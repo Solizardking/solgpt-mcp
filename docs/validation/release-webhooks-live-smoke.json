@@ -1,0 +1,126 @@
+{
+  "checkedAt": "2026-09-05T16:32:20.617Z",
+  "origin": "https://solgpt.trade",
+  "scope": "Unsigned-empty-payload rejection only; provider delivery and downstream processing require separate checks.",
+  "results": [
+    {
+      "path": "/api/telegram",
+      "status": 401,
+      "error": "unauthorized",
+      "rejected": true,
+      "configurationMissing": false,
+      "redirected": false
+    },
+    {
+      "path": "/livekit/webhook",
+      "status": 401,
+      "error": "LIVEKIT_WEBHOOK_UNAUTHORIZED",
+      "rejected": true,
+      "configurationMissing": false,
+      "redirected": false
+    },
+    {
+      "path": "/api/livekit/webhook",
+      "status": 401,
+      "error": "LIVEKIT_WEBHOOK_UNAUTHORIZED",
+      "rejected": true,
+      "configurationMissing": false,
+      "redirected": false
+    },
+    {
+      "path": "/api/voice/elevenlabs/webhook",
+      "status": 401,
+      "error": "missing_signature",
+      "rejected": true,
+      "configurationMissing": false,
+      "redirected": false
+    },
+    {
+      "path": "/api/openai/realtime/webhook",
+      "status": 400,
+      "error": "missing_webhook_headers",
+      "rejected": true,
+      "configurationMissing": false,
+      "redirected": false
+    },
+    {
+      "path": "/webhook",
+      "status": 400,
+      "error": "missing_webhook_headers",
+      "rejected": true,
+      "configurationMissing": false,
+      "redirected": false
+    },
+    {
+      "path": "/api/z500/webhook",
+      "status": 401,
+      "error": "invalid signature",
+      "rejected": true,
+      "configurationMissing": false,
+      "redirected": false
+    },
+    {
+      "path": "/firecrawl",
+      "status": 401,
+      "error": "invalid signature",
+      "rejected": true,
+      "configurationMissing": false,
+      "redirected": false
+    },
+    {
+      "path": "/api/firecrawl/webhook",
+      "status": 401,
+      "error": "invalid signature",
+      "rejected": true,
+      "configurationMissing": false,
+      "redirected": false
+    },
+    {
+      "path": "/firecrawl2",
+      "status": 401,
+      "error": "invalid signature",
+      "rejected": true,
+      "configurationMissing": false,
+      "redirected": false
+    },
+    {
+      "path": "/api/leaderboard/webhook",
+      "status": 401,
+      "error": "invalid signature",
+      "rejected": true,
+      "configurationMissing": false,
+      "redirected": false
+    },
+    {
+      "path": "/api/composio/triggers",
+      "status": 401,
+      "rejected": true,
+      "configurationMissing": false,
+      "redirected": false
+    },
+    {
+      "path": "/webhook/pipedream",
+      "status": 401,
+      "error": "missing_header",
+      "rejected": true,
+      "configurationMissing": false,
+      "redirected": false
+    },
+    {
+      "path": "/honcho/webhook",
+      "status": 401,
+      "error": "invalid_signature",
+      "rejected": true,
+      "configurationMissing": false,
+      "redirected": false
+    },
+    {
+      "path": "/honcho/webhook/release-smoke",
+      "status": 401,
+      "error": "invalid_signature",
+      "rejected": true,
+      "configurationMissing": false,
+      "redirected": false
+    }
+  ]
+}

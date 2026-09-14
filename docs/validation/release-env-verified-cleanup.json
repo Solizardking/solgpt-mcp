@@ -1,0 +1,65 @@
+{
+  "at": "2026-09-05T16:28:59.054Z",
+  "backup": "/private/tmp/solgpt-env-before-verified-cleanup-1788625739054.env",
+  "removedAssignments": 8,
+  "report": [
+    {
+      "key": "SOLANA_TRACKER_RPC_URL",
+      "keptOriginalLine": 229,
+      "removedOriginalLines": [
+        51
+      ]
+    },
+    {
+      "key": "SECURE_RPC_URL",
+      "keptOriginalLine": 161,
+      "removedOriginalLines": [
+        54
+      ]
+    },
+    {
+      "key": "FIRECRAWL_API_KEY",
+      "keptOriginalLine": 329,
+      "removedOriginalLines": [
+        104
+      ]
+    },
+    {
+      "key": "TELEGRAM_BOT_TOKEN",
+      "keptOriginalLine": 112,
+      "removedOriginalLines": [
+        462
+      ]
+    },
+    {
+      "key": "OPENROUTER_ASTRA",
+      "keptOriginalLine": 551,
+      "removedOriginalLines": [
+        233
+      ]
+    },
+    {
+      "key": "OPENROUTER_ASTRA_PRO",
+      "keptOriginalLine": 553,
+      "removedOriginalLines": [
+        234
+      ]
+    },
+    {
+      "key": "OPENROUTER_ASTRA_BATCH",
+      "keptOriginalLine": 552,
+      "removedOriginalLines": [
+        235
+      ]
+    }
+  ],
+  "effectiveChange": "TELEGRAM_BOT_TOKEN now uses earlier authenticated token instead of later 401 token; all other effective values preserved",
+  "additionalCleanup": {
+    "key": "SOLANA_TRACKER_WSS_URL",
+    "backup": "/private/tmp/solgpt-env-before-wss-cleanup-1788626493650.env",
+    "removedLine": 51,
+    "keptLine": 227,
+    "effectiveValuesPreserved": true,
+    "validation": "RPC slotSubscribe acknowledged"
+  }
+}

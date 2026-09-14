@@ -1,0 +1,653 @@
+{
+  "origin": "http://localhost:3475",
+  "pages": 68,
+  "failures": [],
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "text": 2778,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "text": 779,
+      "error": false,
+      "banner": true,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/agent",
+      "status": 200,
+      "text": 844,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/agents",
+      "status": 200,
+      "text": 776,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/app",
+      "status": 200,
+      "text": 305,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/astra-batch",
+      "status": 200,
+      "text": 544,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/auth/callback",
+      "status": 200,
+      "text": 105,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/authorize",
+      "status": 200,
+      "text": 394,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/automations",
+      "status": 200,
+      "text": 907,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/blue",
+      "status": 200,
+      "text": 935,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/blue/call",
+      "status": 200,
+      "text": 548,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/bots",
+      "status": 200,
+      "text": 848,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/box",
+      "status": 200,
+      "text": 903,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/brain",
+      "status": 200,
+      "text": 235,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/chart",
+      "status": 200,
+      "text": 679,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/charts",
+      "status": 200,
+      "text": 670,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/checkout",
+      "status": 200,
+      "text": 294,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/clawdbot",
+      "status": 200,
+      "text": 1718,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/computer",
+      "status": 200,
+      "text": 1184,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/computer/orgo",
+      "status": 200,
+      "text": 780,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/computer/recording",
+      "status": 200,
+      "text": 177,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/docs",
+      "status": 200,
+      "text": 3575,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/download",
+      "status": 200,
+      "text": 1568,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/explorer",
+      "status": 200,
+      "text": 619,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/extension",
+      "status": 200,
+      "text": 605,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/fire",
+      "status": 200,
+      "text": 699,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/fly",
+      "status": 200,
+      "text": 221,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/fly/brain",
+      "status": 200,
+      "text": 147,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/fly/companion",
+      "status": 200,
+      "text": 198,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/fly/exhibit",
+      "status": 200,
+      "text": 0,
+      "error": false,
+      "banner": false,
+      "frames": [
+        {
+          "url": "http://localhost:3475/fly-exhibit/index.html",
+          "text": 505
+        }
+      ],
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/forge",
+      "status": 200,
+      "text": 750,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/gallery",
+      "status": 200,
+      "text": 461,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/gateway",
+      "status": 200,
+      "text": 3386,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/inference",
+      "status": 200,
+      "text": 19102,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/integrations/pipedream",
+      "status": 200,
+      "text": 295,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/keys",
+      "status": 200,
+      "text": 1445,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/kick",
+      "status": 200,
+      "text": 0,
+      "error": false,
+      "banner": false,
+      "frames": [
+        {
+          "url": "https://player.kick.com/thetickeris",
+          "text": 0
+        },
+        {
+          "url": "",
+          "text": 1046
+        },
+        {
+          "url": "https://oauth.telegram.org/embed/cheshireclawdbot?origin=http%3A%2F%2Flocalhost%3A3475&return_to=http%3A%2F%2Flocalhost%3A3475%2Fkick&request_access=write&lang=en",
+          "text": 18
+        },
+        {
+          "url": "about:blank",
+          "text": 0
+        }
+      ],
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/markets",
+      "status": 200,
+      "text": 646,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/mobile",
+      "status": 200,
+      "text": 1775,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/models",
+      "status": 200,
+      "text": 18756,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/nfts",
+      "status": 200,
+      "text": 709,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/pagent",
+      "status": 200,
+      "text": 1775,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/perps",
+      "status": 200,
+      "text": 1516,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/portfolio",
+      "status": 200,
+      "text": 635,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/predictions",
+      "status": 200,
+      "text": 3956,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/privacy",
+      "status": 200,
+      "text": 2271,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/profile",
+      "status": 200,
+      "text": 1411,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/pump",
+      "status": 200,
+      "text": 7804,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/redirect",
+      "status": 200,
+      "text": 1694,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/research",
+      "status": 200,
+      "text": 1468,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/research/portfolio",
+      "status": 200,
+      "text": 1129,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/sandbox",
+      "status": 200,
+      "text": 666,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/search",
+      "status": 200,
+      "text": 340,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/stonkfun",
+      "status": 200,
+      "text": 10353,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/studio",
+      "status": 200,
+      "text": 1211,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/subscribe",
+      "status": 200,
+      "text": 504,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/support",
+      "status": 200,
+      "text": 1011,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/telegram",
+      "status": 200,
+      "text": 342,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/telegram/pnl",
+      "status": 200,
+      "text": 313,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/terms",
+      "status": 200,
+      "text": 1870,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/tg",
+      "status": 200,
+      "text": 342,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/tokens",
+      "status": 200,
+      "text": 1091,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/trade",
+      "status": 200,
+      "text": 573,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/trickshot",
+      "status": 200,
+      "text": 725,
+      "error": false,
+      "banner": false,
+      "frames": [
+        {
+          "url": "",
+          "text": 1046
+        },
+        {
+          "url": "https://oauth.telegram.org/embed/cheshireclawdbot?origin=http%3A%2F%2Flocalhost%3A3475&return_to=http%3A%2F%2Flocalhost%3A3475%2Ftrickshot&request_access=write&lang=en",
+          "text": 18
+        }
+      ],
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/voice",
+      "status": 200,
+      "text": 772,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/wallet",
+      "status": 200,
+      "text": 2012,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/webmcp",
+      "status": 200,
+      "text": 2645,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "path": "/z500",
+      "status": 200,
+      "text": 1765,
+      "error": false,
+      "banner": false,
+      "errors": [],
+      "ok": true
+    }
+  ]
+}

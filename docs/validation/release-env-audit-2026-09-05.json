@@ -1,0 +1,6860 @@
+{
+  "generatedAt": "2026-09-05T16:41:34.698Z",
+  "scope": "src/**/*.{js,jsx,ts,tsx,mjs,cjs,mts,cts}",
+  "note": "Names and locations only. Reference scan includes comments and string literals; indirect/generated usage may be missed. Duplicate comparison is preliminary for single-line values, not proof of credential validity. No entries are removed.",
+  "keys": 396,
+  "assignments": 405,
+  "duplicates": [
+    {
+      "key": "ACCESS_KEY",
+      "lines": [
+        48,
+        222
+      ],
+      "configured": true,
+      "occurrences": 2,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/search/route.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/solanatracker.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "SOLANATRACKER_API_KEY",
+      "lines": [
+        46,
+        219
+      ],
+      "configured": true,
+      "occurrences": 2,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/chart/token/route.ts",
+        "src/app/api/solanatracker/pulse/route.ts",
+        "src/app/api/solanatracker/stream/route.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/solanatracker-datastream.ts",
+        "src/lib/solgpt/solanatracker.ts",
+        "src/lib/solgpt/tools.ts"
+      ],
+      "testReferences": [
+        "src/app/api/chart/token/route.test.ts",
+        "src/app/api/page-env-handlers.test.ts",
+        "src/app/api/solanatracker/pulse/route.test.ts",
+        "src/app/api/solanatracker/stream/route.test.ts",
+        "src/app/api/tokens/popout/route.test.ts",
+        "src/app/api/tokens/route.test.ts",
+        "src/app/api/z500/route.test.ts",
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/deskPricePath.test.ts",
+        "src/lib/solgpt/executors.ohlcv.test.ts",
+        "src/lib/solgpt/rpc.test.ts",
+        "src/lib/solgpt/solanatracker-dca.test.ts",
+        "src/lib/solgpt/solanatracker.test.ts",
+        "src/lib/solgpt/tracker-chat-tools.test.ts",
+        "src/lib/solgpt/tracker-prefers.test.ts"
+      ]
+    },
+    {
+      "key": "SOLANA_TRACKER_ACCESS_KEY",
+      "lines": [
+        47,
+        221
+      ],
+      "configured": true,
+      "occurrences": 2,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": [
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/solanatracker.test.ts"
+      ]
+    },
+    {
+      "key": "SOLANA_TRACKER_API_KEY",
+      "lines": [
+        45,
+        220
+      ],
+      "configured": true,
+      "occurrences": 2,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/search/route.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/executors.ts",
+        "src/lib/solgpt/solanatracker-datastream.ts",
+        "src/lib/solgpt/solanatracker.ts",
+        "src/lib/solgpt/tools.ts",
+        "src/lib/solgpt/wallet.ts"
+      ],
+      "testReferences": [
+        "src/app/api/chart/token/route.test.ts",
+        "src/app/api/page-env-handlers.test.ts",
+        "src/app/api/solanatracker/pulse/route.test.ts",
+        "src/app/api/solanatracker/stream/route.test.ts",
+        "src/app/api/tokens/popout/route.test.ts",
+        "src/app/api/tokens/route.test.ts",
+        "src/app/api/z500/route.test.ts",
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/deskPricePath.test.ts",
+        "src/lib/solgpt/executors.ohlcv.test.ts",
+        "src/lib/solgpt/rpc.test.ts",
+        "src/lib/solgpt/solanatracker-datastream.test.ts",
+        "src/lib/solgpt/solanatracker-dca.test.ts",
+        "src/lib/solgpt/solanatracker.test.ts",
+        "src/lib/solgpt/tracker-chat-tools.test.ts",
+        "src/lib/solgpt/tracker-prefers.test.ts",
+        "src/lib/solgpt/z500-enrich.test.ts"
+      ]
+    },
+    {
+      "key": "SOLANA_TRACKER_DATASTREAM_KEY",
+      "lines": [
+        52,
+        227
+      ],
+      "configured": true,
+      "occurrences": 2,
+      "distinctSingleLineValues": 2,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/app/api/solanatracker/stream/route.test.ts",
+        "src/lib/solgpt/config.test.ts"
+      ]
+    },
+    {
+      "key": "SOLANA_TRACKER_DATA_URL",
+      "lines": [
+        50,
+        224
+      ],
+      "configured": true,
+      "occurrences": 2,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/solanatracker.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/solanatracker.test.ts"
+      ]
+    },
+    {
+      "key": "SOLANA_TRACKER_URL",
+      "lines": [
+        49,
+        223
+      ],
+      "configured": true,
+      "occurrences": 2,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/solanatracker.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/solanatracker.test.ts"
+      ]
+    },
+    {
+      "key": "TELEGRAM_CLIENT_ID",
+      "lines": [
+        109,
+        476
+      ],
+      "configured": true,
+      "occurrences": 2,
+      "distinctSingleLineValues": 2,
+      "runtimeReferences": [
+        "src/lib/privy/public-config.ts",
+        "src/lib/solgpt/readiness.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/readiness.test.ts"
+      ]
+    },
+    {
+      "key": "TELEGRAM_CLIENT_SECRET",
+      "lines": [
+        110,
+        477
+      ],
+      "configured": true,
+      "occurrences": 2,
+      "distinctSingleLineValues": 2,
+      "runtimeReferences": [
+        "src/lib/privy/public-config.ts",
+        "src/lib/solgpt/readiness.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/readiness.test.ts"
+      ]
+    }
+  ],
+  "inventory": [
+    {
+      "key": "ACCESS_KEY",
+      "lines": [
+        48,
+        222
+      ],
+      "configured": true,
+      "occurrences": 2,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/search/route.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/solanatracker.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "ADMIN_WALLET",
+      "lines": [
+        36
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/bots/page.tsx",
+        "src/app/explorer/page.tsx",
+        "src/app/inference/page.tsx",
+        "src/app/markets/page.tsx",
+        "src/app/profile/page.tsx",
+        "src/app/pump/page.tsx",
+        "src/app/tokens/page.tsx",
+        "src/components/desk/paid-page-gate.tsx",
+        "src/lib/solgpt/clawd-gate.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/paid-page-access.ts"
+      ],
+      "testReferences": [
+        "src/app/api/gate/route.test.ts",
+        "src/lib/solgpt/clawd-gate.test.ts",
+        "src/lib/solgpt/paid-gate.test.ts"
+      ]
+    },
+    {
+      "key": "ALCHEMY_API_KEY",
+      "lines": [
+        142
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/alchemy-x402.ts",
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/app/api/tokens/route.test.ts",
+        "src/app/api/z500/route.test.ts",
+        "src/lib/solgpt/alchemy-x402.test.ts",
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/rpc.test.ts"
+      ]
+    },
+    {
+      "key": "ALCHEMY_RPC_URL",
+      "lines": [
+        143
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/app/api/tokens/route.test.ts",
+        "src/app/api/z500/route.test.ts",
+        "src/lib/solgpt/alchemy-x402.test.ts",
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/rpc.test.ts"
+      ]
+    },
+    {
+      "key": "API_URL",
+      "lines": [
+        159
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/neon-auth-env.ts",
+        "src/lib/solgpt/neon-auth.ts"
+      ],
+      "testReferences": [
+        "src/app/api/page-env-handlers.test.ts",
+        "src/lib/solgpt/neon-auth.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "APP_URL",
+      "lines": [
+        34
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "ASSEMBLY_API_KEY",
+      "lines": [
+        295
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/voice/assembly/token/route.ts",
+        "src/app/api/voice/route.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/voice/assembly.ts",
+        "src/lib/solgpt/voice/index.ts"
+      ],
+      "testReferences": [
+        "src/app/api/livekit/webhook/route.test.ts",
+        "src/app/api/page-env-handlers.test.ts",
+        "src/app/api/paid-spend-gate.test.ts",
+        "src/app/api/voice/route.test.ts",
+        "src/lib/solgpt/paid-gate.test.ts",
+        "src/lib/solgpt/voice/assembly.test.ts"
+      ]
+    },
+    {
+      "key": "AUTH_URL",
+      "lines": [
+        400
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/neon-auth-env.ts",
+        "src/lib/solgpt/neon-auth.ts"
+      ],
+      "testReferences": [
+        "src/app/api/page-env-handlers.test.ts",
+        "src/lib/solgpt/client-bundle-boundary.test.ts",
+        "src/lib/solgpt/neon-auth.test.ts"
+      ]
+    },
+    {
+      "key": "AWS_ACCESS_KEY_ID",
+      "lines": [
+        258
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/inference-catalog.ts",
+        "src/lib/solgpt/tigris.ts"
+      ],
+      "testReferences": [
+        "src/app/api/gallery/route.test.ts",
+        "src/app/api/studio/route.test.ts",
+        "src/lib/solgpt/tigris.test.ts"
+      ]
+    },
+    {
+      "key": "AWS_ENDPOINT_URL_IAM",
+      "lines": [
+        261
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/tigris.test.ts"
+      ]
+    },
+    {
+      "key": "AWS_ENDPOINT_URL_S3",
+      "lines": [
+        260
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/app/api/gallery/route.test.ts",
+        "src/app/api/studio/route.test.ts",
+        "src/lib/solgpt/tigris.test.ts"
+      ]
+    },
+    {
+      "key": "AWS_REGION",
+      "lines": [
+        262
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/tigris.test.ts"
+      ]
+    },
+    {
+      "key": "AWS_SECRET_ACCESS_KEY",
+      "lines": [
+        259
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/tigris.ts"
+      ],
+      "testReferences": [
+        "src/app/api/gallery/route.test.ts",
+        "src/app/api/studio/route.test.ts",
+        "src/lib/solgpt/tigris.test.ts"
+      ]
+    },
+    {
+      "key": "BETTER_AUTH_API_KEY",
+      "lines": [
+        525
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/better-auth/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/better-auth/config.test.ts",
+        "src/lib/solgpt/neon-auth.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "BETTER_AUTH_IDENTIFY_URL",
+      "lines": [
+        529
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/better-auth/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/better-auth/config.test.ts"
+      ]
+    },
+    {
+      "key": "BETTER_AUTH_KV_URL",
+      "lines": [
+        527
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/better-auth/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/better-auth/config.test.ts"
+      ]
+    },
+    {
+      "key": "BETTER_AUTH_SECRET",
+      "lines": [
+        526
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/better-auth/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/better-auth/config.test.ts"
+      ]
+    },
+    {
+      "key": "BETTER_AUTH_TRUSTED_ORIGINS",
+      "lines": [
+        530
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/better-auth/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/better-auth/config.test.ts"
+      ]
+    },
+    {
+      "key": "BETTER_AUTH_URL",
+      "lines": [
+        523
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/better-auth/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/better-auth/config.test.ts",
+        "src/lib/solgpt/neon-auth.test.ts"
+      ]
+    },
+    {
+      "key": "BIRDEYE_API_KEY",
+      "lines": [
+        200
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/birdeye/markets/route.ts",
+        "src/app/api/birdeye/portfolio/route.ts",
+        "src/app/api/chart/token/route.ts",
+        "src/app/api/grok/search/route.ts",
+        "src/app/api/ohlcv/pair/route.ts",
+        "src/app/api/ohlcv/stream/route.ts",
+        "src/app/api/ohlcv/token/route.ts",
+        "src/app/api/perps/route.ts",
+        "src/app/api/predictions/pairs/route.ts",
+        "src/app/api/predictions/route.ts",
+        "src/app/api/tokens/detail/route.ts",
+        "src/app/api/tokens/popout/route.ts",
+        "src/app/api/tokens/route.ts",
+        "src/app/markets/page.tsx",
+        "src/lib/solgpt/birdeye-markets.ts",
+        "src/lib/solgpt/birdeye-perps.ts",
+        "src/lib/solgpt/birdeye-token-desk.ts",
+        "src/lib/solgpt/birdeye.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/executors.ts",
+        "src/lib/solgpt/inference-catalog.ts",
+        "src/lib/solgpt/markets-ohlcv.ts",
+        "src/lib/solgpt/perps-desk.ts",
+        "src/lib/solgpt/predictions.ts",
+        "src/lib/solgpt/tools.ts",
+        "src/lib/solgpt/z500-enrich-server.ts"
+      ],
+      "testReferences": [
+        "src/app/api/birdeye/markets/route.test.ts",
+        "src/app/api/birdeye/portfolio/route.test.ts",
+        "src/app/api/chart/token/route.test.ts",
+        "src/app/api/desk-holder-gate.test.ts",
+        "src/app/api/ohlcv/stream/route.test.ts",
+        "src/app/api/page-env-handlers.test.ts",
+        "src/app/api/perps/route.test.ts",
+        "src/app/api/tokens/detail/route.test.ts",
+        "src/app/api/tokens/popout/route.test.ts",
+        "src/app/api/tokens/public/route.test.ts",
+        "src/app/api/tokens/route.test.ts",
+        "src/app/api/v1/[...path]/route.test.ts",
+        "src/app/api/z500/route.test.ts",
+        "src/components/desk/desk-shell.test.ts",
+        "src/lib/solgpt/birdeye-markets.test.ts",
+        "src/lib/solgpt/birdeye-perps.test.ts",
+        "src/lib/solgpt/birdeye-ws.test.ts",
+        "src/lib/solgpt/birdeye.test.ts",
+        "src/lib/solgpt/executors.ohlcv.test.ts",
+        "src/lib/solgpt/grok-search.test.ts",
+        "src/lib/solgpt/imperial-live.test.ts",
+        "src/lib/solgpt/ios-env-sync.test.ts",
+        "src/lib/solgpt/ios-surface-wiring.test.ts",
+        "src/lib/solgpt/perps-desk.test.ts",
+        "src/lib/solgpt/portfolio-networth.test.ts",
+        "src/lib/solgpt/predictions.test.ts",
+        "src/lib/solgpt/token-popout.test.ts",
+        "src/lib/solgpt/tracker-prefers.test.ts",
+        "src/lib/solgpt/voice/voice.test.ts",
+        "src/lib/solgpt/z500-enrich.test.ts"
+      ]
+    },
+    {
+      "key": "BIRDEYE_WSS_URL",
+      "lines": [
+        199
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "BOX_API_KEY",
+      "lines": [
+        436
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/box/route.ts",
+        "src/components/desk/box-panel.tsx",
+        "src/lib/solgpt/telegrab.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "BROWSERUSE_API_KEY",
+      "lines": [
+        335
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/browser-use/route.ts",
+        "src/lib/solgpt/browser-harness-server.ts",
+        "src/lib/solgpt/browser-use-server.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/e2b-alchemy-server.ts",
+        "src/lib/solgpt/e2b-alchemy.ts",
+        "src/lib/solgpt/livekit.ts",
+        "src/lib/solgpt/tools.ts"
+      ],
+      "testReferences": [
+        "src/app/api/browser-use/route.test.ts",
+        "src/app/api/browser-use/status/route.test.ts",
+        "src/app/api/page-env-handlers.test.ts",
+        "src/app/api/paid-spend-gate.test.ts",
+        "src/components/desk/page-api-wiring.test.ts",
+        "src/lib/solgpt/agent-wallet.test.ts",
+        "src/lib/solgpt/browser-use.test.ts",
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/deskPricePath.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "BROWSERUSE_BOX_ID",
+      "lines": [
+        105
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "BROWSERUSE_WEBHOOK_SECRET",
+      "lines": [
+        104
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "BROWSERUSE_WEBHOOK_URL",
+      "lines": [
+        106
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "BROWSER_USE_API_KEY",
+      "lines": [
+        336
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/browser-use/route.ts",
+        "src/lib/solgpt/browser-harness-server.ts",
+        "src/lib/solgpt/browser-harness.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/e2b-alchemy.ts",
+        "src/lib/solgpt/livekit.ts",
+        "src/lib/solgpt/tools.ts"
+      ],
+      "testReferences": [
+        "src/app/api/browser-use/route.test.ts",
+        "src/app/api/browser-use/status/route.test.ts",
+        "src/app/api/page-env-handlers.test.ts",
+        "src/app/api/paid-spend-gate.test.ts",
+        "src/components/desk/paid-page-gate.test.ts",
+        "src/lib/solgpt/browser-harness-server.test.ts",
+        "src/lib/solgpt/browser-use.test.ts",
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/paid-gate.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "CDP_API_KEY_ID",
+      "lines": [
+        266
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/coinbase/onramp/route.ts",
+        "src/lib/solgpt/cdp.ts",
+        "src/lib/solgpt/coinbase-onramp.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/tools.ts"
+      ],
+      "testReferences": [
+        "src/app/api/coinbase/onramp/route.test.ts",
+        "src/app/api/page-env-handlers.test.ts",
+        "src/lib/solgpt/cdp.test.ts",
+        "src/lib/solgpt/coinbase-onramp.test.ts",
+        "src/lib/solgpt/deskPricePath.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "CDP_API_KEY_PRIVATE_KEY",
+      "lines": [
+        268
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/cdp.ts",
+        "src/lib/solgpt/coinbase-onramp.ts",
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/app/api/coinbase/onramp/route.test.ts",
+        "src/app/api/page-env-handlers.test.ts",
+        "src/lib/solgpt/cdp.test.ts",
+        "src/lib/solgpt/coinbase-onramp.test.ts"
+      ]
+    },
+    {
+      "key": "CDP_API_KEY_SECRET",
+      "lines": [
+        267
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/coinbase/onramp/route.ts",
+        "src/lib/solgpt/cdp.ts",
+        "src/lib/solgpt/coinbase-onramp.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/tools.ts"
+      ],
+      "testReferences": [
+        "src/app/api/coinbase/onramp/route.test.ts",
+        "src/app/api/page-env-handlers.test.ts",
+        "src/lib/solgpt/cdp.test.ts",
+        "src/lib/solgpt/coinbase-onramp.test.ts",
+        "src/lib/solgpt/deskPricePath.test.ts",
+        "src/lib/solgpt/llm-gateway-env.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "CDP_BASE_PATH",
+      "lines": [
+        271
+      ],
+      "configured": false,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/cdp.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/cdp.test.ts"
+      ]
+    },
+    {
+      "key": "CDP_ENV",
+      "lines": [
+        270
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/cdp.ts",
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/cdp.test.ts"
+      ]
+    },
+    {
+      "key": "CDP_WALLET_SECRET",
+      "lines": [
+        269
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/cdp.ts",
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/cdp.test.ts"
+      ]
+    },
+    {
+      "key": "CG_API_KEY",
+      "lines": [
+        425
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "CLAWDBOT_VAULT_ALLOWED_IPS",
+      "lines": [
+        397
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "CLAWDBOT_VAULT_ENABLED",
+      "lines": [
+        396
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "CLAWDBOT_VAULT_TOKEN",
+      "lines": [
+        398
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "CLAWD_ADMIN_KEY",
+      "lines": [
+        399
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "CLAWD_ADMIN_WALLETS",
+      "lines": [
+        116
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "CLAWD_GATEWAY_CONVEX_SERVICE_SECRET",
+      "lines": [
+        551
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "CLAWD_GATE_ENABLED",
+      "lines": [
+        113
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "CLAWD_MIN_BALANCE",
+      "lines": [
+        115
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "CLAWD_PERPS_API_URL",
+      "lines": [
+        407
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/phoenix-ws.ts",
+        "src/lib/solgpt/phoenix.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "CLAWD_TOKEN_ADDRESS",
+      "lines": [
+        114
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "CLAWD_WHITELIST_WALLETS",
+      "lines": [
+        117
+      ],
+      "configured": false,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "CLOUDFLARE_ACCESS_KEY_ID",
+      "lines": [
+        96
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "CLOUDFLARE_ACCOUNT_ID",
+      "lines": [
+        94
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "CLOUDFLARE_API_TOKEN",
+      "lines": [
+        95
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "CLOUDFLARE_SECRET_ACCESS_KEY",
+      "lines": [
+        97
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "COINBASE_CLIENT_ID",
+      "lines": [
+        272
+      ],
+      "configured": false,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/cdp.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/tools.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/cdp.test.ts",
+        "src/lib/solgpt/deskPricePath.test.ts"
+      ]
+    },
+    {
+      "key": "COINBASE_ONRAMP_APP_ID",
+      "lines": [
+        273
+      ],
+      "configured": false,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/cdp.ts",
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/cdp.test.ts"
+      ]
+    },
+    {
+      "key": "COINGECKO_API_KEY",
+      "lines": [
+        426
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/coingecko.ts",
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/coingecko.test.ts"
+      ]
+    },
+    {
+      "key": "COMPOSIO_API_KEY",
+      "lines": [
+        440
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/inference/route.ts",
+        "src/lib/solgpt/composio-env.ts",
+        "src/lib/solgpt/composio-provider.ts",
+        "src/lib/solgpt/composio-triggers.ts",
+        "src/lib/solgpt/inference-catalog.ts"
+      ],
+      "testReferences": [
+        "src/app/api/chat/supermemory.route.test.ts",
+        "src/lib/solgpt/composio-env.test.ts",
+        "src/lib/solgpt/composio-provider.test.ts",
+        "src/lib/solgpt/composio-session.test.ts",
+        "src/lib/solgpt/composio-triggers.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "COMPOSIO_AUTH_CONFIG_ID",
+      "lines": [
+        215
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/composio-env.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/composio-env.test.ts"
+      ]
+    },
+    {
+      "key": "COMPOSIO_AUTH_URL",
+      "lines": [
+        446
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "COMPOSIO_CLAWD_WS_URL",
+      "lines": [
+        534
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/composio-env.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/composio-env.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "COMPOSIO_PROJECT_ID",
+      "lines": [
+        238
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/composio-env.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/composio-env.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "COMPOSIO_SIGNING_SECRET",
+      "lines": [
+        536
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/composio/triggers/route.ts",
+        "src/lib/solgpt/composio-env.ts",
+        "src/lib/solgpt/composio-triggers.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/composio-env.test.ts",
+        "src/lib/solgpt/composio-triggers.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "COMPOSIO_SUBSCRIPTION_ID",
+      "lines": [
+        538
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "COMPOSIO_SUB_ID",
+      "lines": [
+        535
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/composio-env.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/composio-env.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "COMPOSIO_URL",
+      "lines": [
+        533
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/composio-env.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/composio-env.test.ts",
+        "src/lib/solgpt/composio-triggers.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "COMPOSIO_WEBHOOK_SECRET",
+      "lines": [
+        537
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/composio/triggers/route.ts",
+        "src/lib/solgpt/composio-env.ts",
+        "src/lib/solgpt/composio-triggers.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/composio-env.test.ts",
+        "src/lib/solgpt/composio-triggers.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "CONSUMER_SECRET",
+      "lines": [
+        487
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "CONSUMER_TOKEN",
+      "lines": [
+        486
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "CONVEX_ACTIONS_URL",
+      "lines": [
+        197
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/api-keys.ts",
+        "src/lib/solgpt/convex-service.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/api-keys.store.test.ts",
+        "src/lib/solgpt/convex-service.test.ts"
+      ]
+    },
+    {
+      "key": "CONVEX_CLOUD",
+      "lines": [
+        89
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "CONVEX_DEPLOY_KEY",
+      "lines": [
+        198
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": [
+        "src/lib/solgpt/env-example-wiring.test.ts"
+      ]
+    },
+    {
+      "key": "CONVEX_KEY",
+      "lines": [
+        91
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "CONVEX_SITE",
+      "lines": [
+        90
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "CONVEX_URL",
+      "lines": [
+        196
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/keys/route.ts",
+        "src/lib/solgpt/api-keys.ts",
+        "src/lib/solgpt/convex-service.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/api-keys.store.test.ts",
+        "src/lib/solgpt/convex-service.test.ts"
+      ]
+    },
+    {
+      "key": "DATABASE_URL",
+      "lines": [
+        163
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/gateway/keys/route.ts",
+        "src/app/api/gateway/usage/route.ts",
+        "src/app/api/health/route.ts",
+        "src/app/api/keys/route.ts",
+        "src/app/automations/page.tsx",
+        "src/components/desk/gateway-usage.tsx",
+        "src/components/desk/profile.tsx",
+        "src/instrumentation.ts",
+        "src/lib/auth.ts",
+        "src/lib/better-auth/auth.ts",
+        "src/lib/solgpt/automations.ts",
+        "src/lib/solgpt/clawd-bot-downloads.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/db.ts",
+        "src/lib/solgpt/gallery-store.ts",
+        "src/lib/solgpt/wallet-usage.ts",
+        "src/lib/telegram/session.ts"
+      ],
+      "testReferences": [
+        "src/app/api/clawd-bot/download/route.test.ts",
+        "src/app/api/health/route.test.ts",
+        "src/app/api/page-env-handlers.test.ts",
+        "src/app/api/studio/route.test.ts",
+        "src/instrumentation.test.ts",
+        "src/lib/solgpt/browser-harness-server.test.ts",
+        "src/lib/solgpt/clawd-bot-downloads.test.ts",
+        "src/lib/solgpt/db.test.ts",
+        "src/lib/solgpt/ios-env-sync.test.ts",
+        "src/lib/solgpt/llm-gateway-env.test.ts",
+        "src/lib/solgpt/neon-auth.test.ts",
+        "src/lib/solgpt/phoenix.test.ts",
+        "src/lib/solgpt/readiness.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts",
+        "src/lib/solgpt/tigris.test.ts",
+        "src/lib/solgpt/wallet-usage.test.ts",
+        "src/lib/telegram/bot.test.ts"
+      ]
+    },
+    {
+      "key": "DATA_API",
+      "lines": [
+        516
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/neon-auth-env.ts",
+        "src/lib/solgpt/neon-auth.ts"
+      ],
+      "testReferences": [
+        "src/app/api/page-env-handlers.test.ts",
+        "src/lib/solgpt/neon-auth.test.ts"
+      ]
+    },
+    {
+      "key": "DATA_API_URL",
+      "lines": [
+        515
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/neon-auth-env.ts",
+        "src/lib/solgpt/neon-auth.ts"
+      ],
+      "testReferences": [
+        "src/app/api/page-env-handlers.test.ts",
+        "src/lib/solgpt/client-bundle-boundary.test.ts",
+        "src/lib/solgpt/neon-auth.test.ts"
+      ]
+    },
+    {
+      "key": "DEEPGRAM_API_KEY",
+      "lines": [
+        294
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/voice/route.ts",
+        "src/components/desk/deepgram-browser-agent.tsx",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/deepgram-intelligence.server.ts",
+        "src/lib/solgpt/inference-catalog.ts",
+        "src/lib/solgpt/livekit.ts",
+        "src/lib/solgpt/voice/browser-agent.ts",
+        "src/lib/solgpt/voice/index.ts"
+      ],
+      "testReferences": [
+        "src/app/api/livekit/webhook/route.test.ts",
+        "src/app/api/page-env-handlers.test.ts",
+        "src/app/api/paid-spend-gate.test.ts",
+        "src/app/api/voice/route.test.ts",
+        "src/lib/solgpt/livekit.test.ts",
+        "src/lib/solgpt/paid-gate.test.ts",
+        "src/lib/solgpt/voice/browser-agent.test.ts",
+        "src/lib/solgpt/voice/voice.test.ts"
+      ]
+    },
+    {
+      "key": "DEEPSEEK_API_KEY",
+      "lines": [
+        134
+      ],
+      "configured": false,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/chat/route.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/inference-catalog.ts",
+        "src/lib/solgpt/models.ts",
+        "src/lib/solgpt/provider.ts"
+      ],
+      "testReferences": [
+        "src/app/api/chat/route.test.ts",
+        "src/app/api/health/route.test.ts",
+        "src/lib/solgpt/llm-gateway-env.test.ts",
+        "src/lib/solgpt/provider.test.ts"
+      ]
+    },
+    {
+      "key": "DFLOW_API_KEY",
+      "lines": [
+        240
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/dflow/book-stream/route.ts",
+        "src/app/api/dflow/order/route.ts",
+        "src/app/api/dflow/quote/route.ts",
+        "src/app/api/dflow/venues/route.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/executors.ts",
+        "src/lib/solgpt/inference-catalog.ts",
+        "src/lib/solgpt/tools.ts"
+      ],
+      "testReferences": [
+        "src/app/api/dflow/quote-stream/route.test.ts",
+        "src/app/api/health/route.test.ts",
+        "src/lib/solgpt/dflow-order.test.ts",
+        "src/lib/solgpt/dflow-streams.test.ts",
+        "src/lib/solgpt/executors.test.ts"
+      ]
+    },
+    {
+      "key": "DFLOW_MARKETS_API_URL",
+      "lines": [
+        242
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/dflow-settings.test.ts"
+      ]
+    },
+    {
+      "key": "DFLOW_MAX_LIMIT",
+      "lines": [
+        245
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/dflow-settings.test.ts"
+      ]
+    },
+    {
+      "key": "DFLOW_PUBLIC_SPOT_FEE_OWNER",
+      "lines": [
+        255
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/dflow-settings.test.ts"
+      ]
+    },
+    {
+      "key": "DFLOW_PUBLIC_SPOT_FEE_SOL",
+      "lines": [
+        253
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/dflow-settings.test.ts"
+      ]
+    },
+    {
+      "key": "DFLOW_PUBLIC_SPOT_MAX_FEE_BPS",
+      "lines": [
+        256
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/dflow-settings.test.ts"
+      ]
+    },
+    {
+      "key": "DFLOW_PUBLIC_SPOT_MAX_FEE_OVERAGE_BPS",
+      "lines": [
+        257
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/dflow-settings.test.ts"
+      ]
+    },
+    {
+      "key": "DFLOW_PUBLIC_SPOT_SOL_FEE_ACCOUNT",
+      "lines": [
+        254
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/dflow-settings.test.ts"
+      ]
+    },
+    {
+      "key": "DFLOW_QSTASH_DEDUPE_SEC",
+      "lines": [
+        252
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/dflow-settings.test.ts"
+      ]
+    },
+    {
+      "key": "DFLOW_QSTASH_WARM_DELAY_SEC",
+      "lines": [
+        251
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/dflow-settings.test.ts"
+      ]
+    },
+    {
+      "key": "DFLOW_QUOTE_API_URL",
+      "lines": [
+        241
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/dflow-streams.test.ts"
+      ]
+    },
+    {
+      "key": "DFLOW_STREAM_HEARTBEAT_MS",
+      "lines": [
+        246
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/dflow-settings.test.ts"
+      ]
+    },
+    {
+      "key": "DFLOW_STREAM_ORDERBOOK_DEPTH",
+      "lines": [
+        250
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/dflow-settings.test.ts"
+      ]
+    },
+    {
+      "key": "DFLOW_STREAM_ORDERBOOK_POLL_MS",
+      "lines": [
+        247
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/dflow-settings.test.ts"
+      ]
+    },
+    {
+      "key": "DFLOW_STREAM_TRADES_POLL_MS",
+      "lines": [
+        248
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/dflow-settings.test.ts"
+      ]
+    },
+    {
+      "key": "DFLOW_STREAM_TRADE_LIMIT",
+      "lines": [
+        249
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/dflow-settings.test.ts"
+      ]
+    },
+    {
+      "key": "DFLOW_TIMEOUT_MS",
+      "lines": [
+        244
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/dflow-settings.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "DFLOW_TRADE_API_WS_URL",
+      "lines": [
+        243
+      ],
+      "configured": false,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/dflow-streams.test.ts"
+      ]
+    },
+    {
+      "key": "E2B_API_KEY",
+      "lines": [
+        332
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/e2b/route.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/e2b-alchemy-server.ts",
+        "src/lib/solgpt/e2b-server.ts",
+        "src/lib/solgpt/tools.ts"
+      ],
+      "testReferences": [
+        "src/app/api/e2b/route.test.ts",
+        "src/app/api/e2b/status/route.test.ts",
+        "src/app/api/page-env-handlers.test.ts",
+        "src/app/api/paid-spend-gate.test.ts",
+        "src/components/desk/paid-page-gate.test.ts",
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/deskPricePath.test.ts",
+        "src/lib/solgpt/e2b.test.ts",
+        "src/lib/solgpt/paid-gate.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "ELEVEN_LABS_AGENT_ID",
+      "lines": [
+        299
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/app/api/voice/elevenlabs/token/route.test.ts",
+        "src/app/api/voice/elevenlabs/webhook/route.test.ts",
+        "src/lib/solgpt/voice/elevenlabs.test.ts"
+      ]
+    },
+    {
+      "key": "ELEVEN_LABS_API_KEY",
+      "lines": [
+        298
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/voice/elevenlabs/token/route.ts",
+        "src/app/api/voice/route.ts",
+        "src/components/desk/elevenlabs-voice.tsx",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/voice/elevenlabs.ts",
+        "src/lib/solgpt/voice/index.ts"
+      ],
+      "testReferences": [
+        "src/app/api/livekit/webhook/route.test.ts",
+        "src/app/api/page-env-handlers.test.ts",
+        "src/app/api/paid-spend-gate.test.ts",
+        "src/app/api/voice/elevenlabs/token/route.test.ts",
+        "src/app/api/voice/route.test.ts",
+        "src/lib/solgpt/paid-gate.test.ts",
+        "src/lib/solgpt/voice/elevenlabs.test.ts"
+      ]
+    },
+    {
+      "key": "ELEVEN_LABS_WEBHOOK_SECRET",
+      "lines": [
+        301
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/voice/elevenlabs/webhook/route.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/voice/elevenlabs.ts"
+      ],
+      "testReferences": [
+        "src/app/api/livekit/webhook/route.test.ts",
+        "src/app/api/paid-spend-gate.test.ts",
+        "src/app/api/voice/elevenlabs/webhook/route.test.ts",
+        "src/app/api/voice/route.test.ts",
+        "src/lib/solgpt/paid-gate.test.ts",
+        "src/lib/solgpt/voice/elevenlabs.test.ts"
+      ]
+    },
+    {
+      "key": "ELEVEN_LABS_WEBHOOK_URL",
+      "lines": [
+        300
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/public-urls.ts"
+      ],
+      "testReferences": [
+        "src/app/api/voice/elevenlabs/webhook/route.test.ts",
+        "src/lib/solgpt/public-urls.test.ts",
+        "src/lib/solgpt/voice/elevenlabs.test.ts"
+      ]
+    },
+    {
+      "key": "ENABLE_PHANTOM_SERVER_LIVE",
+      "lines": [
+        195
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/phantom-server.ts"
+      ],
+      "testReferences": [
+        "src/app/api/phantom/route.test.ts",
+        "src/lib/solgpt/phantom-server.test.ts",
+        "src/lib/solgpt/voice/voice.test.ts"
+      ]
+    },
+    {
+      "key": "ENABLE_PHANTOM_SERVER_SDK",
+      "lines": [
+        194
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/phantom-server.ts"
+      ],
+      "testReferences": [
+        "src/app/api/phantom/route.test.ts",
+        "src/lib/solgpt/phantom-server.test.ts",
+        "src/lib/solgpt/voice/voice.test.ts"
+      ]
+    },
+    {
+      "key": "FAL_API_KEY",
+      "lines": [
+        202
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/fal.ts",
+        "src/lib/solgpt/tools.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "FAL_MODEL1",
+      "lines": [
+        208
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/fal.ts",
+        "src/lib/solgpt/tools.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "FAL_MODEL2",
+      "lines": [
+        209
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "FAL_MODEL3",
+      "lines": [
+        210
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "FAL_MODEL4",
+      "lines": [
+        211
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "FAL_MODEL5",
+      "lines": [
+        212
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "FAL_MODEL6",
+      "lines": [
+        213
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "FAL_MODEL7",
+      "lines": [
+        214
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/fal.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "FIRECRAWL_API_KEY",
+      "lines": [
+        322
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/firecrawl/route.ts",
+        "src/app/api/tokens/route.ts",
+        "src/lib/solgpt/ansem-tokens-server.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/firecrawl-server.ts",
+        "src/lib/solgpt/inference-catalog.ts"
+      ],
+      "testReferences": [
+        "src/app/api/firecrawl/route.test.ts",
+        "src/app/api/page-env-handlers.test.ts",
+        "src/app/api/paid-spend-gate.test.ts",
+        "src/app/api/tokens/route.test.ts",
+        "src/app/api/z500/route.test.ts",
+        "src/components/desk/desk-shell.test.ts",
+        "src/components/desk/paid-page-gate.test.ts",
+        "src/lib/solgpt/firecrawl-server.test.ts",
+        "src/lib/solgpt/paid-gate.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "FIRECRAWL_BASE_URL",
+      "lines": [
+        323
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/app/api/page-env-handlers.test.ts",
+        "src/app/api/tokens/route.test.ts",
+        "src/app/api/z500/route.test.ts",
+        "src/lib/solgpt/firecrawl-server.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "FIRECRAWL_SECRET",
+      "lines": [
+        327
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/z500/webhook/route.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/leaderboard-monitor-server.ts",
+        "src/lib/solgpt/z500-monitor-server.ts"
+      ],
+      "testReferences": [
+        "src/app/api/leaderboard/webhook/route.test.ts",
+        "src/app/api/z500/webhook/route.test.ts",
+        "src/components/desk/desk-shell.test.ts"
+      ]
+    },
+    {
+      "key": "FIRECRAWL_URL2",
+      "lines": [
+        326
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "FIRECRAWL_WEBHOOK",
+      "lines": [
+        324
+      ],
+      "configured": false,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/firecrawl/route.ts",
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/app/api/z500/webhook/route.test.ts"
+      ]
+    },
+    {
+      "key": "FIRECRAWL_WEBHOOK2",
+      "lines": [
+        325
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/leaderboard/webhook/route.ts",
+        "src/app/firecrawl2/route.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/leaderboard-monitor-server.ts"
+      ],
+      "testReferences": [
+        "src/app/api/leaderboard/webhook/route.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "FIRECRAWL_WEBHOOK_SECRET",
+      "lines": [
+        100
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/app/api/leaderboard/webhook/route.test.ts",
+        "src/app/api/z500/webhook/route.test.ts"
+      ]
+    },
+    {
+      "key": "FIRECRAWL_WEBHOOK_SIGNING_SECRET",
+      "lines": [
+        98
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "FOMO_ACCESS_TOKEN",
+      "lines": [
+        124
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "FOMO_PRIVY_TOKEN",
+      "lines": [
+        125
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "GEMINI_API_KEY",
+      "lines": [
+        72
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "HAUHAU_API_KEY",
+      "lines": [
+        138
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/chat/route.ts",
+        "src/app/api/hauhau/keys/route.ts",
+        "src/components/desk/hauhau-keys.tsx",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/inference-catalog.ts",
+        "src/lib/solgpt/provider.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/hauhau-keys.test.ts",
+        "src/lib/solgpt/hauhau-site-login.test.ts",
+        "src/lib/solgpt/llm-gateway-env.test.ts",
+        "src/lib/solgpt/provider.test.ts"
+      ]
+    },
+    {
+      "key": "HAUHAU_BASE_URL",
+      "lines": [
+        137
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/deskPricePath.test.ts",
+        "src/lib/solgpt/ios-env-sync.test.ts",
+        "src/lib/solgpt/provider.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "HAUHAU_MODEL",
+      "lines": [
+        139
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": [
+        "src/lib/solgpt/hauhau-site-login.test.ts"
+      ]
+    },
+    {
+      "key": "HELIUS_API_KEY",
+      "lines": [
+        217
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/agents/route.ts",
+        "src/app/api/explorer/route.ts",
+        "src/app/api/helius/preconf/route.ts",
+        "src/app/api/helius/priority-fee/route.ts",
+        "src/app/api/helius/wallet/route.ts",
+        "src/app/api/nfts/route.ts",
+        "src/app/api/token-metadata/route.ts",
+        "src/app/api/wallet-holdings/route.ts",
+        "src/components/desk/helius-wallet-card.tsx",
+        "src/lib/solgpt/clawd-bot-package.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/e2b-alchemy.ts",
+        "src/lib/solgpt/executors.ts",
+        "src/lib/solgpt/helius-das.ts",
+        "src/lib/solgpt/helius-sender.ts",
+        "src/lib/solgpt/helius-wallet.ts",
+        "src/lib/solgpt/helius.ts",
+        "src/lib/solgpt/inference-catalog.ts",
+        "src/lib/solgpt/metaplex-agents.ts",
+        "src/lib/solgpt/metaplex-nfts.ts",
+        "src/lib/solgpt/openrouter-agent-tools.ts",
+        "src/lib/solgpt/orgo.ts",
+        "src/lib/solgpt/tool-catalog.ts",
+        "src/lib/solgpt/tools.ts",
+        "src/lib/solgpt/trickshot.ts",
+        "src/lib/solgpt/wallet.ts",
+        "src/server/trickshot/config.ts"
+      ],
+      "testReferences": [
+        "src/app/api/agents/mint/route.test.ts",
+        "src/app/api/agents/route.test.ts",
+        "src/app/api/chat/session/route.test.ts",
+        "src/app/api/desk-holder-gate.test.ts",
+        "src/app/api/gate/route.test.ts",
+        "src/app/api/helius/bundle/route.test.ts",
+        "src/app/api/helius/preconf/route.test.ts",
+        "src/app/api/helius/priority-fee/route.test.ts",
+        "src/app/api/helius/send/route.test.ts",
+        "src/app/api/helius/wallet/route.test.ts",
+        "src/app/api/nfts/route.test.ts",
+        "src/app/api/page-env-handlers.test.ts",
+        "src/app/api/token-metadata/route.test.ts",
+        "src/app/api/tokens/route.test.ts",
+        "src/app/api/v1/[...path]/route.test.ts",
+        "src/lib/solgpt/agent-trade.test.ts",
+        "src/lib/solgpt/agent-wallet-trade.consumer.test.ts",
+        "src/lib/solgpt/clawd-das.test.ts",
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/helius-das.test.ts",
+        "src/lib/solgpt/helius-sender.test.ts",
+        "src/lib/solgpt/helius-wallet.test.ts",
+        "src/lib/solgpt/helius.test.ts",
+        "src/lib/solgpt/llm-gateway-env.test.ts",
+        "src/lib/solgpt/login-helius-boundary.test.ts",
+        "src/lib/solgpt/metaplex-agents.test.ts",
+        "src/lib/solgpt/metaplex-nfts.test.ts",
+        "src/lib/solgpt/rpc.test.ts"
+      ]
+    },
+    {
+      "key": "HELIUS_DAS_RPC_URL",
+      "lines": [
+        151
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/helius-das.ts",
+        "src/lib/solgpt/tool-catalog.ts",
+        "src/lib/solgpt/tools.ts",
+        "src/lib/solgpt/trickshot.ts",
+        "src/lib/solgpt/wallet.ts"
+      ],
+      "testReferences": [
+        "src/app/api/agents/route.test.ts",
+        "src/app/api/chat/session/route.test.ts",
+        "src/app/api/gate/route.test.ts",
+        "src/app/api/nfts/route.test.ts",
+        "src/app/api/page-env-handlers.test.ts",
+        "src/lib/solgpt/clawd-das.test.ts",
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/helius-das.test.ts",
+        "src/lib/solgpt/helius-wallet.test.ts",
+        "src/lib/solgpt/helius.test.ts",
+        "src/lib/solgpt/metaplex-agents.test.ts",
+        "src/lib/solgpt/metaplex-nfts.test.ts"
+      ]
+    },
+    {
+      "key": "HELIUS_GATE",
+      "lines": [
+        154
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "HELIUS_LASER",
+      "lines": [
+        155
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "HELIUS_PARSE",
+      "lines": [
+        153
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "HELIUS_RPC_URL",
+      "lines": [
+        216
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/agents/mint/route.ts",
+        "src/app/api/agents/route.ts",
+        "src/app/api/nfts/route.ts",
+        "src/app/api/token-metadata/route.ts",
+        "src/lib/solgpt/agent-trade.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/helius-das.ts",
+        "src/lib/solgpt/helius-sender.ts",
+        "src/lib/solgpt/helius.ts",
+        "src/lib/solgpt/metaplex-agents.ts",
+        "src/lib/solgpt/metaplex-nfts.ts",
+        "src/lib/solgpt/metaplex-token-metadata.ts",
+        "src/lib/solgpt/tools.ts",
+        "src/server/trickshot/config.ts"
+      ],
+      "testReferences": [
+        "src/app/api/agents/mint/route.test.ts",
+        "src/app/api/agents/route.test.ts",
+        "src/app/api/chat/session/route.test.ts",
+        "src/app/api/gate/route.test.ts",
+        "src/app/api/helius/bundle/route.test.ts",
+        "src/app/api/helius/priority-fee/route.test.ts",
+        "src/app/api/helius/send/route.test.ts",
+        "src/app/api/nfts/route.test.ts",
+        "src/app/api/page-env-handlers.test.ts",
+        "src/app/api/token-metadata/route.test.ts",
+        "src/app/api/tokens/route.test.ts",
+        "src/app/api/z500/route.test.ts",
+        "src/lib/solgpt/agent-trade.test.ts",
+        "src/lib/solgpt/agent-wallet-trade.consumer.test.ts",
+        "src/lib/solgpt/clawd-das.test.ts",
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/helius-das.test.ts",
+        "src/lib/solgpt/helius-sender.test.ts",
+        "src/lib/solgpt/helius.test.ts",
+        "src/lib/solgpt/login-helius-boundary.test.ts",
+        "src/lib/solgpt/metaplex-agents.test.ts",
+        "src/lib/solgpt/metaplex-nfts.test.ts",
+        "src/lib/solgpt/metaplex-token-metadata.test.ts",
+        "src/lib/solgpt/rpc.test.ts"
+      ]
+    },
+    {
+      "key": "HELIUS_WSS_URL",
+      "lines": [
+        152
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "HONCHO_AGENT_PEER_ID",
+      "lines": [
+        366
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/honcho.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "HONCHO_API_KEY",
+      "lines": [
+        364
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/honcho/chat/route.ts",
+        "src/lib/solgpt/honcho.ts"
+      ],
+      "testReferences": [
+        "src/app/api/chat/supermemory.route.test.ts",
+        "src/lib/solgpt/honcho.test.ts"
+      ]
+    },
+    {
+      "key": "HONCHO_CONTEXT_SUMMARY",
+      "lines": [
+        368
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/honcho.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "HONCHO_CONTEXT_TOKENS",
+      "lines": [
+        367
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/honcho.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "HONCHO_ENABLED",
+      "lines": [
+        362
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/honcho.ts"
+      ],
+      "testReferences": [
+        "src/app/api/chat/supermemory.route.test.ts",
+        "src/lib/solgpt/honcho.test.ts"
+      ]
+    },
+    {
+      "key": "HONCHO_REASONING_LEVEL",
+      "lines": [
+        369
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/honcho.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "HONCHO_SYNC_MESSAGES",
+      "lines": [
+        370
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/honcho.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "HONCHO_URL",
+      "lines": [
+        363
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/honcho.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "HONCHO_WEBHOOK",
+      "lines": [
+        371
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "HONCHO_WEBHOOK_SECRET",
+      "lines": [
+        372
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/honcho-webhook.ts",
+        "src/lib/solgpt/honcho.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/honcho.test.ts"
+      ]
+    },
+    {
+      "key": "HONCHO_WORKSPACE_ID",
+      "lines": [
+        365
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/honcho.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "IMPERIAL_AGENT_JWT",
+      "lines": [
+        393
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "IMPERIAL_API_KEY",
+      "lines": [
+        391
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "IMPERIAL_JWT",
+      "lines": [
+        392
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "IMPERIAL_LIVE",
+      "lines": [
+        390
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "IMPERIAL_PROFILE_INDEX",
+      "lines": [
+        394
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "IMPERIAL_SLIPPAGE_BPS",
+      "lines": [
+        395
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "JUPITER_API_KEY",
+      "lines": [
+        177
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/jupiter/execute/route.ts",
+        "src/app/api/jupiter/send/route.ts",
+        "src/app/api/predictions/orders/route.ts",
+        "src/app/api/predictions/positions/route.ts",
+        "src/app/api/predictions/route.ts",
+        "src/app/predictions/page.tsx",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/executors.ts",
+        "src/lib/solgpt/inference-catalog.ts",
+        "src/lib/solgpt/predictions.ts",
+        "src/lib/solgpt/tools.ts",
+        "src/lib/solgpt/voice/function-defs.ts"
+      ],
+      "testReferences": [
+        "src/app/api/desk-holder-gate.test.ts",
+        "src/app/api/jupiter/order/route.test.ts",
+        "src/app/api/page-env-handlers.test.ts",
+        "src/app/api/quote/public/route.test.ts",
+        "src/app/api/v1/[...path]/route.test.ts",
+        "src/lib/solgpt/executors.jupiter-v2.test.ts",
+        "src/lib/solgpt/executors.test.ts",
+        "src/lib/solgpt/predictions.test.ts",
+        "src/lib/solgpt/voice/grok.test.ts",
+        "src/lib/solgpt/z500-buy.test.ts"
+      ]
+    },
+    {
+      "key": "JUPITER_PUBLIC_REFERRAL_FEE_BPS",
+      "lines": [
+        180
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "JUPITER_TOKENS_BASE",
+      "lines": [
+        179
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "JUP_SWAP_V1_API_KEY",
+      "lines": [
+        178
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/app/api/jupiter/order/route.test.ts",
+        "src/app/api/page-env-handlers.test.ts",
+        "src/app/api/quote/public/route.test.ts",
+        "src/lib/solgpt/executors.jupiter-v2.test.ts"
+      ]
+    },
+    {
+      "key": "JWKS_URL",
+      "lines": [
+        158
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/neon-auth-env.ts",
+        "src/lib/solgpt/neon-auth.ts"
+      ],
+      "testReferences": [
+        "src/app/api/page-env-handlers.test.ts",
+        "src/lib/solgpt/client-bundle-boundary.test.ts",
+        "src/lib/solgpt/neon-auth.test.ts"
+      ]
+    },
+    {
+      "key": "JWT_SECRET",
+      "lines": [
+        35
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/holder-grant.ts",
+        "src/lib/solgpt/phantom-auth.ts",
+        "src/test/proven-admin.ts"
+      ],
+      "testReferences": [
+        "src/app/api/agents/mint/route.test.ts",
+        "src/app/api/agents/route.test.ts",
+        "src/app/api/astra/batch/route.test.ts",
+        "src/app/api/browser-use/route.test.ts",
+        "src/app/api/browser-use/status/route.test.ts",
+        "src/app/api/chat/route.test.ts",
+        "src/app/api/chat/session/route.test.ts",
+        "src/app/api/dflow/dflow-routes.test.ts",
+        "src/app/api/dflow/quote-stream/route.test.ts",
+        "src/app/api/e2b/route.test.ts",
+        "src/app/api/firecrawl/route.test.ts",
+        "src/app/api/gallery/route.test.ts",
+        "src/app/api/gate/route.test.ts",
+        "src/app/api/helius/bundle/route.test.ts",
+        "src/app/api/helius/send/route.test.ts",
+        "src/app/api/jupiter/order/route.test.ts",
+        "src/app/api/livekit/token/route.test.ts",
+        "src/app/api/nfts/route.test.ts",
+        "src/app/api/orgo/route.test.ts",
+        "src/app/api/page-env-handlers.test.ts",
+        "src/app/api/paid-spend-gate.test.ts",
+        "src/app/api/perps/route.test.ts",
+        "src/app/api/phantom/route.test.ts",
+        "src/app/api/phoenix/prepare/route.test.ts",
+        "src/app/api/privy/intents/intents-route.test.ts",
+        "src/app/api/studio/route.test.ts",
+        "src/app/api/token-metadata/route.test.ts",
+        "src/app/api/voice/elevenlabs/token/route.test.ts",
+        "src/app/api/voice/route.test.ts",
+        "src/components/desk/webmcp-register.test.ts",
+        "src/lib/solgpt/astra-batch.test.ts",
+        "src/lib/solgpt/executors.jupiter-v2.test.ts",
+        "src/lib/solgpt/orgo-server.test.ts",
+        "src/lib/solgpt/paid-gate.test.ts",
+        "src/lib/solgpt/trading-guard.test.ts"
+      ]
+    },
+    {
+      "key": "KERNEL_API_KEY",
+      "lines": [
+        103
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "KIMI_API_KEY",
+      "lines": [
+        130
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "LEVEL5_API_KEY",
+      "lines": [
+        404
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "LEVEL5_DEPOSIT_CODE",
+      "lines": [
+        405
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "LIVEKIT_AGENT_ID",
+      "lines": [
+        315
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "LIVEKIT_AGENT_NAME",
+      "lines": [
+        314
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/livekit.test.ts"
+      ]
+    },
+    {
+      "key": "LIVEKIT_API_KEY",
+      "lines": [
+        305
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/inference-catalog.ts"
+      ],
+      "testReferences": [
+        "src/app/api/livekit/route.test.ts",
+        "src/app/api/livekit/token/route.test.ts",
+        "src/app/api/livekit/webhook/route.test.ts",
+        "src/app/api/page-env-handlers.test.ts"
+      ]
+    },
+    {
+      "key": "LIVEKIT_API_SECRET",
+      "lines": [
+        306
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/app/api/livekit/route.test.ts",
+        "src/app/api/livekit/token/route.test.ts",
+        "src/app/api/livekit/webhook/route.test.ts",
+        "src/app/api/page-env-handlers.test.ts",
+        "src/app/api/paid-spend-gate.test.ts",
+        "src/app/api/voice/route.test.ts",
+        "src/lib/solgpt/paid-gate.test.ts"
+      ]
+    },
+    {
+      "key": "LIVEKIT_LEGACY_TOKEN_SERVER",
+      "lines": [
+        312
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "LIVEKIT_PROJECT_ID",
+      "lines": [
+        307
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/app/api/livekit/webhook/route.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "LIVEKIT_PROJECT_URL",
+      "lines": [
+        308
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "LIVEKIT_SIP_URI",
+      "lines": [
+        309
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "LIVEKIT_TOKEN_SERVER",
+      "lines": [
+        310
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "LIVEKIT_TOKEN_SERVER_URL",
+      "lines": [
+        311
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "LIVEKIT_URL",
+      "lines": [
+        304
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/app/api/livekit/route.test.ts",
+        "src/app/api/livekit/webhook/route.test.ts",
+        "src/lib/solgpt/deskPricePath.test.ts",
+        "src/lib/solgpt/livekit.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "LIVEKIT_WEBHOOK_URL",
+      "lines": [
+        313
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/public-urls.ts"
+      ],
+      "testReferences": [
+        "src/app/api/livekit/route.test.ts",
+        "src/app/api/livekit/webhook/route.test.ts",
+        "src/lib/solgpt/public-urls.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "MASSIVE_API_BASE",
+      "lines": [
+        291
+      ],
+      "configured": false,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/massive.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "MASSIVE_API_KEY",
+      "lines": [
+        290
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/massive.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "MEM0_API_KEY",
+      "lines": [
+        359
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/mem0.ts"
+      ],
+      "testReferences": [
+        "src/app/api/chat/supermemory.route.test.ts",
+        "src/lib/solgpt/mem0.test.ts"
+      ]
+    },
+    {
+      "key": "MEMO_API_KEY",
+      "lines": [
+        358
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/mem0.ts"
+      ],
+      "testReferences": [
+        "src/app/api/chat/supermemory.route.test.ts",
+        "src/lib/solgpt/mem0.test.ts"
+      ]
+    },
+    {
+      "key": "MOONPAY_IP_MATCHING",
+      "lines": [
+        484
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/moonpay.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/moonpay.test.ts"
+      ]
+    },
+    {
+      "key": "MOONPAY_PUB_KEY",
+      "lines": [
+        482
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/moonpay/onramp/route.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/moonpay.ts"
+      ],
+      "testReferences": [
+        "src/app/api/moonpay/onramp/route.test.ts",
+        "src/app/api/page-env-handlers.test.ts",
+        "src/lib/solgpt/moonpay.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "MOONPAY_SECRET_KEY",
+      "lines": [
+        483
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/moonpay.ts"
+      ],
+      "testReferences": [
+        "src/app/api/moonpay/onramp/route.test.ts",
+        "src/lib/solgpt/moonpay.test.ts"
+      ]
+    },
+    {
+      "key": "MOONSHOT_API_KEY",
+      "lines": [
+        129
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/chat/route.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/inference-catalog.ts",
+        "src/lib/solgpt/models.ts",
+        "src/lib/solgpt/provider.ts"
+      ],
+      "testReferences": [
+        "src/app/api/chat/route.test.ts",
+        "src/lib/solgpt/deskPricePath.test.ts",
+        "src/lib/solgpt/llm-gateway-env.test.ts"
+      ]
+    },
+    {
+      "key": "MOONSHOT_BASE_URL",
+      "lines": [
+        131
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/deskPricePath.test.ts"
+      ]
+    },
+    {
+      "key": "MOONSHOT_MODEL",
+      "lines": [
+        132
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "NEON_AUTH_URL",
+      "lines": [
+        517
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/neon-auth-env.ts",
+        "src/lib/solgpt/neon-auth.ts"
+      ],
+      "testReferences": [
+        "src/app/api/page-env-handlers.test.ts",
+        "src/lib/solgpt/neon-auth.test.ts"
+      ]
+    },
+    {
+      "key": "NEWS_API_KEY",
+      "lines": [
+        438
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "NEXT_PUBLIC_BETTER_AUTH_KV_URL",
+      "lines": [
+        528
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/better-auth/auth-client.ts",
+        "src/lib/better-auth/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/better-auth/config.test.ts"
+      ]
+    },
+    {
+      "key": "NEXT_PUBLIC_BETTER_AUTH_URL",
+      "lines": [
+        524
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/better-auth/auth-client.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "NEXT_PUBLIC_NEON_AUTH_URL",
+      "lines": [
+        519
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/neon-auth-env.ts"
+      ],
+      "testReferences": [
+        "src/app/api/page-env-handlers.test.ts",
+        "src/lib/solgpt/neon-auth.test.ts"
+      ]
+    },
+    {
+      "key": "NEXT_PUBLIC_NEON_DATA_API_URL",
+      "lines": [
+        520
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/neon-auth-env.ts"
+      ],
+      "testReferences": [
+        "src/app/api/page-env-handlers.test.ts",
+        "src/lib/solgpt/neon-auth.test.ts"
+      ]
+    },
+    {
+      "key": "NEXT_PUBLIC_PHANTOM_APP_ID",
+      "lines": [
+        184
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/components/wallet/phantom-provider.tsx",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/phantom-server.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/ios-env-sync.test.ts",
+        "src/lib/solgpt/phantom-server.test.ts"
+      ]
+    },
+    {
+      "key": "NEXT_PUBLIC_PHANTOM_REDIRECT_URL",
+      "lines": [
+        185
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/components/wallet/phantom-provider.tsx",
+        "src/lib/solgpt/public-urls.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/public-urls.test.ts"
+      ]
+    },
+    {
+      "key": "NEXT_PUBLIC_PRIVY_APP_ID",
+      "lines": [
+        465
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/privy/credentials.ts",
+        "src/lib/privy/session.ts",
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/app/api/page-env-handlers.test.ts",
+        "src/lib/privy/credentials.test.ts",
+        "src/lib/privy/session.test.ts"
+      ]
+    },
+    {
+      "key": "NEXT_PUBLIC_RPC_URL",
+      "lines": [
+        172
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/components/privy/privy-runtime.tsx",
+        "src/components/wallet/wallet.tsx",
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "NEXT_PUBLIC_SOLANA_CLUSTER",
+      "lines": [
+        173
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "NEXT_PUBLIC_SOLANA_RPC_URL",
+      "lines": [
+        171
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/components/privy/privy-runtime.tsx",
+        "src/components/wallet/wallet.tsx",
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "NEXT_PUBLIC_STACK_PROJECT_ID",
+      "lines": [
+        166
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/neon-auth-env.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/neon-auth.test.ts"
+      ]
+    },
+    {
+      "key": "NEXT_PUBLIC_STACK_PUBLISHABLE_CLIENT_KEY",
+      "lines": [
+        167
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/neon-auth-env.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/neon-auth.test.ts"
+      ]
+    },
+    {
+      "key": "NEXT_PUBLIC_STACK__PUBLISHABLE_CLIENT_KEY",
+      "lines": [
+        521
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/neon-auth-env.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/neon-auth.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID",
+      "lines": [
+        187
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "OPENAI_ADMIN_KEY",
+      "lines": [
+        231
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "OPENAI_API_KEY",
+      "lines": [
+        232
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/openai/images/route.ts",
+        "src/app/api/openai/realtime/calls/route.ts",
+        "src/app/api/openai/realtime/route.ts",
+        "src/lib/solgpt/agent-memory.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/imagine.ts",
+        "src/lib/solgpt/inference-catalog.ts",
+        "src/lib/solgpt/models.ts",
+        "src/lib/solgpt/openai-images.ts",
+        "src/lib/solgpt/provider.ts",
+        "src/lib/solgpt/tools.ts",
+        "src/lib/solgpt/upstash.ts",
+        "src/lib/solgpt/voice/openai-realtime-browser.ts"
+      ],
+      "testReferences": [
+        "src/app/api/paid-spend-gate.test.ts",
+        "src/lib/solgpt/astra.test.ts",
+        "src/lib/solgpt/browser-harness-server.test.ts",
+        "src/lib/solgpt/imagine.test.ts",
+        "src/lib/solgpt/llm-gateway-env.test.ts",
+        "src/lib/solgpt/phoenix.test.ts"
+      ]
+    },
+    {
+      "key": "OPENAI_IMAGE_MODEL",
+      "lines": [
+        17
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "OPENAI_ORG_ID",
+      "lines": [
+        233
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "OPENAI_PROJECT_ID",
+      "lines": [
+        234
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/voice/openai-realtime.test.ts"
+      ]
+    },
+    {
+      "key": "OPENAI_REALTIME_MODEL",
+      "lines": [
+        21
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/voice/openai-realtime.test.ts"
+      ]
+    },
+    {
+      "key": "OPENAI_REALTIME_VOICE",
+      "lines": [
+        22
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "OPENAI_RESPONSES_MODEL",
+      "lines": [
+        18
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/voice/openai-realtime.test.ts"
+      ]
+    },
+    {
+      "key": "OPENAI_SIP_ALLOW_FROM",
+      "lines": [
+        24
+      ],
+      "configured": false,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "OPENAI_SIP_AUTO_ACCEPT",
+      "lines": [
+        25
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "OPENAI_SIP_REGION",
+      "lines": [
+        23
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "OPENAI_WEBHOOK",
+      "lines": [
+        237
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "OPENAI_WEBHOOK_KEY",
+      "lines": [
+        235
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "OPENAI_WEBHOOK_SECRET",
+      "lines": [
+        19
+      ],
+      "configured": false,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/voice/openai-realtime.test.ts"
+      ]
+    },
+    {
+      "key": "OPENAI_WEBHOOK_SIGNING_KEY",
+      "lines": [
+        20
+      ],
+      "configured": false,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "OPENROUTER_API_KEY",
+      "lines": [
+        69
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/chat/route.ts",
+        "src/app/api/chat/session/route.ts",
+        "src/app/api/clawd/analyze/route.ts",
+        "src/app/api/openrouter/app/route.ts",
+        "src/app/gateway/page.tsx",
+        "src/lib/solgpt/astra-batch.ts",
+        "src/lib/solgpt/clawd-analysis.ts",
+        "src/lib/solgpt/clawd-bot-package.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/demo-chat.ts",
+        "src/lib/solgpt/e2b-alchemy.ts",
+        "src/lib/solgpt/inference-catalog.ts",
+        "src/lib/solgpt/models.ts",
+        "src/lib/solgpt/openrouter-harness.ts",
+        "src/lib/solgpt/openrouter-responses.ts",
+        "src/lib/solgpt/openrouter-stt.ts",
+        "src/lib/solgpt/orgo.ts",
+        "src/lib/solgpt/provider.ts",
+        "src/lib/solgpt/public-chat-session.ts",
+        "src/lib/solgpt/telegrab.ts"
+      ],
+      "testReferences": [
+        "src/app/api/astra/batch/route.test.ts",
+        "src/app/api/chat/route.test.ts",
+        "src/app/api/chat/session/route.test.ts",
+        "src/app/api/chat/supermemory.route.test.ts",
+        "src/app/api/clawd/analyze/route.test.ts",
+        "src/app/api/clawd-bot/download/route.test.ts",
+        "src/app/api/openrouter/app/route.test.ts",
+        "src/app/api/page-env-handlers.test.ts",
+        "src/lib/solgpt/astra-batch.test.ts",
+        "src/lib/solgpt/astra.test.ts",
+        "src/lib/solgpt/clawd-analysis.test.ts",
+        "src/lib/solgpt/clawd-bot-package.test.ts",
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/e2b-alchemy.test.ts",
+        "src/lib/solgpt/ios-env-sync.test.ts",
+        "src/lib/solgpt/ios-surface-wiring.test.ts",
+        "src/lib/solgpt/llm-gateway-env.test.ts",
+        "src/lib/solgpt/openrouter-harness.test.ts",
+        "src/lib/solgpt/openrouter-server-tools.test.ts",
+        "src/lib/solgpt/openrouter-stt.test.ts",
+        "src/lib/solgpt/openrouter.test.ts",
+        "src/lib/solgpt/provider.test.ts"
+      ]
+    },
+    {
+      "key": "OPENROUTER_APP_TITLE",
+      "lines": [
+        13
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": [
+        "src/lib/solgpt/env-example-wiring.test.ts",
+        "src/lib/solgpt/openrouter-app.test.ts",
+        "src/lib/solgpt/openrouter-attribution.test.ts",
+        "src/lib/solgpt/openrouter.test.ts"
+      ]
+    },
+    {
+      "key": "OPENROUTER_APP_URL",
+      "lines": [
+        12
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": [
+        "src/lib/solgpt/env-example-wiring.test.ts",
+        "src/lib/solgpt/openrouter-app.test.ts",
+        "src/lib/solgpt/openrouter-attribution.test.ts",
+        "src/lib/solgpt/openrouter.test.ts"
+      ]
+    },
+    {
+      "key": "OPENROUTER_ASTRA",
+      "lines": [
+        543
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/astra.ts",
+        "src/lib/solgpt/models.ts",
+        "src/lib/solgpt/provider.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/astra.test.ts"
+      ]
+    },
+    {
+      "key": "OPENROUTER_ASTRA_BATCH",
+      "lines": [
+        544
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/astra.ts",
+        "src/lib/solgpt/models.ts"
+      ],
+      "testReferences": [
+        "src/app/api/chat/route.test.ts",
+        "src/lib/solgpt/astra.test.ts"
+      ]
+    },
+    {
+      "key": "OPENROUTER_ASTRA_PRO",
+      "lines": [
+        545
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/astra.ts",
+        "src/lib/solgpt/models.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/astra.test.ts"
+      ]
+    },
+    {
+      "key": "OPENROUTER_AUDIO_MODEL",
+      "lines": [
+        509
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/openrouter-stt.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "OPENROUTER_CLAWD_DEFAULT_MODEL",
+      "lines": [
+        424
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "OPENROUTER_COOL_MODEL",
+      "lines": [
+        70
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "OPENROUTER_DEEP",
+      "lines": [
+        422
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/openrouter.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "OPENROUTER_DEEPSEEK_MODEL",
+      "lines": [
+        506
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/models.ts",
+        "src/lib/solgpt/openrouter.ts",
+        "src/lib/solgpt/provider.ts",
+        "src/types/solgpt-models.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/deskPricePath.test.ts",
+        "src/lib/solgpt/provider.test.ts"
+      ]
+    },
+    {
+      "key": "OPENROUTER_DEFAULT_MODEL",
+      "lines": [
+        531
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/chat/route.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/models.ts",
+        "src/lib/solgpt/openrouter-harness.ts"
+      ],
+      "testReferences": [
+        "src/app/api/chat/route.test.ts",
+        "src/app/api/chat/session/route.test.ts",
+        "src/components/desk/desk-shell.test.ts",
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/models.test.ts",
+        "src/lib/solgpt/openrouter-harness.test.ts"
+      ]
+    },
+    {
+      "key": "OPENROUTER_FREEMODEL",
+      "lines": [
+        414
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/e2b-alchemy.ts",
+        "src/lib/solgpt/openrouter-harness.ts",
+        "src/lib/solgpt/openrouter.ts",
+        "src/lib/solgpt/orgo.ts"
+      ],
+      "testReferences": [
+        "src/app/api/chat/route.test.ts",
+        "src/app/api/chat/session/route.test.ts",
+        "src/app/api/clawd/analyze/route.test.ts",
+        "src/lib/solgpt/clawd-analysis.test.ts",
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/deskPricePath.test.ts",
+        "src/lib/solgpt/e2b-alchemy.test.ts",
+        "src/lib/solgpt/models.test.ts",
+        "src/lib/solgpt/orgo-server.test.ts"
+      ]
+    },
+    {
+      "key": "OPENROUTER_FREE_MODEL",
+      "lines": [
+        415
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/clawd-bot-package.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/e2b-alchemy.ts",
+        "src/lib/solgpt/openrouter-harness.ts",
+        "src/lib/solgpt/openrouter.ts",
+        "src/lib/solgpt/orgo.ts"
+      ],
+      "testReferences": [
+        "src/app/api/chat/route.test.ts",
+        "src/app/api/chat/session/route.test.ts",
+        "src/app/api/clawd/analyze/route.test.ts",
+        "src/components/desk/desk-shell.test.ts",
+        "src/lib/solgpt/clawd-analysis.test.ts",
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/models.test.ts",
+        "src/lib/solgpt/openrouter-harness.test.ts"
+      ]
+    },
+    {
+      "key": "OPENROUTER_FREE_MODEL1",
+      "lines": [
+        416
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/openrouter.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "OPENROUTER_FREE_MODEL2",
+      "lines": [
+        417
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/models.ts",
+        "src/lib/solgpt/openrouter.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/solana-clawd-free.test.ts"
+      ]
+    },
+    {
+      "key": "OPENROUTER_FREE_MODEL3",
+      "lines": [
+        547
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/openrouter.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/solana-clawd-free.test.ts"
+      ]
+    },
+    {
+      "key": "OPENROUTER_FREE_MODEL4",
+      "lines": [
+        418
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/models.ts",
+        "src/lib/solgpt/openrouter.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/solana-clawd-free.test.ts"
+      ]
+    },
+    {
+      "key": "OPENROUTER_FREE_MODEL5",
+      "lines": [
+        419
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/models.ts",
+        "src/lib/solgpt/openrouter.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "OPENROUTER_FREE_MODEL6",
+      "lines": [
+        420
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/openrouter.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "OPENROUTER_FREE_ROUTER",
+      "lines": [
+        505
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/models.ts",
+        "src/lib/solgpt/openrouter.ts"
+      ],
+      "testReferences": [
+        "src/app/api/chat/route.test.ts",
+        "src/app/api/chat/session/route.test.ts",
+        "src/components/desk/desk-shell.test.ts",
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/deskPricePath.test.ts",
+        "src/lib/solgpt/models.test.ts",
+        "src/lib/solgpt/openrouter.test.ts"
+      ]
+    },
+    {
+      "key": "OPENROUTER_GLM",
+      "lines": [
+        508
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/models.ts",
+        "src/lib/solgpt/openrouter.ts",
+        "src/lib/solgpt/provider.ts",
+        "src/types/solgpt-models.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/deskPricePath.test.ts",
+        "src/lib/solgpt/provider.test.ts"
+      ]
+    },
+    {
+      "key": "OPENROUTER_GROK",
+      "lines": [
+        421
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/openrouter.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "OPENROUTER_IMAGE_MODEL",
+      "lines": [
+        71
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "OPENROUTER_KIMILATEST",
+      "lines": [
+        423
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "OPENROUTER_MODEL",
+      "lines": [
+        413
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/clawd-bot-package.ts",
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/clawd-bot-package.test.ts"
+      ]
+    },
+    {
+      "key": "OPENROUTER_MOONSHOT",
+      "lines": [
+        133
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/openrouter.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "OPENROUTER_QWEN_FREE_MODEL",
+      "lines": [
+        504
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/models.ts",
+        "src/lib/solgpt/openrouter.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/openrouter.test.ts"
+      ]
+    },
+    {
+      "key": "OPENROUTER_QWEN_MODEL",
+      "lines": [
+        503
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/deskPricePath.test.ts",
+        "src/lib/solgpt/openrouter.test.ts"
+      ]
+    },
+    {
+      "key": "OPENROUTER_STEALTH",
+      "lines": [
+        507
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/models.ts",
+        "src/lib/solgpt/openrouter.ts",
+        "src/lib/solgpt/provider.ts",
+        "src/types/solgpt-models.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/deskPricePath.test.ts",
+        "src/lib/solgpt/provider.test.ts"
+      ]
+    },
+    {
+      "key": "ORGO_API_KEY",
+      "lines": [
+        102
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/orgo/route.ts",
+        "src/components/desk/orgo.tsx",
+        "src/lib/solgpt/orgo-server.ts",
+        "src/lib/solgpt/tools.ts"
+      ],
+      "testReferences": [
+        "src/app/api/orgo/route.test.ts",
+        "src/lib/solgpt/orgo-server.test.ts"
+      ]
+    },
+    {
+      "key": "PAGE_AGENT_OPERATOR_TOKEN",
+      "lines": [
+        540
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/pagent/solana/route.ts",
+        "src/lib/solgpt/page-agent-solana.ts"
+      ],
+      "testReferences": [
+        "src/app/api/pagent/solana/route.test.ts"
+      ]
+    },
+    {
+      "key": "PASSWORD",
+      "lines": [
+        402
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": [
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "PAYBOX_API_URL",
+      "lines": [
+        78
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "PAYBOX_CLIENT_ID",
+      "lines": [
+        77
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "PAY_PAYMENT_PULLER",
+      "lines": [
+        282
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/subscriptions.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "PAY_PAYMENT_RECIPIENT",
+      "lines": [
+        281
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/subscriptions.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "PHANTOM_API_PRIVATE_KEY",
+      "lines": [
+        193
+      ],
+      "configured": false,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/phantom-server.ts"
+      ],
+      "testReferences": [
+        "src/app/api/phantom/route.test.ts",
+        "src/lib/solgpt/phantom-server.test.ts",
+        "src/lib/solgpt/voice/voice.test.ts"
+      ]
+    },
+    {
+      "key": "PHANTOM_APP_ID",
+      "lines": [
+        183
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/components/wallet/phantom-provider.tsx",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/phantom-server.ts"
+      ],
+      "testReferences": [
+        "src/app/api/phantom/route.test.ts",
+        "src/lib/solgpt/phantom-server.test.ts"
+      ]
+    },
+    {
+      "key": "PHANTOM_ORGANIZATION_ID",
+      "lines": [
+        192
+      ],
+      "configured": false,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/phantom-server.ts"
+      ],
+      "testReferences": [
+        "src/app/api/phantom/route.test.ts",
+        "src/lib/solgpt/phantom-server.test.ts",
+        "src/lib/solgpt/voice/voice.test.ts"
+      ]
+    },
+    {
+      "key": "PHOENIX_API_URL",
+      "lines": [
+        406
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/phoenix-ws.ts",
+        "src/lib/solgpt/phoenix.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "PHOENIX_BUILDER_AUTHORITY",
+      "lines": [
+        411
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/phoenix.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/phoenix.test.ts"
+      ]
+    },
+    {
+      "key": "PHOENIX_BUILDER_PDA_INDEX",
+      "lines": [
+        386
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/phoenix.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/phoenix.test.ts"
+      ]
+    },
+    {
+      "key": "PHOENIX_BUILDER_SUBACCOUNT_INDEX",
+      "lines": [
+        387
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/phoenix.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/phoenix.test.ts"
+      ]
+    },
+    {
+      "key": "PHOENIX_BUILDER_TRADER_ACCOUNT",
+      "lines": [
+        380
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/phoenix.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/phoenix.test.ts"
+      ]
+    },
+    {
+      "key": "PHOENIX_FLIGHT_BUILDER_AUTHORITY",
+      "lines": [
+        381
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/phoenix.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/phoenix.test.ts"
+      ]
+    },
+    {
+      "key": "PHOENIX_FLIGHT_FEE_BPS",
+      "lines": [
+        382
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/phoenix.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/phoenix.test.ts"
+      ]
+    },
+    {
+      "key": "PHOENIX_LEGACY_BUILDER_AUTHORITY",
+      "lines": [
+        383
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/phoenix.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "PHOENIX_LEGACY_BUILDER_FEE_BPS",
+      "lines": [
+        384
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/phoenix.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "PHOENIX_LEGACY_REFERRER",
+      "lines": [
+        385
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/phoenix.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "PINATA_JWT",
+      "lines": [
+        449
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/upload.ts"
+      ],
+      "testReferences": [
+        "src/app/api/agents/mint/route.test.ts",
+        "src/app/api/nfts/route.test.ts"
+      ]
+    },
+    {
+      "key": "PIPEDREAM_CLIENT_ID",
+      "lines": [
+        498
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/pipedream/token/route.ts",
+        "src/lib/solgpt/pipedream-server.ts",
+        "src/lib/solgpt/pipedream.ts"
+      ],
+      "testReferences": [
+        "src/app/api/pipedream/token/route.test.ts",
+        "src/app/webhook/pipedream/route.test.ts",
+        "src/lib/solgpt/pipedream.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "PIPEDREAM_CLIENT_SECRET",
+      "lines": [
+        499
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/pipedream/token/route.ts",
+        "src/lib/solgpt/pipedream-server.ts",
+        "src/lib/solgpt/pipedream.ts"
+      ],
+      "testReferences": [
+        "src/app/api/pipedream/token/route.test.ts",
+        "src/app/webhook/pipedream/route.test.ts",
+        "src/lib/solgpt/pipedream.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "PIPEDREAM_ENVIRONMENT",
+      "lines": [
+        329
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/pipedream-server.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/pipedream.test.ts"
+      ]
+    },
+    {
+      "key": "PIPEDREAM_PROJECT_ID",
+      "lines": [
+        495
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/pipedream-server.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/pipedream.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "PIPEDREAM_URL",
+      "lines": [
+        496
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/webhook/pipedream/route.ts",
+        "src/lib/solgpt/pipedream-server.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/pipedream.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "PIPEDREAM_WEBHOOK_SECRET",
+      "lines": [
+        497
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/pipedream-server.ts",
+        "src/lib/solgpt/pipedream.ts"
+      ],
+      "testReferences": [
+        "src/app/webhook/pipedream/route.test.ts",
+        "src/lib/solgpt/pipedream.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "POOLSIDE_API_KEY",
+      "lines": [
+        14
+      ],
+      "configured": false,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/chat/route.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/inference-catalog.ts",
+        "src/lib/solgpt/models.ts",
+        "src/lib/solgpt/provider.ts"
+      ],
+      "testReferences": [
+        "src/app/api/chat/route.test.ts",
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/llm-gateway-env.test.ts",
+        "src/lib/solgpt/provider.test.ts"
+      ]
+    },
+    {
+      "key": "POOLSIDE_BASE_URL",
+      "lines": [
+        15
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/types/solgpt-models.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/provider.test.ts"
+      ]
+    },
+    {
+      "key": "POOLSIDE_MODEL",
+      "lines": [
+        16
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/types/solgpt-models.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/provider.test.ts"
+      ]
+    },
+    {
+      "key": "PRIVY_ACCESS_TOKEN",
+      "lines": [
+        123
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "PRIVY_APP_ID",
+      "lines": [
+        464
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/privy/credentials.ts",
+        "src/lib/privy/intents.ts",
+        "src/lib/privy/session.ts",
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/app/api/page-env-handlers.test.ts",
+        "src/app/api/privy/device/grants/route.test.ts",
+        "src/app/api/privy/device/verify/route.test.ts",
+        "src/lib/privy/credentials.test.ts",
+        "src/lib/privy/session.test.ts",
+        "src/lib/solgpt/readiness.test.ts"
+      ]
+    },
+    {
+      "key": "PRIVY_APP_SECRET",
+      "lines": [
+        466
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/privy/credentials.ts",
+        "src/lib/privy/session.ts",
+        "src/lib/solgpt/holder-grant.ts",
+        "src/lib/solgpt/phantom-auth.ts"
+      ],
+      "testReferences": [
+        "src/app/api/page-env-handlers.test.ts",
+        "src/lib/privy/credentials.test.ts",
+        "src/lib/privy/session.test.ts",
+        "src/lib/solgpt/browser-harness-server.test.ts",
+        "src/lib/solgpt/llm-gateway-env.test.ts",
+        "src/lib/solgpt/phoenix.test.ts",
+        "src/lib/solgpt/readiness.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "PRIVY_AUTHORIZATION_PRIVATE_KEY",
+      "lines": [
+        467
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/privy/credentials.ts"
+      ],
+      "testReferences": [
+        "src/lib/privy/credentials.test.ts"
+      ]
+    },
+    {
+      "key": "PRIVY_AUTH_KEY_ID",
+      "lines": [
+        468
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/privy/credentials.ts",
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/privy/credentials.test.ts"
+      ]
+    },
+    {
+      "key": "PRIVY_CUSTOM_OAUTH",
+      "lines": [
+        474
+      ],
+      "configured": false,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/privy/oauth.ts"
+      ],
+      "testReferences": [
+        "src/lib/privy/oauth.test.ts"
+      ]
+    },
+    {
+      "key": "PRIVY_JWT_VERIFICATION_KEY",
+      "lines": [
+        472
+      ],
+      "configured": false,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/privy/credentials.ts",
+        "src/lib/privy/oauth.ts"
+      ],
+      "testReferences": [
+        "src/lib/privy/credentials.test.ts",
+        "src/lib/privy/oauth.test.ts"
+      ]
+    },
+    {
+      "key": "PRIVY_LOGIN_METHODS",
+      "lines": [
+        473
+      ],
+      "configured": false,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/privy/oauth.ts"
+      ],
+      "testReferences": [
+        "src/lib/privy/oauth.test.ts"
+      ]
+    },
+    {
+      "key": "PRIVY_MAX_SOL_LAMPORTS",
+      "lines": [
+        475
+      ],
+      "configured": false,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/privy/public-config.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "PRIVY_POLICY_ID",
+      "lines": [
+        470
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/components/privy/policy-wallet.tsx",
+        "src/components/privy/session-card.tsx",
+        "src/lib/privy/credentials.ts",
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/privy/credentials.test.ts",
+        "src/lib/solgpt/config.test.ts"
+      ]
+    },
+    {
+      "key": "PRIVY_SANDBOX_SOLANA_POLICY_ID",
+      "lines": [
+        471
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/privy/credentials.ts",
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/config.test.ts"
+      ]
+    },
+    {
+      "key": "PRIVY_SIGNER_ID",
+      "lines": [
+        469
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/components/privy/policy-wallet.tsx",
+        "src/lib/privy/credentials.ts",
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/privy/credentials.test.ts"
+      ]
+    },
+    {
+      "key": "PRIVY_TOKEN",
+      "lines": [
+        126
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "PUBLIC_APP_URL",
+      "lines": [
+        478
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/layout.tsx",
+        "src/lib/better-auth/config.ts",
+        "src/lib/solgpt/public-urls.ts",
+        "src/lib/solgpt/request-security.ts"
+      ],
+      "testReferences": [
+        "src/app/api/livekit/webhook/route.test.ts",
+        "src/components/desk/page-api-wiring.test.ts",
+        "src/lib/better-auth/config.test.ts",
+        "src/lib/solgpt/ios-env-sync.test.ts",
+        "src/lib/solgpt/phantom-auth.test.ts",
+        "src/lib/solgpt/public-urls.test.ts"
+      ]
+    },
+    {
+      "key": "PYTH_API_KEY",
+      "lines": [
+        287
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "QSTASH_CURRENT_SIGNING_KEY",
+      "lines": [
+        432
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "QSTASH_NEXT_SIGNING_KEY",
+      "lines": [
+        433
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "QSTASH_TOKEN",
+      "lines": [
+        431
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": [
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "QSTASH_URL",
+      "lines": [
+        430
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "RPC_URL",
+      "lines": [
+        156
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/app/api/tokens/route.test.ts",
+        "src/app/api/z500/route.test.ts",
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/rpc.test.ts"
+      ]
+    },
+    {
+      "key": "SAID_API_KEY",
+      "lines": [
+        378
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "SECURE_RPC_URL",
+      "lines": [
+        157
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/app/api/tokens/route.test.ts",
+        "src/app/api/z500/route.test.ts",
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/rpc.test.ts"
+      ]
+    },
+    {
+      "key": "SERPER_API_KEY",
+      "lines": [
+        318
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/search.ts",
+        "src/lib/solgpt/tools.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "SERP_API_KEY",
+      "lines": [
+        319
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/search.ts",
+        "src/lib/solgpt/tools.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "SESSION_SECRET",
+      "lines": [
+        479
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/privy/session.ts",
+        "src/lib/solgpt/holder-grant.ts",
+        "src/lib/solgpt/phantom-auth.ts",
+        "src/lib/solgpt/readiness.ts"
+      ],
+      "testReferences": [
+        "src/app/api/gate/route.test.ts",
+        "src/app/api/page-env-handlers.test.ts",
+        "src/lib/privy/session.test.ts",
+        "src/lib/solgpt/paid-gate.test.ts",
+        "src/lib/solgpt/readiness.test.ts"
+      ]
+    },
+    {
+      "key": "SOLANATRACKER_API_KEY",
+      "lines": [
+        46,
+        219
+      ],
+      "configured": true,
+      "occurrences": 2,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/chart/token/route.ts",
+        "src/app/api/solanatracker/pulse/route.ts",
+        "src/app/api/solanatracker/stream/route.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/solanatracker-datastream.ts",
+        "src/lib/solgpt/solanatracker.ts",
+        "src/lib/solgpt/tools.ts"
+      ],
+      "testReferences": [
+        "src/app/api/chart/token/route.test.ts",
+        "src/app/api/page-env-handlers.test.ts",
+        "src/app/api/solanatracker/pulse/route.test.ts",
+        "src/app/api/solanatracker/stream/route.test.ts",
+        "src/app/api/tokens/popout/route.test.ts",
+        "src/app/api/tokens/route.test.ts",
+        "src/app/api/z500/route.test.ts",
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/deskPricePath.test.ts",
+        "src/lib/solgpt/executors.ohlcv.test.ts",
+        "src/lib/solgpt/rpc.test.ts",
+        "src/lib/solgpt/solanatracker-dca.test.ts",
+        "src/lib/solgpt/solanatracker.test.ts",
+        "src/lib/solgpt/tracker-chat-tools.test.ts",
+        "src/lib/solgpt/tracker-prefers.test.ts"
+      ]
+    },
+    {
+      "key": "SOLANA_BACKUP_RPC_URL",
+      "lines": [
+        146
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/app/api/tokens/route.test.ts",
+        "src/lib/solgpt/config.test.ts"
+      ]
+    },
+    {
+      "key": "SOLANA_BACKUP_WSS_URL",
+      "lines": [
+        147
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "SOLANA_CLUSTER",
+      "lines": [
+        148
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "SOLANA_NETWORK",
+      "lines": [
+        149
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "SOLANA_PUBLIC_RPC_URL",
+      "lines": [
+        145
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/app/api/tokens/route.test.ts",
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/rpc.test.ts"
+      ]
+    },
+    {
+      "key": "SOLANA_RPC_PROVIDER",
+      "lines": [
+        150
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "SOLANA_RPC_URL",
+      "lines": [
+        144
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/agent-trade.ts",
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/app/api/tokens/route.test.ts",
+        "src/app/api/z500/route.test.ts",
+        "src/lib/solgpt/alchemy-x402.test.ts",
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/rpc.test.ts"
+      ]
+    },
+    {
+      "key": "SOLANA_TRACKER_ACCESS_KEY",
+      "lines": [
+        47,
+        221
+      ],
+      "configured": true,
+      "occurrences": 2,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": [
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/solanatracker.test.ts"
+      ]
+    },
+    {
+      "key": "SOLANA_TRACKER_API_KEY",
+      "lines": [
+        45,
+        220
+      ],
+      "configured": true,
+      "occurrences": 2,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/search/route.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/executors.ts",
+        "src/lib/solgpt/solanatracker-datastream.ts",
+        "src/lib/solgpt/solanatracker.ts",
+        "src/lib/solgpt/tools.ts",
+        "src/lib/solgpt/wallet.ts"
+      ],
+      "testReferences": [
+        "src/app/api/chart/token/route.test.ts",
+        "src/app/api/page-env-handlers.test.ts",
+        "src/app/api/solanatracker/pulse/route.test.ts",
+        "src/app/api/solanatracker/stream/route.test.ts",
+        "src/app/api/tokens/popout/route.test.ts",
+        "src/app/api/tokens/route.test.ts",
+        "src/app/api/z500/route.test.ts",
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/deskPricePath.test.ts",
+        "src/lib/solgpt/executors.ohlcv.test.ts",
+        "src/lib/solgpt/rpc.test.ts",
+        "src/lib/solgpt/solanatracker-datastream.test.ts",
+        "src/lib/solgpt/solanatracker-dca.test.ts",
+        "src/lib/solgpt/solanatracker.test.ts",
+        "src/lib/solgpt/tracker-chat-tools.test.ts",
+        "src/lib/solgpt/tracker-prefers.test.ts",
+        "src/lib/solgpt/z500-enrich.test.ts"
+      ]
+    },
+    {
+      "key": "SOLANA_TRACKER_DATASTREAM_KEY",
+      "lines": [
+        52,
+        227
+      ],
+      "configured": true,
+      "occurrences": 2,
+      "distinctSingleLineValues": 2,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/app/api/solanatracker/stream/route.test.ts",
+        "src/lib/solgpt/config.test.ts"
+      ]
+    },
+    {
+      "key": "SOLANA_TRACKER_DATA_URL",
+      "lines": [
+        50,
+        224
+      ],
+      "configured": true,
+      "occurrences": 2,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/solanatracker.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/solanatracker.test.ts"
+      ]
+    },
+    {
+      "key": "SOLANA_TRACKER_RPC_URL",
+      "lines": [
+        225
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/app/api/tokens/route.test.ts",
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/rpc.test.ts"
+      ]
+    },
+    {
+      "key": "SOLANA_TRACKER_URL",
+      "lines": [
+        49,
+        223
+      ],
+      "configured": true,
+      "occurrences": 2,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/solanatracker.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/solanatracker.test.ts"
+      ]
+    },
+    {
+      "key": "SOLANA_TRACKER_WSS_URL",
+      "lines": [
+        226
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "SOLGPT_API_BASE",
+      "lines": [
+        203
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "SOLGPT_API_KEY",
+      "lines": [
+        204
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/chat/route.ts",
+        "src/app/api/chat/session/route.ts",
+        "src/app/api/openrouter/app/route.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/openrouter-harness.ts",
+        "src/lib/solgpt/openrouter-stt.ts",
+        "src/lib/solgpt/provider.ts"
+      ],
+      "testReferences": [
+        "src/app/api/chat/route.test.ts",
+        "src/app/api/chat/session/route.test.ts",
+        "src/app/api/chat/supermemory.route.test.ts",
+        "src/app/api/openrouter/app/route.test.ts",
+        "src/lib/solgpt/astra.test.ts",
+        "src/lib/solgpt/clawd-analysis.test.ts",
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/openrouter-harness.test.ts",
+        "src/lib/solgpt/openrouter-stt.test.ts",
+        "src/lib/solgpt/openrouter.test.ts",
+        "src/lib/solgpt/provider.test.ts"
+      ]
+    },
+    {
+      "key": "SOLGPT_APP_TITLE",
+      "lines": [
+        206
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": [
+        "src/lib/solgpt/openrouter-attribution.test.ts",
+        "src/lib/solgpt/openrouter.test.ts"
+      ]
+    },
+    {
+      "key": "SOLGPT_CONVEX_SERVICE_SECRET",
+      "lines": [
+        550
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/api-keys.ts",
+        "src/lib/solgpt/convex-service.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/convex-service.test.ts"
+      ]
+    },
+    {
+      "key": "SOLGPT_HTTP_REFERER",
+      "lines": [
+        207
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/public-urls.ts"
+      ],
+      "testReferences": [
+        "src/app/api/livekit/webhook/route.test.ts",
+        "src/lib/solgpt/openrouter-attribution.test.ts",
+        "src/lib/solgpt/openrouter.test.ts",
+        "src/lib/solgpt/public-urls.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "SOLGPT_MCP_SERVERS",
+      "lines": [
+        278
+      ],
+      "configured": false,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/mcp.ts"
+      ],
+      "testReferences": [
+        "src/app/api/health/route.test.ts",
+        "src/components/desk/desk-shell.test.ts",
+        "src/lib/solgpt/mcp.test.ts",
+        "src/lib/solgpt/pump-fun.test.ts"
+      ]
+    },
+    {
+      "key": "SOLGPT_MODEL",
+      "lines": [
+        205
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/chat/route.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/models.ts",
+        "src/lib/solgpt/openrouter-harness.ts"
+      ],
+      "testReferences": [
+        "src/components/desk/desk-shell.test.ts",
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/models.test.ts"
+      ]
+    },
+    {
+      "key": "SOLGPT_PUMP_MCP_TOKEN",
+      "lines": [
+        277
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/mcp.ts"
+      ],
+      "testReferences": [
+        "src/app/api/health/route.test.ts",
+        "src/lib/solgpt/mcp.test.ts",
+        "src/lib/solgpt/solgpt-mcp-server.test.ts"
+      ]
+    },
+    {
+      "key": "SOLGPT_PUMP_MCP_URL",
+      "lines": [
+        276
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/pumpfun-mcp/route.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/mcp.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/mcp.test.ts"
+      ]
+    },
+    {
+      "key": "SOLGPT_SUB_PLAN_DESK",
+      "lines": [
+        284
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/subscriptions.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "SOLGPT_SUB_PLAN_PUMP",
+      "lines": [
+        283
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/subscriptions.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "SOLGPT_TELEGRAM_ALLOWLIST",
+      "lines": [
+        459
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/telegram/bot.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "SOLGPT_TELEGRAM_WEBHOOK_URL",
+      "lines": [
+        461
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/public-urls.ts"
+      ],
+      "testReferences": [
+        "src/app/api/telegram/setup/route.test.ts",
+        "src/lib/solgpt/public-urls.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts",
+        "src/lib/telegram/security.test.ts"
+      ]
+    },
+    {
+      "key": "SPONGE_LIVE_KEY",
+      "lines": [
+        377
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "SPONGE_TEST_KEY",
+      "lines": [
+        376
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "STACK_AUTH_PROJECT_ID",
+      "lines": [
+        444
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "STACK_SECRET_SERVER_KEY",
+      "lines": [
+        160
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/neon-auth-env.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/neon-auth.test.ts"
+      ]
+    },
+    {
+      "key": "SUPERMEMORY_API_KEY",
+      "lines": [
+        330
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/supermemory.ts"
+      ],
+      "testReferences": [
+        "src/app/api/chat/supermemory.route.test.ts",
+        "src/lib/solgpt/supermemory.test.ts"
+      ]
+    },
+    {
+      "key": "TELEGRAM_ADMIN_ID",
+      "lines": [
+        457
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/clawd-gate.ts",
+        "src/lib/telegram/bot.ts"
+      ],
+      "testReferences": [
+        "src/app/api/telegram/setup/route.test.ts"
+      ]
+    },
+    {
+      "key": "TELEGRAM_BOT_TOKEN",
+      "lines": [
+        108
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/telegram/route.ts",
+        "src/app/api/telegram/setup/route.ts",
+        "src/lib/privy/public-config.ts",
+        "src/lib/solgpt/clawd-bot-package.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/readiness.ts",
+        "src/lib/solgpt/telegrab-bot-source.ts",
+        "src/lib/solgpt/telegrab.ts",
+        "src/lib/telegram/api.ts"
+      ],
+      "testReferences": [
+        "src/app/api/telegram/route.test.ts",
+        "src/app/api/telegram/setup/route.test.ts",
+        "src/lib/solgpt/browser-harness-server.test.ts",
+        "src/lib/solgpt/clawd-bot-package.test.ts",
+        "src/lib/solgpt/llm-gateway-env.test.ts",
+        "src/lib/solgpt/phoenix.test.ts",
+        "src/lib/solgpt/readiness.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts",
+        "src/lib/telegram/api.test.ts"
+      ]
+    },
+    {
+      "key": "TELEGRAM_BOT_USERNAME",
+      "lines": [
+        455
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/privy/public-config.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/readiness.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/readiness.test.ts"
+      ]
+    },
+    {
+      "key": "TELEGRAM_CHANNEL_ID",
+      "lines": [
+        107
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "TELEGRAM_CLIENT_ID",
+      "lines": [
+        109,
+        476
+      ],
+      "configured": true,
+      "occurrences": 2,
+      "distinctSingleLineValues": 2,
+      "runtimeReferences": [
+        "src/lib/privy/public-config.ts",
+        "src/lib/solgpt/readiness.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/readiness.test.ts"
+      ]
+    },
+    {
+      "key": "TELEGRAM_CLIENT_SECRET",
+      "lines": [
+        110,
+        477
+      ],
+      "configured": true,
+      "occurrences": 2,
+      "distinctSingleLineValues": 2,
+      "runtimeReferences": [
+        "src/lib/privy/public-config.ts",
+        "src/lib/solgpt/readiness.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/readiness.test.ts"
+      ]
+    },
+    {
+      "key": "TELEGRAM_GROUP_CHANNEL_ID",
+      "lines": [
+        111
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "TELEGRAM_OPEN_ACCESS",
+      "lines": [
+        460
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/telegram/bot.ts"
+      ],
+      "testReferences": [
+        "src/lib/telegram/bot.test.ts"
+      ]
+    },
+    {
+      "key": "TELEGRAM_USER_ID",
+      "lines": [
+        458
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/telegram/bot.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "TELEGRAM_WEBHOOK_SECRET",
+      "lines": [
+        456
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/telegram/route.ts",
+        "src/app/api/telegram/setup/route.ts",
+        "src/lib/telegram/security.ts"
+      ],
+      "testReferences": [
+        "src/app/api/telegram/route.test.ts",
+        "src/app/api/telegram/setup/route.test.ts",
+        "src/lib/solgpt/readiness.test.ts",
+        "src/lib/telegram/security.test.ts"
+      ]
+    },
+    {
+      "key": "THIRDWEB_CLIENT_ID",
+      "lines": [
+        373
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "THIRDWEB_SECRET",
+      "lines": [
+        374
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "TIGRIS_STORAGE_ACCESS_KEY_ID",
+      "lines": [
+        263
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "TIGRIS_STORAGE_ENDPOINT",
+      "lines": [
+        265
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "TIGRIS_STORAGE_SECRET_ACCESS_KEY",
+      "lines": [
+        264
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "TUNNEL_ID",
+      "lines": [
+        230
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "UPSTASH_API_KEY",
+      "lines": [
+        427
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": [
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "UPSTASH_BOX_API_KEY",
+      "lines": [
+        437
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/box/route.ts",
+        "src/lib/solgpt/telegrab.ts",
+        "src/lib/solgpt/upstash.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "UPSTASH_REDIS_REST_TOKEN",
+      "lines": [
+        429
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/composio-triggers.ts",
+        "src/lib/solgpt/phantom-auth-challenge.ts",
+        "src/lib/solgpt/redis-mirror.ts",
+        "src/lib/solgpt/redis.ts",
+        "src/lib/solgpt/upstash.ts"
+      ],
+      "testReferences": [
+        "src/app/api/telegram/route.test.ts",
+        "src/lib/solgpt/composio-triggers.test.ts",
+        "src/lib/solgpt/rate-limit.test.ts",
+        "src/lib/solgpt/readiness.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts",
+        "src/lib/solgpt/wallet-usage.test.ts"
+      ]
+    },
+    {
+      "key": "UPSTASH_REDIS_REST_URL",
+      "lines": [
+        428
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/composio-triggers.ts",
+        "src/lib/solgpt/phantom-auth-challenge.ts",
+        "src/lib/solgpt/redis-mirror.ts",
+        "src/lib/solgpt/redis.ts",
+        "src/lib/solgpt/upstash.ts"
+      ],
+      "testReferences": [
+        "src/app/api/telegram/route.test.ts",
+        "src/lib/solgpt/composio-triggers.test.ts",
+        "src/lib/solgpt/rate-limit.test.ts",
+        "src/lib/solgpt/readiness.test.ts",
+        "src/lib/solgpt/wallet-usage.test.ts"
+      ]
+    },
+    {
+      "key": "UPSTASH_VECTOR_REST_TOKEN",
+      "lines": [
+        435
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "UPSTASH_VECTOR_REST_URL",
+      "lines": [
+        434
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "URL",
+      "lines": [
+        403
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/agents/mint/route.ts",
+        "src/app/api/agents/nft-metadata/route.ts",
+        "src/app/api/agents/route.ts",
+        "src/app/api/astra/batch/route.ts",
+        "src/app/api/auth/authenticate/route.ts",
+        "src/app/api/auth/challenge/route.ts",
+        "src/app/api/automations/route.ts",
+        "src/app/api/birdeye/markets/route.ts",
+        "src/app/api/birdeye/meme/route.ts",
+        "src/app/api/birdeye/portfolio/route.ts",
+        "src/app/api/birdeye/token/route.ts",
+        "src/app/api/box/route.ts",
+        "src/app/api/chart/token/route.ts",
+        "src/app/api/dflow/book-stream/route.ts",
+        "src/app/api/dflow/intent/route.ts",
+        "src/app/api/dflow/order/route.ts",
+        "src/app/api/dflow/order-status/route.ts",
+        "src/app/api/dflow/quote/route.ts",
+        "src/app/api/dflow/quote-stream/route.ts",
+        "src/app/api/dflow/tokens/route.ts",
+        "src/app/api/explorer/route.ts",
+        "src/app/api/gallery/route.ts",
+        "src/app/api/gallery/stream/route.ts",
+        "src/app/api/gate/route.ts",
+        "src/app/api/hauhau/keys/route.ts",
+        "src/app/api/health/route.ts",
+        "src/app/api/helius/bundle/route.ts",
+        "src/app/api/helius/preconf/route.ts",
+        "src/app/api/helius/priority-fee/route.ts",
+        "src/app/api/helius/wallet/route.ts",
+        "src/app/api/leaderboard/webhook/route.ts",
+        "src/app/api/livekit/dispatch/route.ts",
+        "src/app/api/livekit/webhook/route.ts",
+        "src/app/api/moonpay/onramp/route.ts",
+        "src/app/api/nfts/metadata/route.ts",
+        "src/app/api/nfts/route.ts",
+        "src/app/api/ohlcv/pair/route.ts",
+        "src/app/api/ohlcv/stream/route.ts",
+        "src/app/api/ohlcv/token/route.ts",
+        "src/app/api/perps/route.ts",
+        "src/app/api/phoenix/mark-price/route.ts",
+        "src/app/api/phoenix/markets/route.ts",
+        "src/app/api/phoenix/orderbook/route.ts",
+        "src/app/api/phoenix/stream/route.ts",
+        "src/app/api/phoenix/trader/route.ts",
+        "src/app/api/predictions/orders/route.ts",
+        "src/app/api/predictions/pairs/route.ts",
+        "src/app/api/predictions/positions/route.ts",
+        "src/app/api/predictions/route.ts",
+        "src/app/api/privy/config/route.ts",
+        "src/app/api/profile/chats/route.ts",
+        "src/app/api/quote/public/route.ts",
+        "src/app/api/redpill/attestation/route.ts",
+        "src/app/api/search/route.ts",
+        "src/app/api/solanatracker/pulse/route.ts",
+        "src/app/api/solanatracker/stream/route.ts",
+        "src/app/api/subscriptions/route.ts",
+        "src/app/api/tape/route.ts",
+        "src/app/api/telegram/pnl/route.ts",
+        "src/app/api/token-metadata/route.ts",
+        "src/app/api/tokens/detail/route.ts",
+        "src/app/api/tokens/popout/route.ts",
+        "src/app/api/tokens/public/route.ts",
+        "src/app/api/tokens/resolve/route.ts",
+        "src/app/api/tokens/route.ts",
+        "src/app/api/trickshot/board/route.ts",
+        "src/app/api/trickshot/history/route.ts",
+        "src/app/api/trickshot/og/route.tsx",
+        "src/app/api/trickshot/related/route.ts",
+        "src/app/api/trickshot/wallet/route.ts",
+        "src/app/api/tx/route.ts",
+        "src/app/api/tx/status/route.ts",
+        "src/app/api/upload/route.ts",
+        "src/app/api/v1/[...path]/route.ts",
+        "src/app/api/voice/assembly/token/route.ts",
+        "src/app/api/wallet-holdings/route.ts",
+        "src/app/api/z500/route.ts",
+        "src/app/auth/callback/page.tsx",
+        "src/app/computer/recording/page.tsx",
+        "src/app/docs/page.tsx",
+        "src/app/gateway/page.tsx",
+        "src/app/layout.tsx",
+        "src/app/livekit/webhook/route.ts",
+        "src/app/privacy/page.tsx",
+        "src/app/redirect/page.tsx",
+        "src/app/sponge/[[...path]]/route.ts",
+        "src/app/support/page.tsx",
+        "src/app/telegram/pnl/page.tsx",
+        "src/app/terms/page.tsx",
+        "src/app/webhook/route.ts",
+        "src/components/ai/audio.tsx",
+        "src/components/ai/promptimput.tsx",
+        "src/components/desk/chat.tsx",
+        "src/components/desk/computer.tsx",
+        "src/components/desk/fire.tsx",
+        "src/components/desk/page-agent-panel.tsx",
+        "src/components/desk/portfolio.tsx",
+        "src/components/desk/studio.tsx",
+        "src/components/privy/moonpay-onramp.tsx",
+        "src/components/privy/privy-runtime.tsx",
+        "src/components/trickshot/HistoryReplay.tsx",
+        "src/components/trickshot/WalletReplay.tsx",
+        "src/components/trickshot/ui.tsx",
+        "src/components/wallet/wallet.tsx",
+        "src/lib/better-auth/config.ts",
+        "src/lib/solgpt/alchemy-x402.ts",
+        "src/lib/solgpt/ansem-tokens-server.ts",
+        "src/lib/solgpt/api-keys.ts",
+        "src/lib/solgpt/birdeye-perps.ts",
+        "src/lib/solgpt/birdeye-ws.ts",
+        "src/lib/solgpt/bot-pit.ts",
+        "src/lib/solgpt/browser-harness.ts",
+        "src/lib/solgpt/browser-use.ts",
+        "src/lib/solgpt/cdp.ts",
+        "src/lib/solgpt/character/bot/cycles.ts",
+        "src/lib/solgpt/coinbase-onramp.ts",
+        "src/lib/solgpt/coingecko.ts",
+        "src/lib/solgpt/composio-env.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/convex-service.ts",
+        "src/lib/solgpt/db.ts",
+        "src/lib/solgpt/deepgram-intelligence.server.ts",
+        "src/lib/solgpt/e2b-stream.ts",
+        "src/lib/solgpt/fal.ts",
+        "src/lib/solgpt/firecrawl.ts",
+        "src/lib/solgpt/hauhau-keys.ts",
+        "src/lib/solgpt/helius-das.ts",
+        "src/lib/solgpt/helius-sender.ts",
+        "src/lib/solgpt/helius.ts",
+        "src/lib/solgpt/imagine.ts",
+        "src/lib/solgpt/imperial.ts",
+        "src/lib/solgpt/livekit.ts",
+        "src/lib/solgpt/massive.ts",
+        "src/lib/solgpt/mcp.ts",
+        "src/lib/solgpt/messari.ts",
+        "src/lib/solgpt/metaplex-agents-core.ts",
+        "src/lib/solgpt/metaplex-nfts-core.ts",
+        "src/lib/solgpt/metaplex-token-metadata-core.ts",
+        "src/lib/solgpt/moonpay.ts",
+        "src/lib/solgpt/neon-auth-env.ts",
+        "src/lib/solgpt/openai-images.ts",
+        "src/lib/solgpt/openapi-tools.ts",
+        "src/lib/solgpt/openrouter-app.ts",
+        "src/lib/solgpt/orgo.ts",
+        "src/lib/solgpt/origin-mcp.ts",
+        "src/lib/solgpt/paid-gate.ts",
+        "src/lib/solgpt/pay-skills-gate.ts",
+        "src/lib/solgpt/phoenix-ws.ts",
+        "src/lib/solgpt/phoenix.ts",
+        "src/lib/solgpt/pipedream.ts",
+        "src/lib/solgpt/predictions.ts",
+        "src/lib/solgpt/public-urls.ts",
+        "src/lib/solgpt/pump-tape.ts",
+        "src/lib/solgpt/redis.ts",
+        "src/lib/solgpt/redpill.ts",
+        "src/lib/solgpt/request-security.ts",
+        "src/lib/solgpt/rpc.ts",
+        "src/lib/solgpt/search.ts",
+        "src/lib/solgpt/solanatracker-datastream.ts",
+        "src/lib/solgpt/telegrab.ts",
+        "src/lib/solgpt/tigris.ts",
+        "src/lib/solgpt/tools.ts",
+        "src/lib/solgpt/upload.ts",
+        "src/lib/solgpt/venice.ts",
+        "src/lib/solgpt/voice/assembly-browser.ts",
+        "src/lib/solgpt/voice/elevenlabs.ts",
+        "src/lib/solgpt/voice/grok.ts",
+        "src/lib/solgpt/zai-server.ts",
+        "src/lib/solgpt/zai.ts",
+        "src/lib/telegram/bot.ts",
+        "src/lib/telegram/security.ts",
+        "src/lib/trickshot/fetch.ts",
+        "src/lib/trickshot/host.ts",
+        "src/lib/trickshot/record.ts",
+        "src/lib/trickshot/share.ts",
+        "src/middleware.ts",
+        "src/server/trickshot/config.ts",
+        "src/test/proven-admin.ts"
+      ],
+      "testReferences": [
+        "src/app/api/browser-run/run/route.test.ts",
+        "src/app/api/chat/supermemory.route.test.ts",
+        "src/app/api/dark-clawd/mpp/charge/route.test.ts",
+        "src/app/api/dark-clawd/mpp/trade/plan/route.test.ts",
+        "src/app/api/helius/priority-fee/route.test.ts",
+        "src/app/api/helius/wallet/route.test.ts",
+        "src/app/api/livekit/webhook/route.test.ts",
+        "src/app/api/moonpay/onramp/route.test.ts",
+        "src/app/api/openrouter/app/route.test.ts",
+        "src/app/api/telegram/setup/route.test.ts",
+        "src/app/api/v1/universes/route.test.ts",
+        "src/app/api/voice/elevenlabs/webhook/route.test.ts",
+        "src/components/desk/use-public-desk-session.test.ts",
+        "src/components/wallet/wallet-privy.disconnect.test.ts",
+        "src/instrumentation.test.ts",
+        "src/lib/better-auth/config.test.ts",
+        "src/lib/privy/credentials.test.ts",
+        "src/lib/privy/device-auth-agent.test.ts",
+        "src/lib/solgpt/agent-trade.test.ts",
+        "src/lib/solgpt/agentsky.test.ts",
+        "src/lib/solgpt/alchemy-x402.test.ts",
+        "src/lib/solgpt/api-keys.auth.test.ts",
+        "src/lib/solgpt/api-keys.store.test.ts",
+        "src/lib/solgpt/astra-batch.test.ts",
+        "src/lib/solgpt/birdeye-perps.test.ts",
+        "src/lib/solgpt/birdeye-ws.test.ts",
+        "src/lib/solgpt/cdp.test.ts",
+        "src/lib/solgpt/clawdbot-install.test.ts",
+        "src/lib/solgpt/client-bundle-boundary.test.ts",
+        "src/lib/solgpt/coinbase-onramp.test.ts",
+        "src/lib/solgpt/coingecko.test.ts",
+        "src/lib/solgpt/composio-triggers.test.ts",
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/convex-service.test.ts",
+        "src/lib/solgpt/desk-desktop.test.ts",
+        "src/lib/solgpt/dflow-streams.test.ts",
+        "src/lib/solgpt/download-mobile-artifacts.test.ts",
+        "src/lib/solgpt/e2b-stream.test.ts",
+        "src/lib/solgpt/firecrawl-server.test.ts",
+        "src/lib/solgpt/firecrawl.test.ts",
+        "src/lib/solgpt/grok-search.test.ts",
+        "src/lib/solgpt/helius-das.test.ts",
+        "src/lib/solgpt/helius-sender.test.ts",
+        "src/lib/solgpt/imperial-live.test.ts",
+        "src/lib/solgpt/markets-ohlcv.test.ts",
+        "src/lib/solgpt/mem0.test.ts",
+        "src/lib/solgpt/messari.test.ts",
+        "src/lib/solgpt/moonpay.test.ts",
+        "src/lib/solgpt/neon-auth.test.ts",
+        "src/lib/solgpt/openapi-tools.test.ts",
+        "src/lib/solgpt/openrouter-app.test.ts",
+        "src/lib/solgpt/openrouter-attribution.test.ts",
+        "src/lib/solgpt/openrouter-server-tools.test.ts",
+        "src/lib/solgpt/orgo-server.test.ts",
+        "src/lib/solgpt/paybox.test.ts",
+        "src/lib/solgpt/phoenix-tx.test.ts",
+        "src/lib/solgpt/phoenix-ws.test.ts",
+        "src/lib/solgpt/pipedream.test.ts",
+        "src/lib/solgpt/provider.test.ts",
+        "src/lib/solgpt/rpc.test.ts",
+        "src/lib/solgpt/solana-chart.test.ts",
+        "src/lib/solgpt/solana-clawd-free.test.ts",
+        "src/lib/solgpt/solanatracker-datastream.test.ts",
+        "src/lib/solgpt/supermemory.test.ts",
+        "src/lib/solgpt/tracker-chat-tools.test.ts",
+        "src/lib/solgpt/venice.test.ts",
+        "src/lib/solgpt/voice/elevenlabs.test.ts",
+        "src/lib/telegram/security.test.ts",
+        "src/lib/trickshot/replay.test.ts",
+        "src/lib/trickshot/share.test.ts"
+      ]
+    },
+    {
+      "key": "USER",
+      "lines": [
+        401
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/tool-catalog.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/pump-fun.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "VENICE_ADMIN_KEY",
+      "lines": [
+        345
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/venice.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "VENICE_ALPHA",
+      "lines": [
+        349
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/models.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "VENICE_API_KEY",
+      "lines": [
+        344
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/chat/route.ts",
+        "src/components/desk/studio.tsx",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/imagine.ts",
+        "src/lib/solgpt/inference-catalog.ts",
+        "src/lib/solgpt/models.ts",
+        "src/lib/solgpt/provider.ts",
+        "src/lib/solgpt/venice.ts"
+      ],
+      "testReferences": [
+        "src/app/api/inference/route.test.ts",
+        "src/app/api/studio/route.test.ts",
+        "src/app/api/v1/[...path]/inference.route.test.ts",
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/deskPricePath.test.ts",
+        "src/lib/solgpt/imagine.test.ts",
+        "src/lib/solgpt/inference-catalog.test.ts",
+        "src/lib/solgpt/llm-gateway-env.test.ts",
+        "src/lib/solgpt/provider.test.ts",
+        "src/lib/solgpt/venice.test.ts"
+      ]
+    },
+    {
+      "key": "VENICE_BASE_URL",
+      "lines": [
+        347
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/llm-gateway-env.test.ts",
+        "src/lib/solgpt/provider.test.ts"
+      ]
+    },
+    {
+      "key": "VENICE_DEEP",
+      "lines": [
+        352
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/models.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "VENICE_GLM",
+      "lines": [
+        350
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/models.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "VENICE_IMAGE2",
+      "lines": [
+        353
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/tools.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/deskPricePath.test.ts"
+      ]
+    },
+    {
+      "key": "VENICE_MODEL",
+      "lines": [
+        348
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/types/solgpt-models.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/provider.test.ts"
+      ]
+    },
+    {
+      "key": "VENICE_QWEN",
+      "lines": [
+        351
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/models.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "VENICE_URL",
+      "lines": [
+        346
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/types/solgpt-models.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/config.test.ts",
+        "src/lib/solgpt/deskPricePath.test.ts",
+        "src/lib/solgpt/provider.test.ts",
+        "src/lib/solgpt/venice.test.ts"
+      ]
+    },
+    {
+      "key": "VENICE_VIDEO_I2V",
+      "lines": [
+        355
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "VENICE_VIDEO_REF",
+      "lines": [
+        354
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "VERCEL_OIDC_TOKEN",
+      "lines": [
+        31
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "VITE_IPFS_GATEWAY",
+      "lines": [
+        450
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/metaplex-agents-core.ts",
+        "src/lib/solgpt/upload.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "VITE_NEON_AUTH_URL",
+      "lines": [
+        518
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/neon-auth-env.ts"
+      ],
+      "testReferences": [
+        "src/app/api/page-env-handlers.test.ts",
+        "src/lib/solgpt/neon-auth.test.ts"
+      ]
+    },
+    {
+      "key": "VITE_NEON_DATA_API_URL",
+      "lines": [
+        514
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/neon-auth-env.ts"
+      ],
+      "testReferences": [
+        "src/app/api/page-env-handlers.test.ts",
+        "src/lib/solgpt/neon-auth.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts"
+      ]
+    },
+    {
+      "key": "VITE_PHANTOM_APP_ID",
+      "lines": [
+        38
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "VITE_PHANTOM_APP_NAME",
+      "lines": [
+        39
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "VITE_PHANTOM_REDIRECT_URL",
+      "lines": [
+        40
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "VITE_PHOENIX_BUILDER_PDA_INDEX",
+      "lines": [
+        388
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/phoenix.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "VITE_PHOENIX_BUILDER_SUBACCOUNT_INDEX",
+      "lines": [
+        389
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/phoenix.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "VITE_PUBLIC_STACK_PUBLISHABLE_CLIENT_KEY",
+      "lines": [
+        522
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/neon-auth-env.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/neon-auth.test.ts"
+      ]
+    },
+    {
+      "key": "VOICE_AGENT_ID",
+      "lines": [
+        68
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "VULCAN_BIN",
+      "lines": [
+        408
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/phoenix.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "VULCAN_WALLET_NAME",
+      "lines": [
+        409
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/perps-desk.ts",
+        "src/lib/solgpt/phoenix.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/phoenix.test.ts"
+      ]
+    },
+    {
+      "key": "VULCAN_WALLET_PASSWORD",
+      "lines": [
+        410
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/phoenix.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/phoenix.test.ts"
+      ]
+    },
+    {
+      "key": "WALLET_CONNECT_PROJECT_ID",
+      "lines": [
+        186
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "WEBMCP_API_TOKEN",
+      "lines": [
+        228
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "WSS_URL",
+      "lines": [
+        51
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "XAI_AGENT_ID",
+      "lines": [
+        65
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "XAI_API_KEY",
+      "lines": [
+        236
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/chat/route.ts",
+        "src/app/api/grok/search/route.ts",
+        "src/app/api/grok/voice/ephemeral-token/route.ts",
+        "src/app/api/studio/route.ts",
+        "src/components/desk/groksearch.tsx",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/grok-search.ts",
+        "src/lib/solgpt/imagine.ts",
+        "src/lib/solgpt/inference-catalog.ts",
+        "src/lib/solgpt/models.ts",
+        "src/lib/solgpt/provider.ts",
+        "src/lib/solgpt/tools.ts",
+        "src/lib/solgpt/voice/index.ts"
+      ],
+      "testReferences": [
+        "src/app/api/chat/route.test.ts",
+        "src/app/api/desk-holder-gate.test.ts",
+        "src/app/api/livekit/webhook/route.test.ts",
+        "src/app/api/page-env-handlers.test.ts",
+        "src/app/api/paid-spend-gate.test.ts",
+        "src/app/api/studio/route.test.ts",
+        "src/app/api/voice/route.test.ts",
+        "src/lib/solgpt/grok-search.test.ts",
+        "src/lib/solgpt/imagine.test.ts",
+        "src/lib/solgpt/llm-gateway-env.test.ts",
+        "src/lib/solgpt/models.test.ts",
+        "src/lib/solgpt/paid-gate.test.ts",
+        "src/lib/solgpt/provider.test.ts"
+      ]
+    },
+    {
+      "key": "XAI_TEXT_MODEL",
+      "lines": [
+        26
+      ],
+      "configured": false,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "XAI_VOICE_MODEL",
+      "lines": [
+        66
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": []
+    },
+    {
+      "key": "XAI_VOICE_NAME",
+      "lines": [
+        67
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "X_ACCESS_TOKEN",
+      "lines": [
+        488
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "X_ACCESS_TOKEN_SECRET",
+      "lines": [
+        489
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "X_BEARER_TOKEN",
+      "lines": [
+        485
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "X_BOT_TOKEN",
+      "lines": [
+        122
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "X_OAUTH_ACCESS_TOKEN",
+      "lines": [
+        492
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "X_OAUTH_CLIENT_ID",
+      "lines": [
+        491
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "X_OAUTH_CLIENT_ID2",
+      "lines": [
+        490
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "X_REFRESH_TOKEN",
+      "lines": [
+        493
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [],
+      "testReferences": []
+    },
+    {
+      "key": "ZAI_API_KEY",
+      "lines": [
+        339
+      ],
+      "configured": false,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/app/api/chat/route.ts",
+        "src/lib/solgpt/config.ts",
+        "src/lib/solgpt/inference-catalog.ts",
+        "src/lib/solgpt/models.ts",
+        "src/lib/solgpt/provider.ts",
+        "src/lib/solgpt/tools.ts",
+        "src/lib/solgpt/zai-server.ts"
+      ],
+      "testReferences": [
+        "src/app/api/chat/route.test.ts",
+        "src/lib/solgpt/deskPricePath.test.ts",
+        "src/lib/solgpt/llm-gateway-env.test.ts",
+        "src/lib/solgpt/provider.test.ts",
+        "src/lib/solgpt/zai.test.ts"
+      ]
+    },
+    {
+      "key": "ZAI_BASE_URL",
+      "lines": [
+        340
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/deskPricePath.test.ts",
+        "src/lib/solgpt/provider.test.ts",
+        "src/lib/solgpt/sync-env-database-url.test.ts",
+        "src/lib/solgpt/zai.test.ts"
+      ]
+    },
+    {
+      "key": "ZAI_MODEL",
+      "lines": [
+        341
+      ],
+      "configured": true,
+      "occurrences": 1,
+      "distinctSingleLineValues": 1,
+      "runtimeReferences": [
+        "src/lib/solgpt/config.ts"
+      ],
+      "testReferences": [
+        "src/lib/solgpt/sync-env-database-url.test.ts",
+        "src/lib/solgpt/zai.test.ts"
+      ]
+    }
+  ]
+}

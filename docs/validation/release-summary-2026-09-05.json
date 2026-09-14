@@ -1,0 +1,70 @@
+{
+  "build": "passed after npm ci: compilation, lint, TypeScript, page generation, traces, compiled Tailwind verification",
+  "lint": "passed",
+  "typecheck": "passed",
+  "gitEnvSafety": "passed",
+  "focusedTests": {
+    "files": 15,
+    "passed": 101
+  },
+  "mcpRecheck": {
+    "files": 4,
+    "passed": 19
+  },
+  "storeSelectionFinal": {
+    "passed": 5
+  },
+  "docsBrowser": {
+    "liveBefore": "blank despite HTTP 200",
+    "localAfter": {
+      "references": 1,
+      "apiContentLoaded": true,
+      "canonical": "https://solgpt.us/docs",
+      "walletOnboarding": false
+    }
+  },
+  "env": {
+    "keys": 396,
+    "assignments": 405,
+    "repeatedKeys": 9,
+    "conflictingKeys": [
+      "SOLANA_TRACKER_DATASTREAM_KEY",
+      "TELEGRAM_CLIENT_ID",
+      "TELEGRAM_CLIENT_SECRET"
+    ],
+    "removed": 8,
+    "duplicateDryRunPreservesParsedEnvironment": "passed on earlier 403-assignment snapshot; recheck current snapshot before cleanup",
+    "liveCredentialSmoke": "approved and run; Tracker credits/stream credentials and Telegram login remain unresolved"
+  },
+  "remainingObservedTestFailures": {
+    "files": 1,
+    "assertions": 1,
+    "reason": "duplicate assignments in .env.local"
+  },
+  "dns": "Both domains now pass all eight endpoint checks with normal DNS",
+  "deployment": "Convex deployed; Fly image build pending after Depot OOM",
+  "webhookProviderRegistrations": "unchanged",
+  "convexServiceSecret": "configured in local and Convex; staged on Fly",
+  "generatedAt": "2026-09-05T16:08:22.364Z",
+  "lockedDependencies": {
+    "convex": "1.45.0",
+    "vitest": "4.1.10"
+  },
+  "fullSuite": {
+    "files": 335,
+    "passed": 1761,
+    "failed": 1
+  },
+  "backend": {
+    "testsPassed": 9,
+    "typecheck": "passed",
+    "productionDeployed": true,
+    "apiKeyLifecycle": "passed",
+    "gatewayKeyLifecycle": "passed"
+  },
+  "convexProductionEnvironment": "Both required service secrets configured",
+  "webhooks": {
+    "unsignedRejectionRoutesPassed": 15,
+    "providerRegistrations": "unchanged"
+  }
+}

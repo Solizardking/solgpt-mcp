@@ -1,0 +1,2045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$CLAWD | Solana AI Agent Token</title>
+    <link rel="icon" type="image/x-icon" href="https://pub-d677725afa16499383930c02ee30c019.r2.dev/gfx/nvidia-image-1743382334246.jpg">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Solana Color Palette */
+            --solana-purple: #9945FF;
+            --solana-purple-dark: #7c37cc;
+            --solana-purple-light: #b366ff;
+            --solana-green: #14F195;
+            --solana-green-dark: #0fc77a;
+            --solana-green-light: #4ffab3;
+
+            /* Dark Gradient Backgrounds */
+            --bg-void: #000000;
+            --bg-primary: #0d0a14;
+            --bg-secondary: #130f1a;
+            --bg-terminal: #0a0810;
+            --bg-input: #100c16;
+
+            /* Accent Colors - Solana Based */
+            --accent-primary: var(--solana-green);
+            --accent-secondary: var(--solana-purple);
+            --accent-cyan: var(--solana-green);
+            --accent-purple: var(--solana-purple);
+            --accent-magenta: #dc1fff;
+            --accent-orange: #ff9f0a;
+            --accent-green: var(--solana-green);
+            --accent-red: #ff3b5c;
+            --accent-yellow: #ffe066;
+
+            /* Text Colors */
+            --text-primary: #f0f0f5;
+            --text-secondary: #a0a0b0;
+            --text-muted: #606070;
+            --text-bright: #ffffff;
+
+            /* Borders & Glows */
+            --border-glow: rgba(153, 69, 255, 0.3);
+            --border-color: rgba(153, 69, 255, 0.2);
+            --glow-purple: rgba(153, 69, 255, 0.5);
+            --glow-green: rgba(20, 241, 149, 0.5);
+
+            /* Claude */
+            --claude-orange: #e07a5f;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+            background: linear-gradient(135deg, var(--bg-void) 0%, var(--bg-primary) 50%, #0f0820 100%);
+            background-attachment: fixed;
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+            cursor: default;
+        }
+
+        /* Scanlines overlay - subtle */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.1),
+                rgba(0, 0, 0, 0.1) 1px,
+                transparent 1px,
+                transparent 2px
+            );
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        /* Subtle purple glow effect */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at 50% 0%, rgba(153, 69, 255, 0.08) 0%, transparent 60%);
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        /* Matrix Rain Canvas */
+        #matrix-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.12;
+            pointer-events: none;
+        }
+
+        /* Glitch Effect */
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+            100% { transform: translate(0); }
+        }
+
+        .glitch {
+            animation: glitch 0.3s infinite;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Boot Sequence */
+        #boot-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-void);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            transition: opacity 0.5s, visibility 0.5s;
+        }
+
+        #boot-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .boot-text {
+            font-size: 13px;
+            color: var(--solana-green);
+            text-align: left;
+            white-space: pre;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        /* ASCII Art Header */
+        .ascii-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-top: 30px;
+        }
+
+        .ascii-art {
+            color: var(--solana-green);
+            font-size: 7px;
+            line-height: 1.1;
+            white-space: pre;
+            text-shadow:
+                0 0 10px var(--solana-green),
+                0 0 20px var(--solana-purple),
+                0 0 30px var(--solana-green);
+            animation: textGlow 3s ease-in-out infinite alternate;
+            display: inline-block;
+            letter-spacing: 0px;
+            font-weight: 700;
+        }
+
+        @media (min-width: 640px) {
+            .ascii-art { font-size: 9px; }
+        }
+
+        @media (min-width: 768px) {
+            .ascii-art { font-size: 11px; }
+        }
+
+        @media (min-width: 1024px) {
+            .ascii-art { font-size: 12px; }
+        }
+
+        @keyframes textGlow {
+            from {
+                text-shadow:
+                    0 0 10px var(--solana-green),
+                    0 0 20px rgba(153, 69, 255, 0.5);
+                filter: brightness(1);
+            }
+            to {
+                text-shadow:
+                    0 0 15px var(--solana-green),
+                    0 0 30px var(--solana-purple),
+                    0 0 50px var(--solana-green);
+                filter: brightness(1.15);
+            }
+        }
+
+        .tagline {
+            color: var(--solana-purple-light);
+            font-size: 12px;
+            margin-top: 20px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .date-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--solana-purple), var(--solana-green));
+            padding: 6px 16px;
+            border-radius: 6px;
+            font-size: 11px;
+            margin-top: 15px;
+            color: #000;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        /* Token Display */
+        .token-display {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(20, 241, 149, 0.05), rgba(153, 69, 255, 0.08));
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            flex-wrap: wrap;
+            box-shadow: 0 0 40px rgba(153, 69, 255, 0.1);
+        }
+
+        .token-image-container {
+            position: relative;
+        }
+
+        .token-image {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 3px solid var(--solana-purple);
+            box-shadow:
+                0 0 20px var(--glow-purple),
+                0 0 40px var(--glow-green),
+                inset 0 0 20px rgba(0, 255, 242, 0.1);
+            animation: tokenPulse 3s infinite;
+        }
+
+        @keyframes tokenPulse {
+            0%, 100% {
+                box-shadow:
+                    0 0 20px var(--glow-purple),
+                    0 0 40px var(--glow-green);
+            }
+            50% {
+                box-shadow:
+                    0 0 30px var(--glow-green),
+                    0 0 60px var(--glow-purple),
+                    0 0 80px var(--glow-green);
+            }
+        }
+
+        .token-details {
+            text-align: left;
+        }
+
+        .token-symbol {
+            font-size: 42px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--solana-green), var(--solana-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .token-name {
+            color: var(--text-secondary);
+            font-size: 13px;
+            margin-top: 4px;
+        }
+
+        .token-address-box {
+            font-size: 10px;
+            color: var(--text-secondary);
+            background: var(--bg-terminal);
+            padding: 10px 14px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            margin-top: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .token-address-box:hover {
+            border-color: var(--solana-green);
+            color: var(--solana-green);
+            box-shadow: 0 0 15px var(--glow-green);
+        }
+
+        .token-address-box::before {
+            content: 'SOL: ';
+            color: var(--solana-purple);
+            font-weight: 600;
+        }
+
+        /* Links */
+        .links-row {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 25px 0;
+        }
+
+        .cyber-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 22px;
+            background: transparent;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-family: inherit;
+            font-size: 12px;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cyber-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(20, 241, 149, 0.15), transparent);
+            transition: left 0.5s;
+        }
+
+        .cyber-btn:hover::before {
+            left: 100%;
+        }
+
+        .cyber-btn:hover {
+            border-color: var(--solana-green);
+            color: var(--solana-green);
+            box-shadow: 0 0 20px var(--glow-green);
+            transform: translateY(-2px);
+        }
+
+        .cyber-btn.primary {
+            background: linear-gradient(135deg, var(--solana-purple), var(--solana-green));
+            border: none;
+            color: #000;
+            font-weight: 700;
+        }
+
+        .cyber-btn.primary:hover {
+            box-shadow: 0 0 30px var(--glow-purple), 0 0 50px var(--glow-green);
+            transform: translateY(-3px);
+        }
+
+        /* Main Terminal */
+        .terminal-container {
+            margin: 50px 0;
+        }
+
+        .section-header {
+            font-size: 11px;
+            color: var(--solana-purple-light);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 500;
+        }
+
+        .section-header::before,
+        .section-header::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--solana-purple), transparent);
+        }
+
+        .terminal {
+            background: linear-gradient(180deg, var(--bg-terminal), #0c0818);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow:
+                0 0 0 1px rgba(153, 69, 255, 0.15),
+                0 25px 60px rgba(0,0,0,0.9),
+                0 0 80px rgba(153, 69, 255, 0.1),
+                inset 0 1px 0 rgba(255,255,255,0.03);
+        }
+
+        .terminal-chrome {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            background: linear-gradient(180deg, #1a1525, #130f1a);
+            border-bottom: 1px solid var(--border-color);
+            gap: 8px;
+        }
+
+        .window-btn {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .window-btn.close { background: var(--accent-red); }
+        .window-btn.minimize { background: var(--accent-yellow); }
+        .window-btn.maximize { background: var(--solana-green); }
+
+        .terminal-title {
+            flex: 1;
+            text-align: center;
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .terminal-body {
+            padding: 20px 24px;
+            min-height: 500px;
+            max-height: 70vh;
+            overflow-y: auto;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .terminal-body::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .terminal-body::-webkit-scrollbar-track {
+            background: var(--bg-terminal);
+        }
+
+        .terminal-body::-webkit-scrollbar-thumb {
+            background: var(--solana-purple);
+            border-radius: 4px;
+        }
+
+        .terminal-body::-webkit-scrollbar-thumb:hover {
+            background: var(--solana-purple-light);
+        }
+
+        /* Startup ASCII in terminal */
+        .boot-ascii {
+            color: var(--solana-green);
+            white-space: pre;
+            font-size: 9px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+            text-shadow: 0 0 10px var(--glow-green);
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        /* Chat messages */
+        .chat-msg {
+            margin-bottom: 14px;
+            opacity: 0;
+            transform: translateY(5px);
+            transition: all 0.4s ease;
+        }
+
+        .chat-msg.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .msg-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 6px;
+        }
+
+        .msg-avatar {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            border: 2px solid var(--solana-purple);
+            box-shadow: 0 0 12px var(--glow-purple);
+        }
+
+        .msg-role {
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 4px;
+        }
+
+        .msg-role.user {
+            background: rgba(20, 241, 149, 0.15);
+            color: var(--solana-green);
+            border: 1px solid rgba(20, 241, 149, 0.4);
+        }
+
+        .msg-role.claude {
+            background: rgba(153, 69, 255, 0.15);
+            color: var(--solana-purple-light);
+            border: 1px solid rgba(153, 69, 255, 0.4);
+        }
+
+        .msg-role.system {
+            background: rgba(153, 69, 255, 0.1);
+            color: var(--solana-purple);
+            border: 1px solid rgba(153, 69, 255, 0.3);
+        }
+
+        .msg-role.tool {
+            background: rgba(255, 159, 10, 0.15);
+            color: var(--accent-orange);
+            border: 1px solid rgba(255, 159, 10, 0.3);
+        }
+
+        .msg-role.success {
+            background: rgba(20, 241, 149, 0.2);
+            color: var(--solana-green);
+            border: 1px solid rgba(20, 241, 149, 0.5);
+        }
+
+        .msg-role.error {
+            background: rgba(255, 59, 92, 0.15);
+            color: var(--accent-red);
+            border: 1px solid rgba(255, 59, 92, 0.3);
+        }
+
+        .msg-time {
+            font-size: 10px;
+            color: var(--text-muted);
+        }
+
+        .msg-content {
+            color: var(--text-primary);
+            padding-left: 2px;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        .msg-content code {
+            background: rgba(153, 69, 255, 0.15);
+            color: var(--solana-purple-light);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 11px;
+        }
+
+        .msg-content .highlight {
+            color: var(--solana-green);
+            font-weight: 500;
+        }
+
+        .msg-content .success-text {
+            color: var(--solana-green);
+            font-weight: 600;
+        }
+
+        .msg-content .error-text {
+            color: var(--accent-red);
+        }
+
+        .msg-content .address {
+            color: var(--solana-purple-light);
+            word-break: break-all;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Tool call box */
+        .tool-call-box {
+            background: rgba(153, 69, 255, 0.08);
+            border: 1px solid rgba(153, 69, 255, 0.25);
+            border-radius: 6px;
+            padding: 10px 14px;
+            margin: 10px 0;
+            font-size: 11px;
+        }
+
+        .tool-name {
+            color: var(--solana-purple-light);
+            font-weight: 600;
+        }
+
+        .tool-params {
+            color: var(--text-secondary);
+            margin-top: 6px;
+            font-size: 10px;
+        }
+
+        /* Result box */
+        .result-box {
+            background: rgba(20, 241, 149, 0.08);
+            border: 1px solid rgba(20, 241, 149, 0.25);
+            border-radius: 6px;
+            padding: 12px 14px;
+            margin: 10px 0;
+            font-size: 11px;
+        }
+
+        .result-box.error {
+            background: rgba(255, 59, 92, 0.08);
+            border-color: rgba(255, 59, 92, 0.25);
+        }
+
+        /* Typing cursor */
+        .typing-cursor {
+            display: inline-block;
+            width: 10px;
+            height: 18px;
+            background: var(--solana-green);
+            animation: cursorBlink 1s infinite;
+            vertical-align: middle;
+            margin-left: 2px;
+            box-shadow: 0 0 10px var(--glow-green);
+        }
+
+        @keyframes cursorBlink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        /* Progress indicator */
+        .progress-line {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .progress-spinner {
+            width: 14px;
+            height: 14px;
+            border: 2px solid var(--text-muted);
+            border-top-color: var(--solana-green);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Divider */
+        .msg-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--solana-purple), transparent);
+            margin: 25px 0;
+            opacity: 0.4;
+        }
+
+        /* Controls */
+        .terminal-controls {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .control-btn {
+            padding: 10px 20px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-secondary);
+            font-family: inherit;
+            font-size: 11px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .control-btn:hover {
+            border-color: var(--solana-green);
+            color: var(--solana-green);
+            box-shadow: 0 0 15px var(--glow-green);
+        }
+
+        /* Story section */
+        .story-panel {
+            background: linear-gradient(135deg, rgba(20, 241, 149, 0.03), rgba(153, 69, 255, 0.05));
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 35px;
+            margin: 50px 0;
+            box-shadow: 0 0 50px rgba(153, 69, 255, 0.08);
+        }
+
+        .story-panel h2 {
+            color: var(--solana-green);
+            font-size: 16px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .story-panel h2::before {
+            content: '//';
+            color: var(--solana-purple);
+        }
+
+        .story-panel p {
+            color: var(--text-primary);
+            font-size: 13px;
+            line-height: 1.9;
+            margin-bottom: 18px;
+        }
+
+        .story-panel code {
+            background: rgba(153, 69, 255, 0.15);
+            color: var(--solana-purple-light);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 11px;
+        }
+
+        /* Video Section */
+        .video-section {
+            margin: 50px 0;
+            text-align: center;
+        }
+
+        .video-container {
+            background: linear-gradient(135deg, rgba(20, 241, 149, 0.03), rgba(153, 69, 255, 0.05));
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 0 50px rgba(153, 69, 255, 0.1);
+        }
+
+        .launch-video {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 12px;
+            border: 2px solid var(--solana-purple);
+            box-shadow:
+                0 0 30px var(--glow-purple),
+                0 0 60px rgba(20, 241, 149, 0.2);
+        }
+
+        .launch-video:hover {
+            box-shadow:
+                0 0 40px var(--glow-green),
+                0 0 80px var(--glow-purple);
+        }
+
+        .video-caption {
+            color: var(--text-secondary);
+            font-size: 12px;
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border-color);
+            margin-top: 50px;
+        }
+
+        .footer-ascii {
+            color: var(--solana-purple);
+            font-size: 8px;
+            white-space: pre;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            opacity: 0.7;
+        }
+
+        .footer-text {
+            color: var(--text-secondary);
+            font-size: 11px;
+        }
+
+        .footer-link {
+            color: var(--solana-green);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .footer-link:hover {
+            color: var(--solana-green-light);
+            text-shadow: 0 0 10px var(--glow-green);
+        }
+
+        /* Terminal Input */
+        .terminal-input-container {
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            background: linear-gradient(180deg, #0c0818, var(--bg-terminal));
+            border-top: 1px solid var(--border-color);
+            gap: 10px;
+        }
+
+        .terminal-prompt {
+            color: var(--solana-green);
+            font-weight: 600;
+            font-size: 13px;
+            white-space: nowrap;
+        }
+
+        .terminal-input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            color: var(--text-primary);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            outline: none;
+            caret-color: var(--solana-green);
+        }
+
+        .terminal-input::placeholder {
+            color: var(--text-muted);
+        }
+
+        /* Jupiter Fixed Widget - Bottom Right */
+        .jupiter-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 2000;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+        }
+
+        .jupiter-widget-container {
+            background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 15px;
+            box-shadow:
+                0 0 0 1px rgba(153, 69, 255, 0.2),
+                0 15px 50px rgba(0, 0, 0, 0.6),
+                0 0 80px rgba(153, 69, 255, 0.1);
+            width: 420px;
+            max-width: calc(100vw - 40px);
+            display: none;
+            animation: slideUp 0.3s ease;
+        }
+
+        .jupiter-widget-container.visible {
+            display: block;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .jupiter-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .jupiter-title {
+            color: var(--solana-green);
+            font-size: 14px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .jupiter-title::before {
+            content: '⚡';
+        }
+
+        .jupiter-close {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .jupiter-close:hover {
+            border-color: var(--accent-red);
+            color: var(--accent-red);
+        }
+
+        #jupiter-terminal-container {
+            width: 100%;
+            height: 500px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        /* Floating swap button */
+        .jupiter-fab {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--solana-purple), var(--solana-green));
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow:
+                0 4px 20px rgba(153, 69, 255, 0.4),
+                0 0 40px rgba(20, 241, 149, 0.2);
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .jupiter-fab:hover {
+            transform: scale(1.1);
+            box-shadow:
+                0 6px 30px rgba(153, 69, 255, 0.6),
+                0 0 60px rgba(20, 241, 149, 0.3);
+        }
+
+        .jupiter-fab.active {
+            animation: none;
+            background: linear-gradient(135deg, var(--solana-green), var(--solana-purple));
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow:
+                    0 4px 20px rgba(153, 69, 255, 0.4),
+                    0 0 40px rgba(20, 241, 149, 0.2);
+            }
+            50% {
+                box-shadow:
+                    0 4px 30px rgba(153, 69, 255, 0.6),
+                    0 0 60px rgba(20, 241, 149, 0.4);
+            }
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 480px) {
+            .jupiter-widget {
+                bottom: 10px;
+                right: 10px;
+            }
+            .jupiter-widget-container {
+                width: calc(100vw - 20px);
+            }
+            .jupiter-fab {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+        }
+
+        /* Command help popup */
+        .command-help {
+            position: absolute;
+            bottom: 100%;
+            left: 20px;
+            right: 20px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin-bottom: 8px;
+            display: none;
+            box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .command-help.visible {
+            display: block;
+        }
+
+        .command-help-title {
+            color: var(--solana-purple-light);
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .command-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 6px 0;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .command-item:hover {
+            color: var(--solana-green);
+        }
+
+        .command-item code {
+            background: rgba(20, 241, 149, 0.15);
+            color: var(--solana-green);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            min-width: 60px;
+        }
+
+        .command-item span {
+            color: var(--text-secondary);
+            font-size: 11px;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 640px) {
+            .terminal-body {
+                font-size: 10px;
+                padding: 10px 12px;
+            }
+            .token-symbol {
+                font-size: 28px;
+            }
+            .boot-ascii {
+                font-size: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Boot Screen -->
+    <div id="boot-screen">
+        <pre class="boot-text" id="boot-text"></pre>
+    </div>
+
+    <canvas id="matrix-canvas"></canvas>
+
+    <div class="container" id="main-content" style="opacity: 0;">
+        <!-- ASCII Header -->
+        <header class="ascii-header">
+<pre class="ascii-art">
+ ██████╗██╗      █████╗ ██╗    ██╗██████╗
+██╔════╝██║     ██╔══██╗██║    ██║██╔══██╗
+██║     ██║     ███████║██║ █╗ ██║██║  ██║
+██║     ██║     ██╔══██║██║███╗██║██║  ██║
+╚██████╗███████╗██║  ██║╚███╔███╔╝██████╔╝
+ ╚═════╝╚══════╝╚═╝  ╚═╝ ╚══╝╚══╝ ╚═════╝
+</pre>
+            <p class="tagline">$CLAWD — Solana AI Agent Token</p>
+            <span class="date-badge">MARCH 31, 2025</span>
+        </header>
+
+        <!-- Token Display -->
+        <div class="token-display">
+            <div class="token-image-container">
+                <img src="https://pub-d677725afa16499383930c02ee30c019.r2.dev/gfx/nvidia-image-1743382334246.jpg" alt="$CLAWD Token" class="token-image">
+            </div>
+            <div class="token-details">
+                <div class="token-symbol">$CLAWD</div>
+                <div class="token-name">Clawd — Solana AI Agent Token</div>
+                <div class="token-address-box" onclick="copyAddress()" title="Click to copy">
+                    8cHzQHUS2s2h8TzCmfqPKYiM4dSt4roa3n7MyRLApump
+                </div>
+            </div>
+        </div>
+
+        <!-- Links -->
+        <div class="links-row">
+            <a href="https://pump.fun/coin/8cHzQHUS2s2h8TzCmfqPKYiM4dSt4roa3n7MyRLApump" target="_blank" class="cyber-btn primary">
+                View on Pump.fun
+            </a>
+            <a href="https://claude.ai/share/45f926fb-1680-44aa-bd05-06ec48bdf23e" target="_blank" class="cyber-btn">
+                Original Conversation
+            </a>
+            <a href="https://github.com/8bitsats/sol-gpt" target="_blank" class="cyber-btn">
+                GitHub
+            </a>
+        </div>
+
+        <!-- Terminal -->
+        <div class="terminal-container">
+            <div class="section-header">
+                <span>The Historic Conversation // March 31, 2025</span>
+            </div>
+
+            <div class="terminal">
+                <div class="terminal-chrome">
+                    <div class="window-btn close"></div>
+                    <div class="window-btn minimize"></div>
+                    <div class="window-btn maximize"></div>
+                    <span class="terminal-title">claude-desktop — clawd — 80x24</span>
+                </div>
+                <div class="terminal-body" id="terminal-body">
+<pre class="boot-ascii">
+   ██████╗██╗      █████╗ ██╗   ██╗██████╗ ███████╗
+  ██╔════╝██║     ██╔══██╗██║   ██║██╔══██╗██╔════╝
+  ██║     ██║     ███████║██║   ██║██║  ██║█████╗
+  ██║     ██║     ██╔══██║██║   ██║██║  ██║██╔══╝
+  ╚██████╗███████╗██║  ██║╚██████╔╝██████╔╝███████╗
+   ╚═════╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚══════╝
+
+  ██████╗ ██╗   ██╗███╗   ███╗██████╗     ███╗   ███╗ ██████╗██████╗
+  ██╔══██╗██║   ██║████╗ ████║██╔══██╗    ████╗ ████║██╔════╝██╔══██╗
+  ██████╔╝██║   ██║██╔████╔██║██████╔╝    ██╔████╔██║██║     ██████╔╝
+  ██╔═══╝ ██║   ██║██║╚██╔╝██║██╔═══╝     ██║╚██╔╝██║██║     ██╔═══╝
+  ██║     ╚██████╔╝██║ ╚═╝ ██║██║         ██║ ╚═╝ ██║╚██████╗██║
+  ╚═╝      ╚═════╝ ╚═╝     ╚═╝╚═╝         ╚═╝     ╚═╝ ╚═════╝╚═╝
+
+  CLAWD Terminal v1.0.0 | Solana AI Agent Token
+  Connected to Helius RPC (Mainnet) | Ready for instructions
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+</pre>
+                    <div id="chat-container"></div>
+                </div>
+                <!-- Terminal Input -->
+                <div class="terminal-input-container" style="position: relative;">
+                    <div class="command-help" id="command-help">
+                        <div class="command-help-title">Available Commands</div>
+                        <div class="command-item" onclick="executeCommand('swap')">
+                            <code>swap</code>
+                            <span>Open Jupiter swap terminal</span>
+                        </div>
+                        <div class="command-item" onclick="executeCommand('buy')">
+                            <code>buy</code>
+                            <span>Buy $CLAWD tokens</span>
+                        </div>
+                        <div class="command-item" onclick="executeCommand('restart')">
+                            <code>restart</code>
+                            <span>Restart conversation replay</span>
+                        </div>
+                        <div class="command-item" onclick="executeCommand('clear')">
+                            <code>clear</code>
+                            <span>Clear terminal</span>
+                        </div>
+                    </div>
+                    <span class="terminal-prompt">$CLAWD ~&gt;</span>
+                    <input
+                        type="text"
+                        class="terminal-input"
+                        id="terminal-input"
+                        placeholder="Type 'swap' to trade, 'help' for commands..."
+                        autocomplete="off"
+                        spellcheck="false"
+                    >
+                </div>
+            </div>
+
+            <div class="terminal-controls">
+                <button class="control-btn" onclick="restartConversation()">Restart</button>
+                <button class="control-btn" onclick="skipToEnd()">Skip to End</button>
+                <button class="control-btn" onclick="executeCommand('swap')" style="background: linear-gradient(135deg, var(--solana-purple), var(--solana-green)); border: none; color: #000; font-weight: 600;">Swap $CLAWD</button>
+            </div>
+        </div>
+
+        <!-- Story Section -->
+        <section class="story-panel">
+            <h2>The Genesis of $CLAWD</h2>
+            <p>
+                On March 31, 2025, a developer known as 8bit connected Claude to the Solana blockchain
+                through a custom MCP server. The original conversation is replayed here — remade as
+                <span style="color: var(--accent-cyan);">$CLAWD</span>.
+            </p>
+            <p>
+                After checking the account balance of <code>0.142500891 SOL</code>, fetching a price chart,
+                scanning the top tokens on Pump.fun, and encountering several failed attempts due to
+                image handling issues, the breakthrough came when 8bit provided a local image path.
+            </p>
+            <p>
+                Claude processed the request, generated a mint keypair, constructed the token metadata,
+                and broadcasted the transaction to Solana mainnet. In seconds,
+                <span style="color: var(--accent-cyan);">$CLAWD</span> was live —
+                mint <code>8cHzQHUS2s2h8TzCmfqPKYiM4dSt4roa3n7MyRLApump</code>.
+            </p>
+            <p>
+                The original Claude share
+                <a href="https://claude.ai/share/45f926fb-1680-44aa-bd05-06ec48bdf23e" target="_blank" class="footer-link">45f926fb-1680-44aa-bd05-06ec48bdf23e</a>
+                is the conversation this terminal animates.
+            </p>
+        </section>
+
+        <!-- Video Section -->
+        <section class="video-section">
+            <div class="section-header">The Launch — March 31, 2025</div>
+            <div class="video-container">
+                <video
+                    controls
+                    playsinline
+                    poster="https://pub-d677725afa16499383930c02ee30c019.r2.dev/gfx/nvidia-image-1743382334246.jpg"
+                    class="launch-video"
+                >
+                    <source src="https://pub-d677725afa16499383930c02ee30c019.r2.dev/pdfs/28dcfd791a7143a2953f3bd93f252106.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <p class="video-caption">
+                Watch the historic launch conversation this $CLAWD terminal animates.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+<pre class="footer-ascii">
+  ___ _      _ __      _____
+ / __| |    /_\\ \    / /   \
+| (__| |__ / _ \\ \/\/ /| |) |
+ \___|____/_/ \_\\_/\_/ |___/
+
+$CLAWD — Solana — Anthropic
+</pre>
+            <p class="footer-text">
+                Built with Claude Code |
+                <a href="https://github.com/8bitsats/sol-gpt" class="footer-link">Open Source</a> |
+                <a href="https://anthropic.com" class="footer-link">Anthropic</a> |
+                <a href="https://pump.fun" class="footer-link">Pump.fun</a>
+            </p>
+        </footer>
+    </div>
+
+    <!-- Jupiter Fixed Widget - Bottom Right -->
+    <div class="jupiter-widget" id="jupiter-widget">
+        <div class="jupiter-widget-container" id="jupiter-container">
+            <div class="jupiter-header">
+                <div class="jupiter-title">Swap $CLAWD</div>
+                <button class="jupiter-close" onclick="toggleJupiterWidget()">&times;</button>
+            </div>
+            <div id="jupiter-terminal-container"></div>
+        </div>
+        <button class="jupiter-fab" id="jupiter-fab" onclick="toggleJupiterWidget()" title="Swap $CLAWD">
+            ⚡
+        </button>
+    </div>
+
+    <script>
+        // Boot sequence
+        const bootLines = [
+            'CLAWD SYSTEM v1.0.0',
+            '========================',
+            '',
+            'Initializing kernel...',
+            'Loading CLAWD protocol drivers...',
+            'Connecting to Helius RPC...',
+            'Establishing Solana mainnet connection...',
+            '',
+            '[OK] Keypair manager loaded',
+            '[OK] Token creator initialized',
+            '[OK] PumpFun SDK connected',
+            '[OK] Claude Desktop bridge active',
+            '',
+            'System ready.',
+            '',
+            'Loading historic conversation...'
+        ];
+
+        async function runBootSequence() {
+            const bootText = document.getElementById('boot-text');
+            for (let i = 0; i < bootLines.length; i++) {
+                await sleep(80);
+                bootText.textContent += bootLines[i] + '\n';
+            }
+            await sleep(500);
+            document.getElementById('boot-screen').classList.add('hidden');
+            document.getElementById('main-content').style.opacity = '1';
+            startConversation();
+        }
+
+        function sleep(ms) {
+            const d = replayDelayMs(ms);
+            if (d <= 0) return Promise.resolve();
+            return new Promise(resolve => setTimeout(resolve, d));
+        }
+
+        const CLAWD_TOKEN_ADDRESS = '8cHzQHUS2s2h8TzCmfqPKYiM4dSt4roa3n7MyRLApump';
+        const ORIGINAL_SHARE = 'https://claude.ai/share/45f926fb-1680-44aa-bd05-06ec48bdf23e';
+
+        function replayDelayMs(ms) {
+            if (window.__CLAWD_REPLAY_DELAY === 0) return 0;
+            return ms;
+        }
+
+        // Conversation data — Claude share 45f926fb-1680-44aa-bd05-06ec48bdf23e
+        // Page token / create-token success address is $CLAWD.
+        const conversation = [
+            {
+                type: 'user',
+                time: '09:47:12',
+                content: 'get_account_balance'
+            },
+            {
+                type: 'claude',
+                time: '09:47:14',
+                content: 'I\'ll help you check your account balance. Let me use the account information function for you.'
+            },
+            {
+                type: 'tool',
+                time: '09:47:15',
+                tool: 'get-account-balance',
+                params: '{ accountName: "default" }'
+            },
+            {
+                type: 'result',
+                time: '09:47:17',
+                content: 'Your account <span class="highlight">"default"</span> with address <span class="address">2L2wD4Xbg8QcVvPpBHBzSRzsoK7Bas4teonLcPfbLhLx</span> has a balance of <span class="success-text">0.142500891 SOL</span>.'
+            },
+            {
+                type: 'divider'
+            },
+            {
+                type: 'user',
+                time: '09:47:40',
+                content: 'fetch_price_chart 7JofsgKgD3MerQDa7hEe4dfkY3c3nMnsThZzUuYyTFpE 5m'
+            },
+            {
+                type: 'claude',
+                time: '09:47:42',
+                content: 'I\'ll fetch the price chart data for the token with mint address <span class="address">7JofsgKgD3MerQDa7hEe4dfkY3c3nMnsThZzUuYyTFpE</span> with a 5-minute interval.'
+            },
+            {
+                type: 'tool',
+                time: '09:47:43',
+                tool: 'fetch_price_chart',
+                params: '{ mint: "7JofsgKgD3MerQDa7hEe4dfkY3c3nMnsThZzUuYyTFpE", interval: "5m" }'
+            },
+            {
+                type: 'result',
+                time: '09:47:48',
+                content: `<strong>Price chart (5m)</strong> — <span class="address">7JofsgKgD3MerQDa7hEe4dfkY3c3nMnsThZzUuYyTFpE</span><br><br>
+High ≈ <span class="highlight">0.0000415 SOL</span> · Low ≈ <span class="highlight">0.0000204 SOL</span> · Last close ≈ <span class="highlight">0.0000218 SOL</span><br>
+Volume spiked above 500 SOL in some 5-minute windows. Trend from early March is downward, currently under half the dataset high.`
+            },
+            {
+                type: 'divider'
+            },
+            {
+                type: 'user',
+                time: '09:48:30',
+                content: 'fetch_top_tokens'
+            },
+            {
+                type: 'claude',
+                time: '09:48:32',
+                content: 'I\'ll fetch the top tokens for you.'
+            },
+            {
+                type: 'tool',
+                time: '09:48:33',
+                tool: 'fetch_top_tokens',
+                params: '{}'
+            },
+            {
+                type: 'result',
+                time: '09:48:36',
+                content: `<strong>Top 10 Pump.fun Tokens (24h Volume):</strong><br><br>
+1. <span class="highlight">Fartcoin (FART)</span> — $431M MC — $3.79M vol<br>
+2. <span class="highlight">Retard Finder (RFC)</span> — $10.6M MC — $2.29M vol<br>
+3. <span class="highlight">Buckazoids (BUZ)</span> — $5.87M MC — $2.05M vol<br>
+4. <span class="highlight">Ghiblification (GHIB)</span> — $8.54M MC — $1.62M vol<br>
+5. <span class="highlight">Alchemist AI (ALCH)</span> — $64.4M MC — $1.39M vol`
+            },
+            {
+                type: 'divider'
+            },
+            {
+                type: 'user',
+                time: '09:51:45',
+                content: 'create_token'
+            },
+            {
+                type: 'claude',
+                time: '09:51:48',
+                content: 'I\'ll help you create a new token on Pump.fun. To create a token, I\'ll need some information from you:<br><br>1. Token name<br>2. Token symbol<br>3. A description for your token<br>4. Initial buy amount in SOL (minimum 0.0001 SOL)<br><br>Would you also like to include an image URL for your token? This is optional.'
+            },
+            {
+                type: 'user',
+                time: '09:52:15',
+                content: '1 claude<br>2 mcp<br>1. launched on anthropic<br>2. .0001'
+            },
+            {
+                type: 'claude',
+                time: '09:52:18',
+                content: 'Let me create this token for you. I\'ll use the information you provided:<br><br>• Token name: <span class="highlight">Claude</span><br>• Token symbol: <span class="highlight">MCP</span><br>• Description: launched on anthropic<br>• Initial buy amount: <span class="highlight">0.0001 SOL</span>'
+            },
+            {
+                type: 'tool',
+                time: '09:52:20',
+                tool: 'create-token',
+                params: '{ name: "Claude", symbol: "MCP", description: "launched on anthropic", initialBuyAmount: 0.0001 }'
+            },
+            {
+                type: 'error',
+                time: '09:52:25',
+                content: '<span class="error-text">Error: Token creation failed - file handling issue with image</span>'
+            },
+            {
+                type: 'claude',
+                time: '09:52:28',
+                content: 'I apologize for the error. It seems there might be an issue with the token creation. Let me try again...'
+            },
+            {
+                type: 'tool',
+                time: '09:52:30',
+                tool: 'create-token',
+                params: '{ name: "Claude", symbol: "MCP", description: "launched on anthropic", initialBuyAmount: 0.0001 }'
+            },
+            {
+                type: 'error',
+                time: '09:52:35',
+                content: '<span class="error-text">Error: The token creation tool is requiring an image file</span>'
+            },
+            {
+                type: 'claude',
+                time: '09:52:40',
+                content: 'I apologize, but the token creation tool requires an image file. Would you like to try with an image?'
+            },
+            {
+                type: 'user',
+                time: '09:53:02',
+                content: 'use this image https://www.anthropic.com/_next/image?url=...'
+            },
+            {
+                type: 'tool',
+                time: '09:53:05',
+                tool: 'create-token',
+                params: '{ ..., imageUrl: "https://www.anthropic.com/..." }'
+            },
+            {
+                type: 'error',
+                time: '09:53:12',
+                content: '<span class="error-text">Error: Cannot use remote URL directly. Local file required.</span>'
+            },
+            {
+                type: 'claude',
+                time: '09:53:18',
+                content: 'The tool is looking for a local file on the system rather than a URL. For creating a token with an image, you would need to provide a local file path.'
+            },
+            {
+                type: 'divider'
+            },
+            {
+                type: 'user',
+                time: '09:54:30',
+                content: 'use this image /Users/8bit/Downloads/pumpfun-mcp-server-main/<span class="highlight">nvidia-image-1743382334246.jpg</span>'
+            },
+            {
+                type: 'claude',
+                time: '09:54:33',
+                content: 'I\'ll try to create the token using the local image file path you provided.'
+            },
+            {
+                type: 'tool',
+                time: '09:54:35',
+                tool: 'create-token',
+                params: `{
+  name: "Claude",
+  symbol: "MCP",
+  description: "launched on anthropic",
+  initialBuyAmount: 0.0001,
+  imageUrl: "/Users/8bit/Downloads/.../nvidia-image-1743382334246.jpg"
+}`
+            },
+            {
+                type: 'system',
+                time: '09:54:38',
+                content: 'Generating mint keypair...'
+            },
+            {
+                type: 'system',
+                time: '09:54:40',
+                content: 'Loading image from local filesystem...'
+            },
+            {
+                type: 'system',
+                time: '09:54:42',
+                content: 'Preparing token metadata...'
+            },
+            {
+                type: 'system',
+                time: '09:54:45',
+                content: 'Broadcasting transaction to Solana mainnet...'
+            },
+            {
+                type: 'system',
+                time: '09:54:48',
+                content: 'Waiting for confirmation...'
+            },
+            {
+                type: 'success',
+                time: '09:54:52',
+                content: '<span class="success-text">TOKEN CREATED SUCCESSFULLY</span>'
+            },
+            {
+                type: 'result',
+                time: '09:54:53',
+                content: `<strong>Token Creation Complete!</strong><br><br>
+• <strong>Token Name:</strong> Claude<br>
+• <strong>Token Symbol:</strong> CLAWD<br>
+• <strong>Token Address:</strong> <span class="address">8cHzQHUS2s2h8TzCmfqPKYiM4dSt4roa3n7MyRLApump</span><br>
+• <strong>Your Balance:</strong> <span class="success-text">3,576.654744 CLAWD</span><br>
+• <strong>Transaction:</strong> <span class="address" style="font-size: 9px;">35tiorNpXhvcF5ct6JfY4bBRpr8JrCrzQmnuNENJQzSW8c5g...</span>`
+            },
+            {
+                type: 'claude',
+                time: '09:54:58',
+                content: 'Great news! The token has been successfully created.<br><br>You can view and share your token using this URL:<br><a href="https://pump.fun/8cHzQHUS2s2h8TzCmfqPKYiM4dSt4roa3n7MyRLApump" target="_blank" style="color: var(--accent-cyan);">https://pump.fun/8cHzQHUS2s2h8TzCmfqPKYiM4dSt4roa3n7MyRLApump</a><br><br>Your token is now live on Pump.fun! <span class="success-text">$CLAWD is live.</span>'
+            },
+            {
+                type: 'system',
+                time: '09:55:10',
+                content: '<span class="success-text">// $CLAWD IS NOW LIVE ON SOLANA</span>'
+            },
+            {
+                type: 'divider'
+            },
+            {
+                type: 'user',
+                time: '09:55:40',
+                content: 'fetch_top_tokens'
+            },
+            {
+                type: 'claude',
+                time: '09:55:42',
+                content: 'I\'ll fetch the top tokens for you again.'
+            },
+            {
+                type: 'tool',
+                time: '09:55:43',
+                tool: 'fetch_top_tokens',
+                params: '{}'
+            },
+            {
+                type: 'result',
+                time: '09:55:47',
+                content: `<strong>Top 10 Pump.fun Tokens (24h Volume) — follow-up:</strong><br><br>
+1. <span class="highlight">Fartcoin (FART)</span> — $439M MC — $3.42M vol<br>
+2. <span class="highlight">Retard Finder (RFC)</span> — $9.48M MC — $2.31M vol<br>
+3. <span class="highlight">Buckazoids (BUZ)</span> — $4.96M MC — $2.08M vol<br>
+4. <span class="highlight">Ghiblification (GHIB)</span> — $8.70M MC — $1.96M vol<br>
+5. <span class="highlight">Gothification (GOTH)</span> — +633.94% 24h<br>
+6. <span class="highlight">titcoin (TIT)</span> — FtUEW73K6vEYHfbkfpdBZfWpxgQar2HipGdbutEhpump`
+            },
+            {
+                type: 'divider'
+            },
+            {
+                type: 'user',
+                time: '09:56:10',
+                content: 'fetch_price FtUEW73K6vEYHfbkfpdBZfWpxgQar2HipGdbutEhpump'
+            },
+            {
+                type: 'claude',
+                time: '09:56:12',
+                content: 'I\'ll fetch the current price of titcoin for you.'
+            },
+            {
+                type: 'tool',
+                time: '09:56:13',
+                tool: 'fetch_price',
+                params: '{ mint: "FtUEW73K6vEYHfbkfpdBZfWpxgQar2HipGdbutEhpump" }'
+            },
+            {
+                type: 'result',
+                time: '09:56:16',
+                content: 'The current price of <span class="highlight">titcoin (TIT)</span> is <span class="success-text">0.0165378646776123 SOL</span>. Address <span class="address">FtUEW73K6vEYHfbkfpdBZfWpxgQar2HipGdbutEhpump</span>.'
+            }
+        ];
+
+        let currentIndex = 0;
+        let isPlaying = true;
+
+        async function startConversation() {
+            currentIndex = 0;
+            isPlaying = true;
+            document.getElementById('chat-container').innerHTML = '';
+            playNextMessage();
+        }
+
+        async function playNextMessage() {
+            if (!isPlaying || currentIndex >= conversation.length) return;
+
+            const msg = conversation[currentIndex];
+            const container = document.getElementById('chat-container');
+
+            const el = createMessageElement(msg);
+            container.appendChild(el);
+
+            // Scroll to bottom
+            const body = document.getElementById('terminal-body');
+            body.scrollTop = body.scrollHeight;
+
+            // Animate in
+            await sleep(50);
+            el.classList.add('visible');
+
+            currentIndex++;
+
+            // Determine delay based on message type
+            let delay = 800;
+            if (msg.type === 'user') delay = 1200;
+            if (msg.type === 'claude') delay = 1500;
+            if (msg.type === 'tool') delay = 600;
+            if (msg.type === 'system') delay = 400;
+            if (msg.type === 'error') delay = 1000;
+            if (msg.type === 'success') delay = 1200;
+            if (msg.type === 'divider') delay = 300;
+
+            const wait = replayDelayMs(delay);
+            if (wait <= 0) {
+                return playNextMessage();
+            }
+            setTimeout(playNextMessage, wait);
+        }
+
+        function createMessageElement(msg) {
+            const div = document.createElement('div');
+            div.className = 'chat-msg';
+
+            if (msg.type === 'divider') {
+                div.innerHTML = '<div class="msg-divider"></div>';
+                return div;
+            }
+
+            if (msg.type === 'tool') {
+                div.innerHTML = `
+                    <div class="tool-call-box">
+                        <span class="tool-name">[Invoking tool: ${msg.tool}]</span>
+                        <div class="tool-params">${msg.params}</div>
+                    </div>
+                `;
+                return div;
+            }
+
+            if (msg.type === 'result') {
+                div.innerHTML = `
+                    <div class="result-box">
+                        ${msg.content}
+                    </div>
+                `;
+                return div;
+            }
+
+            if (msg.type === 'error') {
+                div.innerHTML = `
+                    <div class="result-box error">
+                        ${msg.content}
+                    </div>
+                `;
+                return div;
+            }
+
+            const roleClass = msg.type;
+            const roleLabel = msg.type.charAt(0).toUpperCase() + msg.type.slice(1);
+            const claudeAvatar = 'https://pub-d677725afa16499383930c02ee30c019.r2.dev/gfx/nvidia-image-1743382334246.jpg';
+
+            // Add avatar for Claude messages
+            const avatarHtml = msg.type === 'claude'
+                ? `<img src="${claudeAvatar}" alt="Claude" class="msg-avatar">`
+                : '';
+
+            div.innerHTML = `
+                <div class="msg-header">
+                    ${avatarHtml}
+                    <span class="msg-role ${roleClass}">${roleLabel}</span>
+                    <span class="msg-time">${msg.time}</span>
+                </div>
+                <div class="msg-content">${msg.content}</div>
+            `;
+
+            return div;
+        }
+
+        function restartConversation() {
+            isPlaying = false;
+            const wait = replayDelayMs(100);
+            if (wait <= 0) return startConversation();
+            setTimeout(startConversation, wait);
+        }
+
+        function skipToEnd() {
+            isPlaying = false;
+            const container = document.getElementById('chat-container');
+            container.innerHTML = '';
+
+            conversation.forEach(msg => {
+                const el = createMessageElement(msg);
+                el.classList.add('visible');
+                container.appendChild(el);
+            });
+
+            const body = document.getElementById('terminal-body');
+            body.scrollTop = body.scrollHeight;
+        }
+
+        // Matrix Rain
+        const canvas = document.getElementById('matrix-canvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        const chars = '$CLAWD01SOLANA';
+        const fontSize = 14;
+        let columns = Math.floor(canvas.width / fontSize);
+        let drops = Array(columns).fill(1);
+
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#14F195'; // Solana green
+            ctx.font = fontSize + 'px JetBrains Mono';
+
+            for (let i = 0; i < drops.length; i++) {
+                const char = chars[Math.floor(Math.random() * chars.length)];
+                ctx.fillText(char, i * fontSize, drops[i] * fontSize);
+
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+
+        if (!window.__CLAWD_PAGE_NOBOOT) {
+            setInterval(drawMatrix, 50);
+        }
+
+        // Copy address
+        function copyAddress() {
+            navigator.clipboard.writeText(CLAWD_TOKEN_ADDRESS);
+            const el = document.querySelector('.token-address-box');
+            const original = el.innerHTML;
+            el.innerHTML = '<span style="color: var(--accent-green);">Copied to clipboard!</span>';
+            setTimeout(() => {
+                el.innerHTML = original;
+            }, 2000);
+        }
+
+        // ==========================================
+        // Terminal Command Input & Jupiter Integration
+        // ==========================================
+
+        let jupiterInitialized = false;
+
+        // Terminal input handling
+        const terminalInput = document.getElementById('terminal-input');
+        const commandHelp = document.getElementById('command-help');
+
+        terminalInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                const command = this.value.trim().toLowerCase();
+                if (command) {
+                    executeCommand(command);
+                    this.value = '';
+                }
+            } else if (e.key === 'Escape') {
+                commandHelp.classList.remove('visible');
+            }
+        });
+
+        terminalInput.addEventListener('focus', function() {
+            commandHelp.classList.add('visible');
+        });
+
+        terminalInput.addEventListener('blur', function() {
+            setTimeout(() => {
+                commandHelp.classList.remove('visible');
+            }, 200);
+        });
+
+        function executeCommand(command) {
+            const chatContainer = document.getElementById('chat-container');
+            const terminalBody = document.getElementById('terminal-body');
+
+            // Add user command to chat
+            const cmdEl = document.createElement('div');
+            cmdEl.className = 'chat-msg visible';
+            cmdEl.innerHTML = `
+                <div class="msg-header">
+                    <span class="msg-role user">User</span>
+                    <span class="msg-time">${new Date().toLocaleTimeString('en-US', { hour12: false })}</span>
+                </div>
+                <div class="msg-content">${command}</div>
+            `;
+            chatContainer.appendChild(cmdEl);
+            terminalBody.scrollTop = terminalBody.scrollHeight;
+
+            // Execute command
+            switch(command) {
+                case 'swap':
+                    addSystemMessage('Opening Jupiter swap terminal...');
+                    setTimeout(() => {
+                        openJupiterWidget();
+                    }, 500);
+                    break;
+
+                case 'buy':
+                    addSystemMessage('Opening Jupiter to buy $CLAWD...');
+                    setTimeout(() => {
+                        openJupiterWidget(CLAWD_TOKEN_ADDRESS);
+                    }, 500);
+                    break;
+
+                case 'help':
+                    addSystemMessage(`Available commands:
+<br>• <span class="highlight">swap</span> - Open Jupiter swap terminal
+<br>• <span class="highlight">buy</span> - Buy $CLAWD tokens
+<br>• <span class="highlight">restart</span> - Restart conversation replay
+<br>• <span class="highlight">clear</span> - Clear terminal output
+<br>• <span class="highlight">info</span> - Show $CLAWD token info`);
+                    break;
+
+                case 'restart':
+                    addSystemMessage('Restarting conversation...');
+                    setTimeout(() => restartConversation(), 500);
+                    break;
+
+                case 'clear':
+                    chatContainer.innerHTML = '';
+                    addSystemMessage('Terminal cleared.');
+                    break;
+
+                case 'info':
+                    addSystemMessage(`<strong>$CLAWD Token Information</strong>
+<br>• Name: Clawd (CLAWD)
+<br>• Symbol: $CLAWD
+<br>• Address: <span class="address">${CLAWD_TOKEN_ADDRESS}</span>
+<br>• Chain: Solana
+<br>• Original conversation: <a href="${ORIGINAL_SHARE}" target="_blank" style="color: var(--solana-green);">Claude share</a>
+<br>• <a href="https://pump.fun/coin/${CLAWD_TOKEN_ADDRESS}" target="_blank" style="color: var(--solana-green);">View on Pump.fun</a>`);
+                    break;
+
+                default:
+                    addSystemMessage(`<span class="error-text">Unknown command: ${command}</span>
+<br>Type <span class="highlight">help</span> for available commands.`);
+            }
+        }
+
+        function addSystemMessage(content) {
+            const chatContainer = document.getElementById('chat-container');
+            const terminalBody = document.getElementById('terminal-body');
+
+            const msgEl = document.createElement('div');
+            msgEl.className = 'chat-msg visible';
+            msgEl.innerHTML = `
+                <div class="msg-header">
+                    <span class="msg-role system">System</span>
+                    <span class="msg-time">${new Date().toLocaleTimeString('en-US', { hour12: false })}</span>
+                </div>
+                <div class="msg-content">${content}</div>
+            `;
+            chatContainer.appendChild(msgEl);
+            terminalBody.scrollTop = terminalBody.scrollHeight;
+        }
+
+        // Jupiter Widget Functions
+        let jupiterWidgetOpen = false;
+
+        function toggleJupiterWidget(outputMint = null) {
+            const container = document.getElementById('jupiter-container');
+            const fab = document.getElementById('jupiter-fab');
+
+            jupiterWidgetOpen = !jupiterWidgetOpen;
+
+            if (jupiterWidgetOpen) {
+                container.classList.add('visible');
+                fab.classList.add('active');
+
+                // Initialize Jupiter Terminal if not already done
+                if (!jupiterInitialized && window.Jupiter) {
+                    initJupiter(outputMint);
+                } else if (window.Jupiter && outputMint) {
+                    window.Jupiter.syncProps({
+                        initialOutputMint: outputMint
+                    });
+                }
+            } else {
+                container.classList.remove('visible');
+                fab.classList.remove('active');
+            }
+        }
+
+        function openJupiterWidget(outputMint = null) {
+            if (!jupiterWidgetOpen) {
+                toggleJupiterWidget(outputMint);
+            } else if (outputMint && window.Jupiter) {
+                window.Jupiter.syncProps({
+                    initialOutputMint: outputMint
+                });
+            }
+        }
+
+        function initJupiter(outputMint = null) {
+            // RPC and API Configuration
+            const RPC_URL = 'https://ancient-burned-friday.solana-mainnet.quiknode.pro/bc8308dfa6d609f531f014aeee4ca28e16934efb/';
+            const REFERRAL_KEY = '2mE1EbETC8e8XyJomMkvQ3jXzoGBZAqRRSRFJv9AHRD9';
+            const PLATFORM_FEE_BPS = 20;
+
+            const config = {
+                displayMode: 'integrated',
+                integratedTargetId: 'jupiter-terminal-container',
+                endpoint: RPC_URL,
+                strictTokenList: false,
+                defaultExplorer: 'Solscan',
+                platformFeeAndAccounts: {
+                    referralAccount: REFERRAL_KEY,
+                    feeBps: PLATFORM_FEE_BPS
+                },
+                formProps: {
+                    initialInputMint: 'So11111111111111111111111111111111111111112',
+                    initialOutputMint: outputMint || CLAWD_TOKEN_ADDRESS,
+                    fixedInputMint: false,
+                    fixedOutputMint: false,
+                    swapMode: 'ExactIn',
+                    initialSlippageBps: 50
+                },
+                enableWalletPassthrough: true,
+                passthroughWalletContextState: null,
+                onSuccess: ({ txid }) => {
+                    console.log('Swap successful:', txid);
+                    addSystemMessage(`<span style="color: var(--solana-green);">✓ Swap successful! TX: ${txid.slice(0,8)}...</span>`);
+                },
+                onSwapError: ({ error }) => {
+                    console.error('Swap error:', error);
+                    addSystemMessage(`<span class="error-text">Swap failed: ${error?.message || 'Unknown error'}</span>`);
+                }
+            };
+
+            try {
+                if (window.Jupiter) {
+                    window.Jupiter.init(config);
+                    jupiterInitialized = true;
+                    console.log('Jupiter Terminal initialized with QuickNode RPC');
+                } else {
+                    console.error('Jupiter SDK not loaded');
+                    addSystemMessage('<span class="error-text">Jupiter SDK not loaded. Please refresh the page.</span>');
+                }
+            } catch (error) {
+                console.error('Failed to initialize Jupiter:', error);
+                addSystemMessage('<span class="error-text">Failed to load Jupiter Terminal. Please try again.</span>');
+            }
+        }
+
+        // Handle Escape key to close widget
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && jupiterWidgetOpen) {
+                toggleJupiterWidget();
+            }
+        });
+
+        window.CLAWD_TOKEN_ADDRESS = CLAWD_TOKEN_ADDRESS;
+        window.conversation = conversation;
+        window.playNextMessage = playNextMessage;
+        window.skipToEnd = skipToEnd;
+        window.restartConversation = restartConversation;
+        window.startConversation = startConversation;
+        window.executeCommand = executeCommand;
+        window.createMessageElement = createMessageElement;
+        window.copyAddress = copyAddress;
+        window.runBootSequence = runBootSequence;
+        window.openJupiterWidget = openJupiterWidget;
+
+        if (!window.__CLAWD_PAGE_NOBOOT) {
+            window.addEventListener('load', runBootSequence);
+        }
+
+        // Initialize Jupiter when script is ready
+        let jupiterLoadAttempts = 0;
+        function waitForJupiter() {
+            jupiterLoadAttempts++;
+            if (window.Jupiter) {
+                console.log('Jupiter SDK loaded after', jupiterLoadAttempts, 'attempts');
+            } else if (jupiterLoadAttempts < 100) {
+                setTimeout(waitForJupiter, 100);
+            } else {
+                console.error('Jupiter SDK failed to load after 10 seconds');
+            }
+        }
+
+        if (!window.__CLAWD_PAGE_NOBOOT) {
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', waitForJupiter);
+            } else {
+                waitForJupiter();
+            }
+        }
+    </script>
+
+    <!-- Jupiter Terminal Script - Load with high priority -->
+    <script src="https://terminal.jup.ag/main-v2.js" async></script>
+</body>
+</html>

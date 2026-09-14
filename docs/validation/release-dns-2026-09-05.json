@@ -1,0 +1,37 @@
+[
+  {
+    "type": "A",
+    "name": "solgpt.trade",
+    "content": "66.241.125.205",
+    "proxied": false,
+    "ttl": 300,
+    "id": "62b8828c5163736fda47bbc47eb30392",
+    "status": "created"
+  },
+  {
+    "type": "AAAA",
+    "name": "solgpt.trade",
+    "content": "2a09:8280:1::17a:7f3a:0",
+    "proxied": false,
+    "ttl": 300,
+    "id": "4dff0c6b22d4582e788b2134ffa1aea1",
+    "status": "created"
+  },
+  {
+    "type": "CNAME",
+    "name": "_acme-challenge.solgpt.trade",
+    "content": "solgpt.trade.1p28qj2.flydns.net",
+    "proxied": false,
+    "ttl": 300,
+    "id": "b7fd330f79f7774ed41c0cd585ece042",
+    "status": "created"
+  },
+  {
+    "type": "TXT",
+    "name": "_fly-ownership.solgpt.trade",
+    "content": "app-1p28qj2",
+    "ttl": 300,
+    "id": "e3726ab58de9b5f90855ea1333332455",
+    "status": "created"
+  }
+]

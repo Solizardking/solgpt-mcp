@@ -1,0 +1,1464 @@
+{
+  "app": "solgpt",
+  "auditedAt": "2026-09-05T00:42:22.094Z",
+  "secretCount": 364,
+  "secretValuesIncluded": false,
+  "secrets": [
+    {
+      "name": "ACCESS_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "AGENTSKI_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "AGENTSKY_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "ALCHEMY_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "ALCHEMY_RPC_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "API_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "ASSEMBLY_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "AUTH_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "AWS_ACCESS_KEY_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "AWS_ENDPOINT_URL_IAM",
+      "status": "Deployed"
+    },
+    {
+      "name": "AWS_ENDPOINT_URL_S3",
+      "status": "Deployed"
+    },
+    {
+      "name": "AWS_REGION",
+      "status": "Deployed"
+    },
+    {
+      "name": "AWS_SECRET_ACCESS_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "BETTER_AUTH_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "BETTER_AUTH_IDENTIFY_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "BETTER_AUTH_KV_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "BETTER_AUTH_SECRET",
+      "status": "Deployed"
+    },
+    {
+      "name": "BETTER_AUTH_TRUSTED_ORIGINS",
+      "status": "Deployed"
+    },
+    {
+      "name": "BETTER_AUTH_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "BIRDEYE_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "BIRDEYE_WSS_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "BOX_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "BROWSER_USE_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "BROWSERUSE_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "CDP_API_KEY_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "CDP_API_KEY_PRIVATE_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "CDP_API_KEY_SECRET",
+      "status": "Deployed"
+    },
+    {
+      "name": "CDP_BASE_PATH",
+      "status": "Deployed"
+    },
+    {
+      "name": "CDP_ENV",
+      "status": "Deployed"
+    },
+    {
+      "name": "CDP_WALLET_SECRET",
+      "status": "Deployed"
+    },
+    {
+      "name": "CG_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "CLAWD_ADMIN_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "CLAWD_PERPS_API_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "CLAWDBOT_VAULT_ALLOWED_IPS",
+      "status": "Deployed"
+    },
+    {
+      "name": "CLAWDBOT_VAULT_ENABLED",
+      "status": "Deployed"
+    },
+    {
+      "name": "CLAWDBOT_VAULT_TOKEN",
+      "status": "Deployed"
+    },
+    {
+      "name": "COINBASE_CLIENT_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "COINBASE_ONRAMP_APP_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "COINGECKO_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "COMPOSIO_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "COMPOSIO_AUTH_CONFIG_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "COMPOSIO_AUTH_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "COMPOSIO_CLAWD_WS_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "COMPOSIO_PROJECT_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "COMPOSIO_SIGNING_SECRET",
+      "status": "Deployed"
+    },
+    {
+      "name": "COMPOSIO_SUB_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "COMPOSIO_SUBSCRIPTION_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "COMPOSIO_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "COMPOSIO_WEBHOOK_SECRET",
+      "status": "Deployed"
+    },
+    {
+      "name": "CONSUMER_SECRET",
+      "status": "Deployed"
+    },
+    {
+      "name": "CONSUMER_TOKEN",
+      "status": "Deployed"
+    },
+    {
+      "name": "CONTROL_PLANE_TUNNEL_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "CONVEX_ACTIONS_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "CONVEX_DEPLOY_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "CONVEX_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "DATA_API",
+      "status": "Deployed"
+    },
+    {
+      "name": "DATA_API_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "DATABASE_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "DATABASE_URL_UNPOOLED",
+      "status": "Deployed"
+    },
+    {
+      "name": "DEEPGRAM_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "DEEPSEEK_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "DFLOW_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "DFLOW_MARKETS_API_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "DFLOW_MAX_LIMIT",
+      "status": "Deployed"
+    },
+    {
+      "name": "DFLOW_PUBLIC_SPOT_FEE_OWNER",
+      "status": "Deployed"
+    },
+    {
+      "name": "DFLOW_PUBLIC_SPOT_FEE_SOL",
+      "status": "Deployed"
+    },
+    {
+      "name": "DFLOW_PUBLIC_SPOT_MAX_FEE_BPS",
+      "status": "Deployed"
+    },
+    {
+      "name": "DFLOW_PUBLIC_SPOT_MAX_FEE_OVERAGE_BPS",
+      "status": "Deployed"
+    },
+    {
+      "name": "DFLOW_PUBLIC_SPOT_SOL_FEE_ACCOUNT",
+      "status": "Deployed"
+    },
+    {
+      "name": "DFLOW_QSTASH_DEDUPE_SEC",
+      "status": "Deployed"
+    },
+    {
+      "name": "DFLOW_QSTASH_WARM_DELAY_SEC",
+      "status": "Deployed"
+    },
+    {
+      "name": "DFLOW_QUOTE_API_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "DFLOW_STREAM_HEARTBEAT_MS",
+      "status": "Deployed"
+    },
+    {
+      "name": "DFLOW_STREAM_ORDERBOOK_DEPTH",
+      "status": "Deployed"
+    },
+    {
+      "name": "DFLOW_STREAM_ORDERBOOK_POLL_MS",
+      "status": "Deployed"
+    },
+    {
+      "name": "DFLOW_STREAM_TRADE_LIMIT",
+      "status": "Deployed"
+    },
+    {
+      "name": "DFLOW_STREAM_TRADES_POLL_MS",
+      "status": "Deployed"
+    },
+    {
+      "name": "DFLOW_TIMEOUT_MS",
+      "status": "Deployed"
+    },
+    {
+      "name": "DFLOW_TRADE_API_WS_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "E2B_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "E2B_TEMPLATE_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "ELEVEN_LABS_AGENT_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "ELEVEN_LABS_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "ELEVEN_LABS_WEBHOOK_SECRET",
+      "status": "Deployed"
+    },
+    {
+      "name": "ELEVEN_LABS_WEBHOOK_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "ENABLE_PHANTOM_SERVER_LIVE",
+      "status": "Deployed"
+    },
+    {
+      "name": "ENABLE_PHANTOM_SERVER_SDK",
+      "status": "Deployed"
+    },
+    {
+      "name": "FAL_MODEL1",
+      "status": "Deployed"
+    },
+    {
+      "name": "FAL_MODEL5",
+      "status": "Deployed"
+    },
+    {
+      "name": "FIRECRAWL_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "FIRECRAWL_BASE_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "FIRECRAWL_SECRET",
+      "status": "Deployed"
+    },
+    {
+      "name": "FIRECRAWL_URL2",
+      "status": "Deployed"
+    },
+    {
+      "name": "FIRECRAWL_WEBHOOK",
+      "status": "Deployed"
+    },
+    {
+      "name": "FIRECRAWL_WEBHOOK_SECRET",
+      "status": "Deployed"
+    },
+    {
+      "name": "FIRECRAWL_WEBHOOK_SIGNING_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "FIRECRAWL_WEBHOOK2",
+      "status": "Deployed"
+    },
+    {
+      "name": "HAUHAU_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "HAUHAU_BASE_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "HAUHAU_MODEL",
+      "status": "Deployed"
+    },
+    {
+      "name": "HELIUS_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "HELIUS_DAS_RPC_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "HELIUS_GATE",
+      "status": "Deployed"
+    },
+    {
+      "name": "HELIUS_LASER",
+      "status": "Deployed"
+    },
+    {
+      "name": "HELIUS_PARSE",
+      "status": "Deployed"
+    },
+    {
+      "name": "HELIUS_RPC_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "HELIUS_WSS_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "HONCHO_AGENT_PEER_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "HONCHO_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "HONCHO_CONTEXT_SUMMARY",
+      "status": "Deployed"
+    },
+    {
+      "name": "HONCHO_CONTEXT_TOKENS",
+      "status": "Deployed"
+    },
+    {
+      "name": "HONCHO_ENABLED",
+      "status": "Deployed"
+    },
+    {
+      "name": "HONCHO_REASONING_LEVEL",
+      "status": "Deployed"
+    },
+    {
+      "name": "HONCHO_SYNC_MESSAGES",
+      "status": "Deployed"
+    },
+    {
+      "name": "HONCHO_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "HONCHO_WEBHOOK",
+      "status": "Deployed"
+    },
+    {
+      "name": "HONCHO_WEBHOOK_SECRET",
+      "status": "Deployed"
+    },
+    {
+      "name": "HONCHO_WORKSPACE_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "IMPERIAL_AGENT_JWT",
+      "status": "Deployed"
+    },
+    {
+      "name": "IMPERIAL_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "IMPERIAL_JWT",
+      "status": "Deployed"
+    },
+    {
+      "name": "IMPERIAL_LIVE",
+      "status": "Deployed"
+    },
+    {
+      "name": "IMPERIAL_PROFILE_INDEX",
+      "status": "Deployed"
+    },
+    {
+      "name": "IMPERIAL_SLIPPAGE_BPS",
+      "status": "Deployed"
+    },
+    {
+      "name": "JUP_SWAP_V1_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "JUPITER_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "JUPITER_PUBLIC_REFERRAL_FEE_BPS",
+      "status": "Deployed"
+    },
+    {
+      "name": "JUPITER_TOKENS_BASE",
+      "status": "Deployed"
+    },
+    {
+      "name": "JWKS_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "KIMI_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "LEVEL5_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "LEVEL5_DEPOSIT_CODE",
+      "status": "Deployed"
+    },
+    {
+      "name": "LIVEKIT_AGENT_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "LIVEKIT_AGENT_NAME",
+      "status": "Deployed"
+    },
+    {
+      "name": "LIVEKIT_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "LIVEKIT_API_SECRET",
+      "status": "Deployed"
+    },
+    {
+      "name": "LIVEKIT_LEGACY_TOKEN_SERVER",
+      "status": "Deployed"
+    },
+    {
+      "name": "LIVEKIT_PROJECT_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "LIVEKIT_PROJECT_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "LIVEKIT_SIP_URI",
+      "status": "Deployed"
+    },
+    {
+      "name": "LIVEKIT_TOKEN_SERVER",
+      "status": "Deployed"
+    },
+    {
+      "name": "LIVEKIT_TOKEN_SERVER_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "LIVEKIT_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "LIVEKIT_WEBHOOK_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "MASSIVE_API_BASE",
+      "status": "Deployed"
+    },
+    {
+      "name": "MASSIVE_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "MEM0_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "MEMO_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "MESSARI_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "MOONPAY_IP_MATCHING",
+      "status": "Deployed"
+    },
+    {
+      "name": "MOONPAY_PUB_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "MOONPAY_SECRET_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "MOONSHOT_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "MOONSHOT_BASE_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "MOONSHOT_MODEL",
+      "status": "Deployed"
+    },
+    {
+      "name": "NEON_AI_GATEWAY_BASE_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "NEON_AI_GATEWAY_TOKEN",
+      "status": "Deployed"
+    },
+    {
+      "name": "NEON_AUTH_BASE_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "NEON_AUTH_JWKS_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "NEON_AUTH_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "NEON_BRANCH",
+      "status": "Deployed"
+    },
+    {
+      "name": "NEWS_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "NEXT_PUBLIC_BETTER_AUTH_KV_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "NEXT_PUBLIC_BETTER_AUTH_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "NEXT_PUBLIC_NEON_AUTH_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "NEXT_PUBLIC_NEON_DATA_API_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "NEXT_PUBLIC_PHANTOM_APP_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "NEXT_PUBLIC_PHANTOM_REDIRECT_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "NEXT_PUBLIC_PRIVY_APP_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "NEXT_PUBLIC_RPC_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "NEXT_PUBLIC_SOLANA_CLUSTER",
+      "status": "Deployed"
+    },
+    {
+      "name": "NEXT_PUBLIC_SOLANA_RPC_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "NEXT_PUBLIC_STACK__PUBLISHABLE_CLIENT_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "NEXT_PUBLIC_STACK_PROJECT_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "NEXT_PUBLIC_STACK_PUBLISHABLE_CLIENT_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENAI_ADMIN_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENAI_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENAI_IMAGE_MODEL",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENAI_ORG_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENAI_PROJECT_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENAI_REALTIME_MODEL",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENAI_REALTIME_VOICE",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENAI_RESPONSES_MODEL",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENAI_SIP_ALLOW_FROM",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENAI_SIP_AUTO_ACCEPT",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENAI_SIP_REGION",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENAI_WEBHOOK",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENAI_WEBHOOK_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENAI_WEBHOOK_SECRET",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENAI_WEBHOOK_SIGNING_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENROUTER_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENROUTER_APP_TITLE",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENROUTER_APP_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENROUTER_AUDIO_MODEL",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENROUTER_CLAWD_DEFAULT_MODEL",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENROUTER_DEEP",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENROUTER_DEEPSEEK_MODEL",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENROUTER_DEFAULT_MODEL",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENROUTER_FREE_MODEL",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENROUTER_FREE_MODEL1",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENROUTER_FREE_MODEL2",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENROUTER_FREE_MODEL4",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENROUTER_FREE_MODEL5",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENROUTER_FREE_MODEL6",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENROUTER_FREE_ROUTER",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENROUTER_FREEMODEL",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENROUTER_GLM",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENROUTER_GROK",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENROUTER_KIMILATEST",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENROUTER_MODEL",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENROUTER_MOONSHOT",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENROUTER_QWEN_FREE_MODEL",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENROUTER_QWEN_MODEL",
+      "status": "Deployed"
+    },
+    {
+      "name": "OPENROUTER_STEALTH",
+      "status": "Deployed"
+    },
+    {
+      "name": "ORGO_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "ORGO_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "OTEL_EXPORTER_OTLP_ENDPOINT",
+      "status": "Deployed"
+    },
+    {
+      "name": "OTEL_EXPORTER_OTLP_PROTOCOL",
+      "status": "Deployed"
+    },
+    {
+      "name": "OTEL_SERVICE_NAME",
+      "status": "Deployed"
+    },
+    {
+      "name": "PASSWORD",
+      "status": "Deployed"
+    },
+    {
+      "name": "PAY_PAYMENT_PULLER",
+      "status": "Deployed"
+    },
+    {
+      "name": "PAY_PAYMENT_RECIPIENT",
+      "status": "Deployed"
+    },
+    {
+      "name": "PHANTOM_API_PRIVATE_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "PHANTOM_APP_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "PHANTOM_ORGANIZATION_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "PHOENIX_API_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "PHOENIX_BUILDER_AUTHORITY",
+      "status": "Deployed"
+    },
+    {
+      "name": "PHOENIX_BUILDER_PDA_INDEX",
+      "status": "Deployed"
+    },
+    {
+      "name": "PHOENIX_BUILDER_SUBACCOUNT_INDEX",
+      "status": "Deployed"
+    },
+    {
+      "name": "PHOENIX_BUILDER_TRADER_ACCOUNT",
+      "status": "Deployed"
+    },
+    {
+      "name": "PHOENIX_FLIGHT_BUILDER_AUTHORITY",
+      "status": "Deployed"
+    },
+    {
+      "name": "PHOENIX_FLIGHT_FEE_BPS",
+      "status": "Deployed"
+    },
+    {
+      "name": "PHOENIX_LEGACY_BUILDER_AUTHORITY",
+      "status": "Deployed"
+    },
+    {
+      "name": "PHOENIX_LEGACY_BUILDER_FEE_BPS",
+      "status": "Deployed"
+    },
+    {
+      "name": "PHOENIX_LEGACY_REFERRER",
+      "status": "Deployed"
+    },
+    {
+      "name": "PINATA_JWT",
+      "status": "Deployed"
+    },
+    {
+      "name": "PIPEDREAM_CLIENT_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "PIPEDREAM_CLIENT_SECRET",
+      "status": "Deployed"
+    },
+    {
+      "name": "PIPEDREAM_ENVIRONMENT",
+      "status": "Deployed"
+    },
+    {
+      "name": "PIPEDREAM_PROJECT_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "PIPEDREAM_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "PIPEDREAM_WEBHOOK_SECRET",
+      "status": "Deployed"
+    },
+    {
+      "name": "PIPEDREAM_WEBHOOK_SIGNING_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "PIPEDREAM_WORKSPACE_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "POOLSIDE_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "POOLSIDE_BASE_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "POOLSIDE_MODEL",
+      "status": "Deployed"
+    },
+    {
+      "name": "PRIVY_APP_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "PRIVY_APP_SECRET",
+      "status": "Deployed"
+    },
+    {
+      "name": "PRIVY_AUTH_KEY_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "PRIVY_AUTHORIZATION_PRIVATE_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "PRIVY_CLIENT_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "PRIVY_CUSTOM_OAUTH",
+      "status": "Deployed"
+    },
+    {
+      "name": "PRIVY_JWT_VERIFICATION_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "PRIVY_LOGIN_METHODS",
+      "status": "Deployed"
+    },
+    {
+      "name": "PRIVY_MAX_SOL_LAMPORTS",
+      "status": "Deployed"
+    },
+    {
+      "name": "PRIVY_POLICY_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "PRIVY_SANDBOX_SOLANA_POLICY_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "PRIVY_SIGNER_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "PRIVY_SIGNING_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "PUBLIC_APP_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "PYTH_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "QSTASH_CURRENT_SIGNING_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "QSTASH_NEXT_SIGNING_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "QSTASH_TOKEN",
+      "status": "Deployed"
+    },
+    {
+      "name": "QSTASH_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "RPC_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "SAID_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "SECURE_RPC_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "SERP_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "SERPER_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "SESSION_SECRET",
+      "status": "Deployed"
+    },
+    {
+      "name": "SOLANA_BACKUP_RPC_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "SOLANA_BACKUP_WSS_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "SOLANA_CLUSTER",
+      "status": "Deployed"
+    },
+    {
+      "name": "SOLANA_NETWORK",
+      "status": "Deployed"
+    },
+    {
+      "name": "SOLANA_PUBLIC_RPC_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "SOLANA_RPC_PROVIDER",
+      "status": "Deployed"
+    },
+    {
+      "name": "SOLANA_RPC_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "SOLANA_TRACKER_ACCESS_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "SOLANA_TRACKER_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "SOLANA_TRACKER_DATA_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "SOLANA_TRACKER_DATASTREAM_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "SOLANA_TRACKER_RPC_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "SOLANA_TRACKER_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "SOLANA_TRACKER_WSS_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "SOLANA_WSS_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "SOLANATRACKER_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "SOLGPT_API_BASE",
+      "status": "Deployed"
+    },
+    {
+      "name": "SOLGPT_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "SOLGPT_APP_TITLE",
+      "status": "Deployed"
+    },
+    {
+      "name": "SOLGPT_HTTP_REFERER",
+      "status": "Deployed"
+    },
+    {
+      "name": "SOLGPT_MCP_SERVERS",
+      "status": "Deployed"
+    },
+    {
+      "name": "SOLGPT_MCP_TOKEN",
+      "status": "Deployed"
+    },
+    {
+      "name": "SOLGPT_MODEL",
+      "status": "Deployed"
+    },
+    {
+      "name": "SOLGPT_PUMP_MCP_TOKEN",
+      "status": "Deployed"
+    },
+    {
+      "name": "SOLGPT_PUMP_MCP_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "SOLGPT_SUB_PLAN_DESK",
+      "status": "Deployed"
+    },
+    {
+      "name": "SOLGPT_SUB_PLAN_PUMP",
+      "status": "Deployed"
+    },
+    {
+      "name": "SOLGPT_TELEGRAM_ALLOWLIST",
+      "status": "Deployed"
+    },
+    {
+      "name": "SOLGPT_TELEGRAM_WEBHOOK_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "SPONGE_GATEWAY_SECRET",
+      "status": "Deployed"
+    },
+    {
+      "name": "SPONGE_LIVE_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "SPONGE_TEST_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "STACK_AUTH_PROJECT_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "STACK_SECRET_SERVER_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "SUPERMEMORY_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "TELEGRAM_ADMIN_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "TELEGRAM_BOT_TOKEN",
+      "status": "Deployed"
+    },
+    {
+      "name": "TELEGRAM_BOT_USERNAME",
+      "status": "Deployed"
+    },
+    {
+      "name": "TELEGRAM_CLIENT_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "TELEGRAM_CLIENT_SECRET",
+      "status": "Deployed"
+    },
+    {
+      "name": "TELEGRAM_OPEN_ACCESS",
+      "status": "Deployed"
+    },
+    {
+      "name": "TELEGRAM_USER_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "TELEGRAM_WEBHOOK_SECRET",
+      "status": "Deployed"
+    },
+    {
+      "name": "THIRDWEB_CLIENT_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "THIRDWEB_SECRET",
+      "status": "Deployed"
+    },
+    {
+      "name": "TUNNEL_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "UPSTASH_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "UPSTASH_BOX_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "UPSTASH_REDIS_REST_TOKEN",
+      "status": "Deployed"
+    },
+    {
+      "name": "UPSTASH_REDIS_REST_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "UPSTASH_VECTOR_REST_TOKEN",
+      "status": "Deployed"
+    },
+    {
+      "name": "UPSTASH_VECTOR_REST_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "USER",
+      "status": "Deployed"
+    },
+    {
+      "name": "VENICE_ADMIN_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "VENICE_ALPHA",
+      "status": "Deployed"
+    },
+    {
+      "name": "VENICE_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "VENICE_BASE_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "VENICE_DEEP",
+      "status": "Deployed"
+    },
+    {
+      "name": "VENICE_GLM",
+      "status": "Deployed"
+    },
+    {
+      "name": "VENICE_IMAGE2",
+      "status": "Deployed"
+    },
+    {
+      "name": "VENICE_MODEL",
+      "status": "Deployed"
+    },
+    {
+      "name": "VENICE_QWEN",
+      "status": "Deployed"
+    },
+    {
+      "name": "VENICE_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "VENICE_VIDEO_I2V",
+      "status": "Deployed"
+    },
+    {
+      "name": "VENICE_VIDEO_REF",
+      "status": "Deployed"
+    },
+    {
+      "name": "VITE_IPFS_GATEWAY",
+      "status": "Deployed"
+    },
+    {
+      "name": "VITE_NEON_AUTH_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "VITE_NEON_DATA_API_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "VITE_PHOENIX_BUILDER_PDA_INDEX",
+      "status": "Deployed"
+    },
+    {
+      "name": "VITE_PHOENIX_BUILDER_SUBACCOUNT_INDEX",
+      "status": "Deployed"
+    },
+    {
+      "name": "VITE_PUBLIC_STACK_PROJECT_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "VITE_PUBLIC_STACK_PUBLISHABLE_CLIENT_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "VULCAN_BIN",
+      "status": "Deployed"
+    },
+    {
+      "name": "VULCAN_WALLET_NAME",
+      "status": "Deployed"
+    },
+    {
+      "name": "VULCAN_WALLET_PASSWORD",
+      "status": "Deployed"
+    },
+    {
+      "name": "WALLET_CONNECT_PROJECT_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "WEBMCP_API_TOKEN",
+      "status": "Deployed"
+    },
+    {
+      "name": "WSS_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "X_ACCESS_TOKEN",
+      "status": "Deployed"
+    },
+    {
+      "name": "X_ACCESS_TOKEN_SECRET",
+      "status": "Deployed"
+    },
+    {
+      "name": "X_BEARER_TOKEN",
+      "status": "Deployed"
+    },
+    {
+      "name": "X_OAUTH_ACCESS_TOKEN",
+      "status": "Deployed"
+    },
+    {
+      "name": "X_OAUTH_CLIENT_ID",
+      "status": "Deployed"
+    },
+    {
+      "name": "X_OAUTH_CLIENT_ID2",
+      "status": "Deployed"
+    },
+    {
+      "name": "X_REFRESH_TOKEN",
+      "status": "Deployed"
+    },
+    {
+      "name": "XAI_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "XAI_TEXT_MODEL",
+      "status": "Deployed"
+    },
+    {
+      "name": "ZAI_API_KEY",
+      "status": "Deployed"
+    },
+    {
+      "name": "ZAI_BASE_URL",
+      "status": "Deployed"
+    },
+    {
+      "name": "ZAI_MODEL",
+      "status": "Deployed"
+    }
+  ]
+}

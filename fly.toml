@@ -1,0 +1,49 @@
+# solgpt-pumpfun-mcp
+#
+# Docker build context MUST be the repository root: pump docs live at ../docs
+# and the Dockerfile COPYs mcp-server/... plus docs/. Bare `fly deploy` from
+# this directory sends mcp-server/ as context and fails with
+# "/mcp-server/package.json: not found".
+#
+# From mcp-server/:  ./deploy.sh
+# From repo root:    fly deploy --config mcp-server/fly.toml --ha=false
+
+app = "solgpt-pumpfun-mcp"
+primary_region = "ewr"
+
+[build]
+  dockerfile = "Dockerfile"
+  ignorefile = "Dockerfile.dockerignore"
+
+[env]
+  HOST = "0.0.0.0"
+  PORT = "8080"
+  NODE_ENV = "production"
+  PUBLIC_ORIGIN = "https://solgpt.trade"
+  API_DATA_DIR = "/data"
+  PUMP_DOCS_ROOT = "/app/docs"
+  OTEL_SERVICE_NAME = "mcp-server"
+  OTEL_EXPORTER_OTLP_ENDPOINT = "http://solgpt-otel.internal:4318"
+
+[[mounts]]
+  source = "clawd_access"
+  destination = "/data"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 1
+
+  [[http_service.checks]]
+    interval = "30s"
+    timeout = "5s"
+    grace_period = "15s"
+    method = "GET"
+    path = "/health"
+
+[[vm]]
+  memory = "512mb"
+  cpu_kind = "shared"
+  cpus = 1

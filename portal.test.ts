@@ -1,0 +1,71 @@
+import { generateKeyPairSync, sign } from 'node:crypto';
+import { PublicKey } from '@solana/web3.js';
+import { afterAll, beforeAll, expect, it } from 'vitest';
+import { AccessService, HOLDER_EXCLUDED_TOOLS } from './access.ts';
+import { createMcpHttpServer } from './http.ts';
+import { listPumpFunMcpToolNames } from './server.ts';
+
+const access = new AccessService({ file: ':memory:', balance: async () => ({ raw: '1', decimals: 6, display: '0.000001' }) });
+const server = createMcpHttpServer({ host: '127.0.0.1', token: 'operator-test-token', access });
+let base: string;
+beforeAll(async () => {
+  await new Promise<void>((resolve, reject) => { server.once('error', reject); server.listen(0, '127.0.0.1', resolve); });
+  const address = server.address();
+  if (!address || typeof address === 'string') throw new Error('No listener');
+  base = `http://127.0.0.1:${address.port}`;
+});
+afterAll(async () => { server.closeAllConnections(); await new Promise<void>(resolve => server.close(() => resolve())); });
+function post(url: string, body: unknown, cookie = '') { return fetch(base + url, { method: 'POST', headers: { origin: base, 'content-type': 'application/json', cookie }, body: JSON.stringify(body) }); }
+it('serves the real landing page and local assets with a restrictive CSP', async () => {
+  const res = await fetch(base);
+  expect(res.status).toBe(200);
+  expect(res.headers.get('content-security-policy')).toContain("frame-ancestors 'none'");
+  const html = await res.text();
+  expect(html).toContain('Your wallet.');
+  expect(html).toContain('/favicon.ico');
+  expect(html).toContain('/favicon.png');
+  expect(html).toContain('/clawd-gateway-mark.png');
+  expect(html).toContain('/clawd-gateway-wordmark.png');
+  expect(html).toContain('CLAWD GATEWAY');
+  expect((await fetch(base + '/app.js')).status).toBe(200);
+  expect((await fetch(base + '/favicon.ico')).status).toBe(200);
+  expect((await fetch(base + '/favicon.png')).status).toBe(200);
+  expect((await fetch(base + '/clawd-gateway-mark.png')).status).toBe(200);
+  expect((await fetch(base + '/clawd-gateway-wordmark.png')).status).toBe(200);
+  expect((await fetch(base + '/api/config')).status).toBe(200);
+  expect((await fetch(base + '/.env.local')).status).toBe(404);
+});
+it('rejects cross-origin login and unauthenticated issuance', async () => {
+  expect((await fetch(base + '/api/challenge', { method: 'POST', headers: { origin: 'https://evil.test' } })).status).toBe(403);
+  expect((await post('/api/keys', { name: 'Project', purpose: 'testing public data' })).status).toBe(401);
+});
+it('completes wallet login → personal key → scoped MCP call → revocation', async () => {
+  const pair = generateKeyPairSync('ed25519');
+  const wallet = new PublicKey(pair.publicKey.export({ type: 'spki', format: 'der' }).subarray(-32)).toBase58();
+  const challenge = await (await post('/api/challenge', { wallet })).json();
+  const signature = sign(null, Buffer.from(challenge.message), pair.privateKey).toString('base64');
+  const login = await post('/api/login', { id: challenge.id, signature });
+  expect(login.status).toBe(200);
+  expect(login.headers.get('set-cookie')).toContain('HttpOnly; SameSite=Strict');
+  const cookie = login.headers.get('set-cookie')!.split(';')[0];
+  const session = await (await fetch(base + '/api/session', { headers: { cookie } })).json();
+  expect(session.eligible).toBe(true);
+  const issued = await post('/api/keys', { name: 'My agent', purpose: 'Testing my holder agent' }, cookie);
+  expect(issued.status).toBe(201);
+  const key = await issued.json();
+  const call = (method: string, params = {}) => fetch(base + '/mcp', { method: 'POST', headers: { authorization: 'Bearer ' + key.key, 'content-type': 'application/json', accept: 'application/json, text/event-stream' }, body: JSON.stringify({ jsonrpc: '2.0', id: 1, method, params }) });
+  const tools = await (await call('tools/list')).json();
+  const holderTools = listPumpFunMcpToolNames().filter((name) => !HOLDER_EXCLUDED_TOOLS.has(name));
+  expect(tools.result.tools).toHaveLength(holderTools.length);
+  expect(tools.result.tools.some((tool: { name: string }) => tool.name === 'tracker-price')).toBe(true);
+  expect(tools.result.tools.some((tool: { name: string }) => tool.name === 'jupiter-quote')).toBe(true);
+  expect(tools.result.tools.some((tool: { name: string }) => tool.name === 'ows-sign-tx')).toBe(false);
+  expect(tools.result.tools.some((tool: { name: string }) => tool.name === 'composio-session-mcp')).toBe(false);
+  const forbidden = await (await call('tools/call', { name: 'ows-sign-tx', arguments: {} })).json();
+  expect(Boolean(forbidden.error || forbidden.result?.isError)).toBe(true);
+  const publicCall = await (await call('tools/call', { name: 'get-program-ids', arguments: {} })).json();
+  expect(publicCall.result.isError).not.toBe(true);
+  const revoked = await fetch(base + '/api/keys/' + key.id, { method: 'DELETE', headers: { origin: base, cookie } });
+  expect(revoked.status).toBe(200);
+  expect((await call('tools/list')).status).toBe(401);
+});

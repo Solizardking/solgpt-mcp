@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-09-13T17:45:07.869884+00:00",
+  "deploymentId": "dpl_9fQWLYhzDWSdkTudPRGfC7HZGeKo",
+  "deploymentUrl": "https://sol-3j0u3vsuy-clawd-c4b28c7e.vercel.app",
+  "productionOrigin": "https://solgpt.trade",
+  "state": "READY",
+  "convex": "https://veracious-snake-356.convex.cloud",
+  "checks": {
+    "voiceHTTP": 200,
+    "voiceBrowserErrors": [],
+    "unauthenticatedStatusHTTP": 401,
+    "unauthenticatedLicenseHTTP": 401,
+    "voiceWebhookHTTP": 503,
+    "voiceWebhookError": "commerce_webhook_unconfigured",
+    "clawdBotMonthlyPaylink": "",
+    "clawdBotLifetimePaylink": "",
+    "signedConvexAccessRead": "passed"
+  },
+  "paymentActivationComplete": false,
+  "remaining": [
+    "Commerce API credentials",
+    "Clawd Bot monthly and lifetime paylinks",
+    "webhook registration and sharedTokens",
+    "wallet-reviewed end-to-end payment and voice session"
+  ]
+}

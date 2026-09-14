@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "pump-mcp": {
+      "command": "node",
+      "args": ["/absolute/path/to/PUMP-MCP/build/index.js"],
+      "env": {
+        "SOLANA_TRACKER_SECURE_RPC": "https://YOUR_INSTANCE.secure.rpc.solanatracker.io",
+        "SOLANA_TRACKER_RPC_URL": "https://rpc-mainnet.solanatracker.io/?api_key=YOUR_SOLANA_TRACKER_ACCESS_KEY",
+        "SOLANA_RPC_URL": "https://rpc-mainnet.solanatracker.io/?api_key=YOUR_SOLANA_TRACKER_ACCESS_KEY",
+        "SOLANA_TRACKER_WSS_URL": "wss://rpc-mainnet.solanatracker.io/?api_key=YOUR_SOLANA_TRACKER_ACCESS_KEY",
+        "SOLANA_TRACKER_ACCESS_KEY": "YOUR_SOLANA_TRACKER_ACCESS_KEY",
+        "BIRDEYE_API_KEY": "YOUR_BIRDEYE_API_KEY",
+        "JUPITER_API_KEY": "YOUR_JUPITER_API_KEY",
+        "JUPITER_TOKENS_BASE": "https://api.jup.ag/tokens/v2",
+        "OPENAI_API_KEY": "sk-YOUR_OPENAI_API_KEY_HERE"
+      }
+    }
+  }
+}

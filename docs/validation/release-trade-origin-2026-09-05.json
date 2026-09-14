@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-09-05T16:02:11.445369+00:00",
+  "origin": "https://solgpt.trade",
+  "verification": "TLS verified with hostname pinned to the published Fly A record; public DNS independently confirmed via Google DNS",
+  "checks": [
+    {
+      "path": "/docs",
+      "status": "200",
+      "ok": true
+    },
+    {
+      "path": "/openapi.json",
+      "status": "200",
+      "ok": true
+    },
+    {
+      "path": "/healthz",
+      "status": "200",
+      "ok": true
+    },
+    {
+      "path": "/readyz",
+      "status": "200",
+      "ok": true
+    }
+  ]
+}

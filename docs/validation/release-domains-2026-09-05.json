@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-09-05T15:59:37.287Z",
+  "note": "HTTP/content smoke only; interactive docs require browser verification.",
+  "checks": [
+    {
+      "origin": "https://solgpt.us",
+      "path": "/docs",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "origin": "https://solgpt.us",
+      "path": "/openapi.json",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "origin": "https://solgpt.us",
+      "path": "/healthz",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "origin": "https://solgpt.us",
+      "path": "/readyz",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "origin": "https://solgpt.trade",
+      "path": "/docs",
+      "ok": false,
+      "error": "ENOTFOUND"
+    },
+    {
+      "origin": "https://solgpt.trade",
+      "path": "/openapi.json",
+      "ok": false,
+      "error": "ENOTFOUND"
+    },
+    {
+      "origin": "https://solgpt.trade",
+      "path": "/healthz",
+      "ok": false,
+      "error": "ENOTFOUND"
+    },
+    {
+      "origin": "https://solgpt.trade",
+      "path": "/readyz",
+      "ok": false,
+      "error": "ENOTFOUND"
+    }
+  ]
+}

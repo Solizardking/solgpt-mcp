@@ -1,0 +1,96 @@
+{
+  "projectId": "050eccec-ae63-491b-8cd4-c80ca4f18506",
+  "environmentId": "eaea31cb-222b-4cca-9697-0f642750f292",
+  "services": {
+    "livekit-agent": {
+      "id": "ba7cfed1-4804-43bc-b021-a703f9e421e4",
+      "sources": [
+        ".env.local",
+        "livekit-agent/.env"
+      ],
+      "keys": [
+        "LIVEKIT_URL",
+        "LIVEKIT_API_KEY",
+        "LIVEKIT_API_SECRET",
+        "LIVEKIT_AGENT_NAME",
+        "LIVEKIT_AGENT_ID",
+        "DEEPGRAM_API_KEY",
+        "ASSEMBLYAI_API_KEY",
+        "ASSEMBLY_API_KEY",
+        "XAI_API_KEY",
+        "OPENAI_API_KEY",
+        "OPENROUTER_API_KEY",
+        "LIVEKIT_LLM_PROVIDER",
+        "LIVEKIT_LLM_MODEL",
+        "LIVEKIT_LLM_PROVIDER_FALLBACK",
+        "LIVEKIT_OPENAI_LLM_MODEL",
+        "LIVEKIT_OPENAI_REALTIME_MODEL"
+      ],
+      "publicDomain": false,
+      "port": 8081,
+      "healthcheck": "/"
+    },
+    "llm-gateway": {
+      "id": "1d10fb1d-7d65-4f62-b3d2-776db41185d2",
+      "sources": [
+        ".env.local"
+      ],
+      "keys": [
+        "DATABASE_URL",
+        "OPENROUTER_API_KEY",
+        "XAI_API_KEY",
+        "OPENAI_API_KEY",
+        "VENICE_API_KEY",
+        "MOONSHOT_API_KEY",
+        "DEEPSEEK_API_KEY",
+        "ZAI_API_KEY",
+        "POOLSIDE_API_KEY",
+        "HAUHAU_API_KEY",
+        "REDPILL_API_KEY",
+        "MESSARI_API_KEY"
+      ],
+      "publicDomain": true,
+      "port": 3000,
+      "healthcheck": "/readyz"
+    },
+    "mcp-server": {
+      "id": "72fb8b44-12ba-47b7-b0c0-503c2de73192",
+      "sources": [
+        ".env.local"
+      ],
+      "keys": [
+        "SOLGPT_PUMP_MCP_TOKEN",
+        "ALCHEMY_API_KEY",
+        "ALCHEMY_RPC_URL",
+        "HELIUS_API_KEY",
+        "HELIUS_RPC_URL",
+        "SOLANA_TRACKER_API_KEY",
+        "SOLANA_TRACKER_DATASTREAM_KEY",
+        "SOLANA_TRACKER_WSS_URL",
+        "BIRDEYE_API_KEY",
+        "JUPITER_API_KEY",
+        "DFLOW_API_KEY",
+        "COMPOSIO_API_KEY"
+      ],
+      "aliases": {
+        "MCP_HTTP_AUTH_TOKEN": "SOLGPT_PUMP_MCP_TOKEN"
+      },
+      "publicDomain": true,
+      "port": 8080,
+      "healthcheck": "/health",
+      "volumeMount": "/data"
+    },
+    "mcp-client": {
+      "id": "3737d102-1f20-462c-9e3f-7e1bcb60ac48",
+      "sources": [
+        ".env.local"
+      ],
+      "keys": [
+        "SOLGPT_PUMP_MCP_TOKEN"
+      ],
+      "publicDomain": false,
+      "command": "node dist/index.js --tools",
+      "restartPolicy": "NEVER"
+    }
+  }
+}

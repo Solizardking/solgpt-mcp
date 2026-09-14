@@ -1,0 +1,29 @@
+{
+  "at": "2026-09-05T16:41:09.535Z",
+  "results": [
+    {
+      "check": "create",
+      "ok": true
+    },
+    {
+      "check": "list",
+      "ok": true
+    },
+    {
+      "check": "verify",
+      "ok": true
+    },
+    {
+      "check": "touch",
+      "ok": true
+    },
+    {
+      "check": "revoke",
+      "ok": true
+    },
+    {
+      "check": "revoked_denied",
+      "ok": true
+    }
+  ]
+}

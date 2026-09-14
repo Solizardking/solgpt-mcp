@@ -1,0 +1,10 @@
+node_modules
+.git
+.env
+.env.*
+keys
+.keys
+*.md
+!README.md
+!SECURITY.md
+!LICENSE

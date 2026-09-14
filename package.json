@@ -1,0 +1,40 @@
+{
+  "name": "@solgpt/mcp",
+  "version": "1.0.0",
+  "description": "Official SOL-GPT MCP — pump.fun, Solana venues, OWS, OpenRouter + RedPill TEE. Connect at https://solgpt.trade/mcp",
+  "type": "module",
+  "main": "index.ts",
+  "bin": {
+    "pumpfun-mcp": "./index.ts"
+  },
+  "scripts": {
+    "start": "tsx index.ts",
+    "start:http": "tsx index.ts --http",
+    "test": "vitest run --config vitest.config.ts",
+    "typecheck": "tsc --noEmit --target ES2022 --module NodeNext --moduleResolution NodeNext --strict --skipLibCheck --esModuleInterop --allowImportingTsExtensions index.ts http.ts access.ts portal.ts boot.ts otel.ts config.ts solanatracker.ts birdeye.ts jupiter.ts server.ts rpc.ts",
+    "deploy:fly": "./deploy.sh",
+    "deploy": "./deploy.sh"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "dependencies": {
+    "@composio/core": "0.17.0",
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "@solana/web3.js": "^1.95.4",
+    "ws": "^8.21.3",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/ws": "^8.18.1",
+    "tsx": "^4.23.12",
+    "typescript": "5.9.3",
+    "vitest": "^4.1.10"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Solizardking/solgpt-mcp.git"
+  }
+}

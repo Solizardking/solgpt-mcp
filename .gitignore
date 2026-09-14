@@ -1,0 +1,226 @@
+node_modules/
+dist/
+.keys/
+keys/
+*.tsbuildinfo
+.env
+.env.*
+node_modules
+# Dependencies
+node_modules/
+**/node_modules/
+.venv/
+**/.venv/
+.pnp
+.pnp.js
+yarn.lock
+bun.lock
+.dev.vars
+# Build outputs
+.next/
+.next-dev/
+.next-dev-*/
+dist/
+build/
+target/
+.anchor/
+*.tsbuildinfo
+terraform-datasets
+# Local tool state
+.playwright-mcp/
+.vercel/
+.vercel-static/
+.wrangler/
+.clawd/
+.convex/
+.pay/
+.pnpm-store/
+.mypy_cache/
+
+# Environment files
+.env
+.env.*
+.env.local
+.env.*.local
+.envrc
+env.local
+!.env.example
+!.env.template
+!.env.sample
+!.env.vercel.example
+!.env.fly.example
+terraform-datasets
+# Local private key material
+wallets/arena-agents/
+wallet.json
+*-wallet.json
+keypair.json
+*-keypair.json
+*_keypair.json
+keypair*.json
+solana-keygen.json
+phantom-export.json
+id.json
+*.b58
+*.b64.key
+# The standalone Trickshot checkout at the repo root. Anchored so the pattern
+# cannot also match src/components/trickshot, src/app/trickshot, … — Tailwind
+# v4 source detection respects .gitignore, and a bare name here silently
+# dropped every class used only by the replay components from the compiled CSS.
+/trickshot/
+# Private keys, certificates, and cloud credentials
+private.key
+*.pem
+*.key
+# Raw LLM-gateway bearer token (llmg_…). `*.key` does not match this name.
+.gateway-key
+**/.gateway-key
+llm-gateway/.gateway-key
+*.crt
+*.cer
+*.der
+*.csr
+*.p7b
+*.p7c
+*.p12
+*.pfx
+*.keystore
+*.jks
+*.asc
+*.gpg
+*.ppk
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+id_ecdsa
+id_ecdsa.*
+id_dsa
+id_dsa.*
+service-account*.json
+*-sa-key.json
+compute-sa-key.json
+vertex-sa-key.json
+gcp-credentials*.json
+google-credentials*.json
+firebase-adminsdk*.json
+aws-credentials
+credentials.json
+client_secret*.json
+google-services.json
+cdp_private_key.pem
+cdp_*.pem
+
+# Env backups / local scratch (never commit)
+.env.local.bak*
+.env.local.before-*
+.env.*.bak*
+.write-test-*
+
+# Public repo excludes local nested research drops and copied projects.
+/Agent-Trading-Arena/
+/Agent-Trading-Arena-main/
+/TradingView-API-main/
+/agent-minter/
+/attached_assets/
+/better-auth-main/
+/candy/
+/caveman-agent/
+/cheshire-terminal/
+/convex-helpers-main/
+/Discord/
+/dynamic-bonding-curve-main/
+/gfx/
+/library/
+/livekit-agent/
+/m/
+/magicblock-engine-examples-main/
+/magicblock-gacha/
+/programs/
+/pump-public-docs-main/
+/solanastreaming/
+/staking/
+/wallets/
+
+# Root scratch notes, generated reports, and screenshots.
+/db.txt
+/dex-mobile-snapshot.md
+/llm.txt
+/pool.txt
+/search.txt
+/style.txt
+/swap.txt
+/*.png
+/bundle-stats.json
+/package-lock.json
+
+# Agent runtime state
+.vulcan/
+vulcan-runs/
+paper-state.json
+paper-balance.json
+.paper/
+.imperial/
+imperial-session*.json
+.agent-sessions/
+*.session.json
+agent-memory*.json
+session-state*.json
+.clawdbot/
+sessions/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+xai-realtime-output.pcm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Temp
+tmp/
+temp/
+.vercel
+clawd.env
+# Terraform — never commit providers, state, or plans (GitHub 100MB limit)
+**/.terraform/
+**/*.tfstate
+**/*.tfstate.*
+**/*.tfplan
+**/tfplan
+**/crash.log
+**/crash.*.log
+**/.terraform.lock.hcl
+
+# Published package install artifacts
+packages/*/node_modules/
+packages/*/dist/
+cdp_wallet_secret.txt
+# Local Firecrawl / scrape caches
+.cache/
+
+# Trickshot chain-reconstruction cache
+.trickshot-cache/
+
+# Runtime desktop download counter (Solana Clawd Terminal)
+data/desktop-download-stats.json
+data/clawd-bot-downloads.json
+data/clawd-bot-selfhost.tgz
+data/clawd-bot-manifest.json
+src-tauri
+
+# Local holder sessions and API key database
+.data/

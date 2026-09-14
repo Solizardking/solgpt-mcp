@@ -1,0 +1,16 @@
+[
+  {
+    "clientLine": 110,
+    "secretLine": 111,
+    "status": 200,
+    "error": "invalid_grant",
+    "scope": "invalid-code probe; a full user login remains required"
+  },
+  {
+    "clientLine": 477,
+    "secretLine": 478,
+    "status": 200,
+    "error": "invalid_grant",
+    "scope": "invalid-code probe; a full user login remains required"
+  }
+]

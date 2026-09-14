@@ -1,0 +1,67 @@
+{
+    "hostname": "solgpt.trade",
+    "configured": true,
+    "acme_requested": true,
+    "status": "Ready",
+    "dns_provider": "cloudflare",
+    "certificates": [
+        {
+            "source": "fly",
+            "status": "active",
+            "created_at": "2026-09-05T15:57:12.293Z",
+            "expires_at": "2026-12-04T14:58:47Z",
+            "issued": [
+                {
+                    "type": "rsa",
+                    "expires_at": "2026-12-04T14:58:47Z",
+                    "certificate_authority": "lets_encrypt"
+                },
+                {
+                    "type": "ecdsa",
+                    "expires_at": "2026-12-04T14:58:39Z",
+                    "certificate_authority": "lets_encrypt"
+                }
+            ]
+        }
+    ],
+    "validation": {
+        "dns_configured": false,
+        "alpn_configured": true,
+        "http_configured": true,
+        "ownership_txt_configured": true
+    },
+    "dns_requirements": {
+        "a": [
+            "66.241.125.205"
+        ],
+        "aaaa": [
+            "2a09:8280:1::17a:7f3a:0"
+        ],
+        "cname": "1p28qj2.solgpt.fly.dev",
+        "acme_challenge": {
+            "name": "_acme-challenge.solgpt.trade",
+            "target": "solgpt.trade.1p28qj2.flydns.net."
+        },
+        "ownership": {
+            "name": "_fly-ownership.solgpt.trade",
+            "app_value": "app-1p28qj2",
+            "org_value": "org-mwzd5m"
+        }
+    },
+    "dns_records": {
+        "a": [
+            "66.241.125.205"
+        ],
+        "aaaa": [
+            "2a09:8280:1::17a:7f3a:0"
+        ],
+        "cname": [],
+        "resolved_addresses": [
+            "66.241.125.205",
+            "2a09:8280:1::17a:7f3a:0"
+        ],
+        "soa": "craig.ns.cloudflare.com",
+        "acme_challenge_cname": "solgpt.trade.1p28qj2.flydns.net",
+        "ownership_txt": "app-1p28qj2"
+    }
+}

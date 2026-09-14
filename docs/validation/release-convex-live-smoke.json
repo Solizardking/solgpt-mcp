@@ -1,0 +1,46 @@
+{
+  "testedAt": "2026-09-05T16:26:42.267Z",
+  "deployment": "veracious-snake-356",
+  "results": [
+    {
+      "check": "create",
+      "status": 201,
+      "ok": true
+    },
+    {
+      "check": "list",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "check": "replay_rejected",
+      "status": 409,
+      "ok": true
+    },
+    {
+      "check": "verify",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "check": "touch",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "check": "invalid_signature_rejected",
+      "status": 401,
+      "ok": true
+    },
+    {
+      "check": "revoke",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "check": "revoked_key_denied",
+      "status": 200,
+      "ok": true
+    }
+  ]
+}

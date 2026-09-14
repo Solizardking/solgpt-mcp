@@ -1,0 +1,16 @@
+[
+  {
+    "line": 112,
+    "check": "telegram_getMe",
+    "status": 200,
+    "ok": true,
+    "bot": true
+  },
+  {
+    "line": 462,
+    "check": "telegram_getMe",
+    "status": 401,
+    "ok": false,
+    "bot": false
+  }
+]

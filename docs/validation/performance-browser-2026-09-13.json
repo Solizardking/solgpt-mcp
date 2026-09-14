@@ -1,0 +1,36 @@
+{
+  "origin": "https://solgpt.trade",
+  "checkedAt": "2026-09-13T04:43:05.854Z",
+  "passed": true,
+  "initialRequests": [
+    "/api/grok/search",
+    "/api/gate",
+    "/api/privy/config",
+    "/api/chat/session",
+    "/api/tokens/public",
+    "/api/tape",
+    "/api/spinners",
+    "/api/tokens/public",
+    "/api/gate"
+  ],
+  "initialResearchRequests": 0,
+  "researchLoadsOnOpen": true,
+  "researchStopsOnClose": true,
+  "tabletRailUnmounted": true,
+  "mobileTickerUnmounted": true,
+  "errors": [],
+  "performance": {
+    "ttfbMs": 745.5999999940395,
+    "domContentLoadedMs": 1528.4000000059605,
+    "paint": [
+      {
+        "name": "first-paint",
+        "ms": 8628
+      },
+      {
+        "name": "first-contentful-paint",
+        "ms": 8628
+      }
+    ]
+  }
+}
