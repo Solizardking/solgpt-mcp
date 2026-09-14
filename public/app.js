@@ -4,7 +4,7 @@ let session = null;
 let provider = null;
 let revealedKey = '';
 let busy = false;
-let endpoint = ((location.hostname.includes('solgpt')||location.hostname.includes('x402')) ? (location.origin + '/mcp') : 'https://solgpt.trade/mcp');
+let endpoint = location.origin + '/mcp';
 let walletEpoch = 0;
 let toastTimer;
 function notify(text) { $('toast').textContent = text; $('toast').hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(() => $('toast').hidden = true, 3500); }
@@ -170,3 +170,54 @@ async function initialize() {
   await loadSession(true);
 }
 initialize();
+
+async function registerWebmcpSiteTools() {
+  const mc = document.modelContext || navigator.modelContext;
+  if (typeof mc?.registerTool !== 'function') return;
+  const tools = [
+    {
+      name: 'get_page_title',
+      description: 'Read the title of the current page.',
+      inputSchema: { type: 'object', properties: {}, additionalProperties: false },
+      annotations: { readOnlyHint: true },
+      execute: async () => ({ title: document.title }),
+    },
+    {
+      name: 'list_portal_tools',
+      description: 'List ChatGPT Site tools registered on this CLAWD MCP portal page.',
+      inputSchema: { type: 'object', properties: {}, additionalProperties: false },
+      annotations: { readOnlyHint: true },
+      execute: async () => ({ tools: ['get_page_title', 'list_portal_tools', 'portal_readyz', 'open_mcp_docs'] }),
+    },
+    {
+      name: 'portal_readyz',
+      description: 'Report mcp.solgpt.trade portal readiness (origin + health path).',
+      inputSchema: { type: 'object', properties: {}, additionalProperties: false },
+      annotations: { readOnlyHint: true, openWorldHint: true },
+      execute: async () => {
+        const health = await fetch('/health', { credentials: 'same-origin' }).then((r) => r.json()).catch((e) => ({ error: String(e) }));
+        return { origin: location.origin, path: location.pathname, health };
+      },
+    },
+    {
+      name: 'open_mcp_docs',
+      description: 'Scroll to the Quickstart / docs section on this portal.',
+      inputSchema: { type: 'object', properties: {}, additionalProperties: false },
+      annotations: { readOnlyHint: false, consequentialHint: false },
+      execute: async () => {
+        document.querySelector('#docs')?.scrollIntoView({ behavior: 'smooth' });
+        return { opened: '#docs' };
+      },
+    },
+  ];
+  for (const tool of tools) {
+    try { await mc.registerTool(tool); } catch (_) { /* surface missing or duplicate */ }
+  }
+  window.__SOLGPT_SITE_TOOLS__ = tools.map((t) => t.name);
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => { void registerWebmcpSiteTools(); });
+} else {
+  void registerWebmcpSiteTools();
+}
