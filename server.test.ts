@@ -149,6 +149,22 @@ describe("pumpfun MCP server (shipped)", () => {
     ).toThrow(/forbidden/);
   });
 
+  it("includes manageConnections, twitter toolkit, and auth config id", () => {
+    const prev = process.env.COMPOSIO_AUTH_CONFIG_ID;
+    process.env.COMPOSIO_AUTH_CONFIG_ID = "ac_test_config";
+    try {
+      const planned = composioSessionCreateArgs({ userId: "u1", mcp: true });
+      expect(planned.options.manageConnections).toEqual({ waitForConnections: true });
+      expect(planned.authConfigId).toBe("ac_test_config");
+      expect(planned.whiteLabelOrigins).toContain("https://solgpt.trade");
+      expect(planned.whiteLabelOrigins).toContain("https://x402.life");
+      expect((planned.options.toolkits as string[])).toContain("twitter");
+    } finally {
+      if (prev === undefined) delete process.env.COMPOSIO_AUTH_CONFIG_ID;
+      else process.env.COMPOSIO_AUTH_CONFIG_ID = prev;
+    }
+  });
+
   it("ships IMAGE_GENERATION_GUIDE and the desk Streamable HTTP route", () => {
     expect(existsSync(path.join(mcpServerRoot, "IMAGE_GENERATION_GUIDE.md"))).toBe(
       true,

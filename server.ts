@@ -713,6 +713,8 @@ export function createPumpFunMcpServer(options: { holder?: boolean } = {}): McpS
         userId: z.string(),
         toolkits: z.array(z.string()).optional(),
         directTools: z.boolean().optional(),
+        waitForConnections: z.boolean().optional(),
+        authConfigId: z.string().optional(),
       },
     },
     async (args) => {
