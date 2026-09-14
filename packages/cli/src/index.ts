@@ -12,11 +12,13 @@ Usage:
   solgpt login [--origin https://solgpt.trade]
   solgpt mcp [--url ${MCP_DEFAULT}] [--tools]
   solgpt trade quote --mint <MINT> --side buy|sell [--sol <n>]
+  solgpt feed [--health]
   solgpt whoami
 
 Env:
   SOLGPT_API_KEY   bearer from holder portal (clawd_…)
   SOLGPT_MCP_URL   override MCP endpoint
+  CLAWD_WS_URL     override live feed (default https://clawd-ws.fly.dev)
 `);
 }
 
@@ -39,6 +41,26 @@ async function mcpToolsList(url: string, token?: string) {
 async function main() {
   const [cmd, ...rest] = process.argv.slice(2);
   if (!cmd || cmd === "-h" || cmd === "--help") return help();
+
+
+  if (cmd === "feed") {
+    const origin = (process.env.CLAWD_WS_URL || process.env.COMPOSIO_CLAWD_WS_URL || "https://clawd-ws.fly.dev").replace(/\/$/, "");
+    const healthUrl = origin + "/health";
+    const res = await fetch(healthUrl, { headers: { accept: "application/json" } });
+    const body = await res.text();
+    let json = null;
+    try { json = body ? JSON.parse(body) : null; } catch { json = { raw: body.slice(0, 400) }; }
+    console.log(JSON.stringify({
+      origin,
+      healthUrl,
+      ws: origin.replace(/^http/, "ws") + "/ws",
+      ok: res.ok,
+      status: res.status,
+      body: json,
+    }, null, 2));
+    if (!res.ok) process.exit(1);
+    return;
+  }
 
   if (cmd === "whoami") {
     const key = process.env.SOLGPT_API_KEY;

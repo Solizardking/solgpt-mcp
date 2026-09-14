@@ -86,6 +86,11 @@ import {
   xaiResponses,
 } from "./llm-models.ts";
 import {
+  clawdWsOrigin,
+  fetchClawdWsHealth,
+  fetchClawdWsLaunches,
+} from "./clawd-ws.ts";
+import {
   getTrackerPrice,
   getTrackerToken,
   getTrackerTrending,
@@ -1164,6 +1169,43 @@ export function createPumpFunMcpServer(options: { holder?: boolean } = {}): McpS
       inputSchema: {},
     },
     async () => mcpText(describeModelProviders()),
+  );
+
+
+  server.registerTool(
+    "clawd-ws-health",
+    {
+      description:
+        "Live health of the canonical pump feed at https://clawd-ws.fly.dev (same tape as solgpt pump UI).",
+      inputSchema: {},
+    },
+    async () => {
+      try {
+        return mcpText(await fetchClawdWsHealth());
+      } catch (error) {
+        return mcpError(error);
+      }
+    },
+  );
+
+  server.registerTool(
+    "clawd-ws-launches",
+    {
+      description:
+        "Recent launches from clawd-ws.fly.dev when HTTP exposes them; otherwise returns live health + wss URL for the tape.",
+      inputSchema: { limit: z.number().optional() },
+    },
+    async (args) => {
+      try {
+        const limit = guardedArgs(args).limit as number | undefined;
+        return mcpText({
+          origin: clawdWsOrigin(),
+          ...(await fetchClawdWsLaunches({ limit })),
+        });
+      } catch (error) {
+        return mcpError(error);
+      }
+    },
   );
 
   return server;
