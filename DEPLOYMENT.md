@@ -42,3 +42,10 @@ shared database exists.
 
 Copy `env.example` to `.env.local`. `index.ts` loads `.env.local` then `.env`
 without overriding already-set process env.
+
+
+## Railway (mcp.solgpt.trade)
+
+Set `PUBLIC_ORIGIN=https://mcp.solgpt.trade` and `API_DATA_DIR=/data`.
+Mount a persistent volume at `/data` so `access.sqlite` (wallet → API key rows)
+survives redeploys. One replica only until a shared DB is used.
