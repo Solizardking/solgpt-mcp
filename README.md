@@ -205,3 +205,7 @@ Local development requires Node 24. `npm run typecheck` checks the standalone
 runtime; `npm test` includes wallet verification, issuance, revocation,
 persistence, and holder tool-scope tests. Mock balances are injected only by
 tests; the production runtime has no mock-balance environment switch.
+
+## CLI
+
+Scaffold: `packages/cli` → `@solgpt/cli` (`npx @solgpt/cli`). Talks to https://solgpt.trade/mcp.
