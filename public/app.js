@@ -4,7 +4,7 @@ let session = null;
 let provider = null;
 let revealedKey = '';
 let busy = false;
-let endpoint = location.origin + '/mcp';
+let endpoint = ((location.hostname.includes('solgpt')||location.hostname.includes('x402')) ? (location.origin + '/mcp') : 'https://solgpt.trade/mcp');
 let walletEpoch = 0;
 let toastTimer;
 function notify(text) { $('toast').textContent = text; $('toast').hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(() => $('toast').hidden = true, 3500); }

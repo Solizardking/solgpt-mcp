@@ -11,7 +11,7 @@
     "start": "tsx index.ts",
     "start:http": "tsx index.ts --http",
     "test": "vitest run --config vitest.config.ts",
-    "typecheck": "tsc --noEmit --target ES2022 --module NodeNext --moduleResolution NodeNext --strict --skipLibCheck --esModuleInterop --allowImportingTsExtensions index.ts http.ts access.ts portal.ts boot.ts otel.ts config.ts solanatracker.ts birdeye.ts jupiter.ts server.ts rpc.ts",
+    "typecheck": "tsc --noEmit --target ES2022 --module NodeNext --moduleResolution NodeNext --strict --skipLibCheck --esModuleInterop --allowImportingTsExtensions index.ts http.ts access.ts portal.ts boot.ts otel.ts config.ts solanatracker.ts birdeye.ts jupiter.ts llm-models.ts server.ts rpc.ts",
     "deploy:fly": "./deploy.sh",
     "deploy": "./deploy.sh"
   },

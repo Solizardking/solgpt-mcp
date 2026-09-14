@@ -77,6 +77,15 @@ import {
   searchJupiterTokens,
 } from "./jupiter.ts";
 import {
+  chatCompletion,
+  describeModelProviders,
+  getModelInfo,
+  searchModels,
+  validateModel,
+  xaiImageGenerate,
+  xaiResponses,
+} from "./llm-models.ts";
+import {
   getTrackerPrice,
   getTrackerToken,
   getTrackerTrending,
@@ -123,6 +132,7 @@ export const PUMPFUN_MCP_TOOLS = [
   "jupiter-quote",
   "jupiter-swap",
   "jupiter-token",
+  search_models,
 ] as const;
 
 export function listPumpFunMcpToolNames(): string[] {
@@ -998,6 +1008,162 @@ export function createPumpFunMcpServer(options: { holder?: boolean } = {}): McpS
         });
       }
     },
+  );
+
+
+  server.registerTool(
+    "search_models",
+    {
+      description:
+        "Search OpenRouter + RedPill TEE + xAI model catalogs. Prefer RedPill slots when REDPILL_API_KEY is set.",
+      inputSchema: {
+        query: z.string().optional(),
+        provider: z.enum(["all", "openrouter", "redpill", "xai"]).optional(),
+        limit: z.number().optional(),
+        offset: z.number().optional(),
+      },
+    },
+    async (args) => {
+      try {
+        const a = guardedArgs(args);
+        return mcpText(await searchModels({
+          query: a.query as string | undefined,
+          provider: a.provider as "all" | "openrouter" | "redpill" | "xai" | undefined,
+          limit: a.limit as number | undefined,
+          offset: a.offset as number | undefined,
+        }));
+      } catch (error) {
+        return mcpError(error);
+      }
+    },
+  );
+
+  server.registerTool(
+    "get_model_info",
+    {
+      description: "Get details for one model id across OpenRouter / RedPill / xAI.",
+      inputSchema: { model: z.string() },
+    },
+    async (args) => {
+      try {
+        const model = String(guardedArgs(args).model || "");
+        return mcpText({ model, info: await getModelInfo(model) });
+      } catch (error) {
+        return mcpError(error);
+      }
+    },
+  );
+
+  server.registerTool(
+    "validate_model",
+    {
+      description: "Check whether a model id is routable with current API keys.",
+      inputSchema: { model: z.string() },
+    },
+    async (args) => {
+      try {
+        return mcpText(await validateModel(String(guardedArgs(args).model || "")));
+      } catch (error) {
+        return mcpError(error);
+      }
+    },
+  );
+
+  server.registerTool(
+    "chat_completion",
+    {
+      description:
+        "Chat completion via RedPill TEE (configured slots), xAI Grok, or OpenRouter. Keys never returned.",
+      inputSchema: {
+        model: z.string(),
+        messages: z.array(z.object({ role: z.string(), content: z.any() })),
+        temperature: z.number().optional(),
+        max_tokens: z.number().optional(),
+      },
+    },
+    async (args) => {
+      try {
+        const a = guardedArgs(args);
+        return mcpText(await chatCompletion({
+          model: String(a.model),
+          messages: a.messages as Array<{ role: string; content: unknown }>,
+          temperature: a.temperature as number | undefined,
+          max_tokens: a.max_tokens as number | undefined,
+        }));
+      } catch (error) {
+        return mcpError(error);
+      }
+    },
+  );
+
+  server.registerTool(
+    "xai_responses",
+    {
+      description:
+        "xAI Responses API (stateful Grok). Requires XAI_API_KEY. Optional previous_response_id to continue.",
+      inputSchema: {
+        model: z.string().optional(),
+        input: z.any(),
+        previous_response_id: z.string().optional(),
+        store: z.boolean().optional(),
+        include: z.array(z.string()).optional(),
+      },
+    },
+    async (args) => {
+      try {
+        const a = guardedArgs(args);
+        return mcpText(await xaiResponses({
+          model: a.model as string | undefined,
+          input: a.input,
+          previous_response_id: a.previous_response_id as string | undefined,
+          store: a.store as boolean | undefined,
+          include: a.include as string[] | undefined,
+        }));
+      } catch (error) {
+        return mcpError(error);
+      }
+    },
+  );
+
+  server.registerTool(
+    "xai_image_generate",
+    {
+      description: "xAI Grok Imagine image generation. Requires XAI_API_KEY.",
+      inputSchema: {
+        prompt: z.string(),
+        model: z.string().optional(),
+        n: z.number().optional(),
+        aspect_ratio: z.string().optional(),
+        resolution: z.string().optional(),
+        quality: z.string().optional(),
+        response_format: z.string().optional(),
+      },
+    },
+    async (args) => {
+      try {
+        const a = guardedArgs(args);
+        return mcpText(await xaiImageGenerate({
+          prompt: String(a.prompt),
+          model: a.model as string | undefined,
+          n: a.n as number | undefined,
+          aspect_ratio: a.aspect_ratio as string | undefined,
+          resolution: a.resolution as string | undefined,
+          quality: a.quality as string | undefined,
+          response_format: a.response_format as string | undefined,
+        }));
+      } catch (error) {
+        return mcpError(error);
+      }
+    },
+  );
+
+  server.registerTool(
+    "model_providers",
+    {
+      description: "Redacted snapshot of which model providers are configured (never returns keys).",
+      inputSchema: {},
+    },
+    async () => mcpText(describeModelProviders()),
   );
 
   return server;
